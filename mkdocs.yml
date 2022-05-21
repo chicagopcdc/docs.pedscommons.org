@@ -1,0 +1,25 @@
+site_name: PCDC Documentation
+nav:
+  - Acceptable Use Policy: 'AcceptableUsePolicy.md'
+  - PCDC Data Portal Statistical Manual: 'StatisticalManual.md'
+  - PCDC Data Portal User Guide: 'DataPortalUserGuide.md'
+  - Privacy Notice: 'PcdcPrivacyNotice.md'
+  - Terms and Conditions: 'TermsAndConditions.md'
+theme:
+  name: material
+  font:
+    text: Raleway
+  favicon: img/favicon.ico
+extra:
+  generator: false
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+    # prev_next_buttons_location: none
+    # include_homepage_in_sidebar: False
+#    logo: img/PcdcLogo.png

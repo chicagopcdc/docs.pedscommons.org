@@ -1,0 +1,752 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
+    
+    
+      
+        <title>PCDC Data Portal User Guide - PCDC Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c382b1dc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Raleway";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pcdc-data-portal-v15-user-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PCDC Documentation" class="md-header__button md-logo" aria-label="PCDC Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PCDC Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PCDC Data Portal User Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PCDC Documentation" class="md-nav__button md-logo" aria-label="PCDC Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    PCDC Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AcceptableUsePolicy/" class="md-nav__link">
+        Acceptable Use Policy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StatisticalManual/" class="md-nav__link">
+        PCDC Data Portal Statistical Manual
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          PCDC Data Portal User Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        PCDC Data Portal User Guide
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access" class="md-nav__link">
+    Access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    Navigation
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    Dictionary
+  </a>
+  
+    <nav class="md-nav" aria-label="Dictionary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-find-an-item" class="md-nav__link">
+    How to find an item
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploration" class="md-nav__link">
+    Exploration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filters-and-search" class="md-nav__link">
+    Filters and Search
+  </a>
+  
+    <nav class="md-nav" aria-label="Filters and Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saving-a-filter-set" class="md-nav__link">
+    Saving a Filter Set
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#survival-analysis" class="md-nav__link">
+    Survival Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Survival Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-menu" class="md-nav__link">
+    User Menu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-requests" class="md-nav__link">
+    Data Requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PcdcPrivacyNotice/" class="md-nav__link">
+        Privacy Notice
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TermsAndConditions/" class="md-nav__link">
+        Terms and Conditions
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access" class="md-nav__link">
+    Access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    Navigation
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dictionary" class="md-nav__link">
+    Dictionary
+  </a>
+  
+    <nav class="md-nav" aria-label="Dictionary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-find-an-item" class="md-nav__link">
+    How to find an item
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exploration" class="md-nav__link">
+    Exploration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filters-and-search" class="md-nav__link">
+    Filters and Search
+  </a>
+  
+    <nav class="md-nav" aria-label="Filters and Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#saving-a-filter-set" class="md-nav__link">
+    Saving a Filter Set
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#survival-analysis" class="md-nav__link">
+    Survival Analysis
+  </a>
+  
+    <nav class="md-nav" aria-label="Survival Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query" class="md-nav__link">
+    Query
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-menu" class="md-nav__link">
+    User Menu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-requests" class="md-nav__link">
+    Data Requests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<p><img alt="Logo" src="../img/PcdcLogo.png" /></p>
+<h1 id="pcdc-data-portal-v15-user-guide">PCDC Data Portal v1.5 User Guide</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. </p>
+<p>By harmonizing existing clinical research data and leading international efforts to standardize data collection, we are breaking down long-standing barriers that have held back advancements in research on rare diseases. Our aim is to leverage this unique collaborative consortium-based approach to enable new and meaningful discoveries about pediatric cancers.</p>
+<p>The PCDC Data Portal supports the management, analysis and sharing of data for the research community. The portal includes a data dictionary and data search functionality. </p>
+<p>For additional information, users can watch this <a href="https://youtu.be/uSUFthO4aBs">introductory video</a>. </p>
+<h2 id="access">Access</h2>
+<p>The PCDC Data Portal can be accessed using a web browser by visiting <a href="https://portal.pedscommons.org/">https://portal.pedscommons.org/</a>.  New users to the PCDC Data Portal are prompted to login using an approved authentication provider (i.e., Google).  </p>
+<p><img alt="Landing" src="../img/image33.png" /></p>
+<p>After a user successfully logs in using the authentication provider (Google) for the first time, they are prompted to associate their account with the PCDC Data Portal. </p>
+<p>Registration of an account with the PCDC Data Portal requires users to provide their email (supplied by the authentication provider), first name, last name, and institutional affiliation (e.g. University of California Berkeley).  Registration also requires that users read and acknowledge agreement with the <a href="../PcdcPrivacyNotice/">PCDC Privacy Notice</a>, the <a href="../TermsAndConditions/">PCDC Terms and Conditions</a>, and the <a href="../AcceptableUsePolicy/">Acceptable Use Policy</a>. </p>
+<p><img alt="Registration" src="../img/image5.png" /></p>
+<p>Users who have previously registered an account will be taken directly to the main page of the PCDC Data Portal after authentication.</p>
+<p>Users will initially have access to summary data only. Researchers can request access to line-level data by clicking the <strong>Request Access</strong> button on the Exploration page. See the <strong>Exploration</strong> section below. </p>
+<h2 id="navigation">Navigation</h2>
+<p>After successful login, users will see the main page. </p>
+<p><img alt="Main" src="../img/image32.png" /></p>
+<p>The main navigation buttons to PCDC Data Portal pages are in the upper right-hand corner of the page:</p>
+<ul>
+<li>Dictionary</li>
+<li>Exploration</li>
+<li>Query</li>
+</ul>
+<p>Profile settings can be accessed by clicking the username at the top of the page. See the <a href="#user-menu">Profile section</a> below.</p>
+<h3 id="dictionary">Dictionary</h3>
+<p><strong>Dictionary</strong> is the data dictionary used to define the data in the portal, including what each entity (Node) represents, properties associated with the entities, and possible values.</p>
+<p>The Dictionary is accessed by clicking the <strong>Dictionary</strong> button in the top-right hand corner of the PDCD Data Portal main page.</p>
+<p><img alt="Dictionary Button" src="../img/image26.png" /></p>
+<p>Example: for the data entity named “Cytology”, the dictionary includes seven properties as shown below. </p>
+<p><img alt="Dictionary Cytology" src="../img/image1.png" /></p>
+<p>On the right side of the Table View are Download Templates for each data element. </p>
+<p><img alt="Template Download" src="../img/image18.png" /></p>
+<p>Templates are available in JSON (JavaScript Object Notation) or TSV (tab separated values) format. Templates are used when submitting clinical trial data for use in the portal. </p>
+<p>The data dictionary can be viewed as a table, (shown above), or in graphical format by clicking on the <strong>Graph View</strong> button in the upper left. The Graph View shows an overview of the data model, which can be zoomed in to see individual components of the model and how they relate to one another.</p>
+<p><img alt="Dictionary Graph" src="../img/image30.png" /></p>
+<p>Clicking the <strong>Open Properties</strong> button will switch to the table view as shown above.  </p>
+<p><img alt="Dictionary Graph Detail" src="../img/image9.png" /></p>
+<h4 id="how-to-find-an-item">How to find an item</h4>
+<ol>
+<li>In the main page click the <strong>Dictionary</strong> button. The Dictionary page is displayed.</li>
+<li>
+<p>Type the item you want to find in the <strong>Search in Dictionary</strong> field on the left of the page.</p>
+<p><img alt="Search in Dictionary" src="../img/image2.png" /></p>
+<p>Items that match your search are displayed as you type:</p>
+<p><img alt="Search in Dictionary" src="../img/image17.png" /></p>
+</li>
+<li>
+<p>Click the item in the list you want to display.</p>
+<p><img alt="Search in Dictionary Results" src="../img/image7.png" /></p>
+</li>
+</ol>
+<p>The Graph View area of the screen will highlight Nodes that include the search term(s). </p>
+<p>The <strong>Search Results</strong> on the left side shows the number of matches in the Node title and description, as well as the number of matches in the node properties. </p>
+<p><img alt="Search Results Counts" src="../img/image29.png" /></p>
+<p>The <strong>Last Search</strong> field shows the number of Nodes where the term appears – in this example: 3.</p>
+<p><img alt="Search Results Node Count" src="../img/image15.png" /></p>
+<p>Click on the Node to see the properties.</p>
+<p><img alt="Search Results Node" src="../img/image21.png" /></p>
+<p>Matching search results are highlighted in yellow text. Click on the <strong>See All</strong> button to toggle between matched results and all properties. </p>
+<p><img alt="Search Results Highlight" src="../img/image31.png" /></p>
+<h3 id="exploration">Exploration</h3>
+<p>The <strong>Exploration</strong> button at the top of the home page takes the user to the main data page allowing users to see summary data. </p>
+<p>Users can refer to <a href="https://youtu.be/0TJJpx3m0GY">this video</a> for an overview of the Exploration functionality. </p>
+<p>For users who do not have access to line-level data, the top of the Exploration page will display a <strong>Request Access</strong> button. </p>
+<p><img alt="Explore Request Access" src="../img/image34.png" /></p>
+<p>Clicking this button will download the PCDC Project Request Form (MS Word format). Follow the instructions on the form to provide project information and request access to line-level data.</p>
+<p>The main <strong>Exploration</strong> page shows a summary view of distributions across some key demographic variables for all cases in the PCDC that match the currently-selected filters. </p>
+<p><img alt="Explore Main" src="../img/image4.png" /></p>
+<p>The <strong>Table View</strong> tab on the main page is restricted to approved researchers who have access to line-level data. </p>
+<p>The current Release Version of the data is included at the bottom of the left panel.</p>
+<h3 id="filters-and-search">Filters and Search</h3>
+<p>The Filters panel on the left side of the <strong>Exploration</strong> page can be used to narrow the Summary View results by selected variables. Filters act upon variables in the underlying data and are available for variables in the <strong>Subject</strong>, <strong>Disease</strong> and <strong>Molecular</strong> data domains. Use the expand icon (&gt;) to see the controls available for a given filter.  </p>
+<p><img alt="Explore Expand" src="../img/image3.png" /></p>
+<p>Different variable types (e.g. continuous variables, discrete variables, categorical variables) will have different controls available. For example, <strong>Race</strong> is a categorical (enumerative) variable, and categorical variable filters can be selected using checkboxes with one checkbox per value within that variable. The user can select the values of a variable they are interested in seeing as part of the population. Multiple selections <strong><em>within a single filter</em></strong> are treated as logical ‘ORs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ would see a result set where the subjects have a <strong>Race</strong> value of either ‘Asian’ OR ‘Black or African American’. </p>
+<p>Multiple selections made <strong><em>across multiple filters</em></strong> are treated as logical ‘ANDs’. Therefore, a user who selects  ‘Asian’ and ‘Black or African American’ from the Race filter and who select ‘Male’ from the <strong>Sex</strong> filter would see a result set where the subjects have a <strong>Race</strong> value of either ‘Asian’ OR ‘Black or African American’ <strong><em>AND</em></strong> who have a <strong>Sex</strong> value of ‘Male’.</p>
+<p>Using the above example, the <strong>Filters in Use</strong> bar at the top of the graph view shows “Sex is “Male” AND “Race is any of (logial OR) Black or African American, Asian” The AND can be switched to OR by clicking on the AND button between the two expressions. Each filter can be removed by clicking on the “x” at the end of the string. </p>
+<p><img alt="Explore Remove Filter" src="../img/image25.png" /></p>
+<p>Note: some filters, such as <strong>Age at LKSS</strong> (Last Known Survival Status) have a slider to select an age range.</p>
+<p><img alt="LKSS" src="../img/image13.png" /></p>
+<p>A bin size limit of five has been implemented for all data filters as an additional measure of participant privacy. Bin size refers to the minimum sample size reporting threshold. A lock icon will appear next to the filter that includes less than five subjects. </p>
+<p><img alt="Lock" src="../img/image14.png" /></p>
+<p>For patient observations that may be captured longitudinally, for example <strong>Tumor Site</strong> within the <strong>Disease</strong> tab, users can restrict filtering activity to a specific disease phase (e.g. Initial Diagnosis, Relapse) by clicking one of the radio buttons under <strong>Disease Phase</strong>. </p>
+<p><img alt="Disease Phase" src="../img/image10.png" /></p>
+<p>For example, a user who was interested in patients with relapse disease of the bladder would select Relapse under <strong>Disease Phase</strong> and Bladder under <strong>Tumor Site</strong> to see the count of subjects that have an observation of relapse at the bladder.  </p>
+<p><img alt="Bladder" src="../img/image27.png" /></p>
+<p>Clicking on the search icon (<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.5 7a4.499 4.499 0 1 1-8.998 0A4.499 4.499 0 0 1 11.5 7zm-.82 4.74a6 6 0 1 1 1.06-1.06l3.04 3.04a.75.75 0 1 1-1.06 1.06l-3.04-3.04z"/></svg></span>) to the right of a filter name (e.g. Tumor Site) allows users to search for a specific value in a list of categorical levels by keyword,  Matching categorical level values will appear if there is a full or partial match, allowing the user to select it. The filter value can be selected by checking the box next to the name.</p>
+<p><img alt="Search Tumor Site" src="../img/image11.png" /></p>
+<p>Once selected, the main page will show the filtered data set. To clear the search and see an unfiltered list of variable levels, the user should hit clear (x) within the search box. </p>
+<p><img alt="Search Tumor Site" src="../img/image20.png" /></p>
+<p>An underline in the filter name indicates that filters are active within that tab. In the below example, both the <strong>Disease</strong> and <strong>Molecular</strong> tabs have active filters. Clicking into the tabs will show which filters are selected (also underlined). In the example below, <strong>Initial Diagnosis</strong> is selected, along with <strong>Tumor Site</strong> from within the <strong>Disease</strong> tab. </p>
+<p><img alt="Init Dx Tumor Site" src="../img/image36.png" /></p>
+<p>Some filters have an interdependency. Example: selecting the FOXO1-PAX3 fusion molecular abnormality should be followed by a selection of Positive, Negative, or Unknown from the Molecular Abnormality Result filter set.</p>
+<p><img alt="Molecular Abnormality" src="../img/image6.png" /></p>
+<h4 id="saving-a-filter-set">Saving a Filter Set</h4>
+<p>Once a desired filter set has been selected, users can save it accessing the <strong>Manage Filter Set</strong> drop down and clicking <strong>Save</strong>. </p>
+<p><img alt="Save Filter Set" src="../img/image12.png" /></p>
+<p>Users will be prompted to enter a name for the saved filter set.</p>
+<p><img alt="Save Filter Set" src="../img/image16.png" /></p>
+<p>When changes are made to a saved filter set, the system will indicate the change by showing a warning icon next to “My filter sets” in the left panel. Clicking on the warning icon <img alt="⚠" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/26a0.svg" title=":warning:" /> will revert any changes made to the original saved filter set. </p>
+<p>Users can save changes to the filter set using the drop down menu, or use <strong>Save As</strong> to create a new filter set. Once changes have been saved, the warning icon will no longer be visible. </p>
+<p><img alt="Changes" src="../img/image23.png" /></p>
+<h3 id="survival-analysis">Survival Analysis</h3>
+<p>The PCDC platform includes a <strong>Survival Analysis</strong> tool that can display survival curves and Number at Risk tables. This tool will be available temporarily during a pilot phase to test the functionality and usability of the tool.</p>
+<p>When first accessing the survival curve generator, users must agree to the Acceptable User Policy. Subsequent sessions will include a reminder of the terms whenever the Apply button is pressed.</p>
+<p><img alt="Survival Analysis" src="../img/image8.png" /></p>
+<p>To create a survival curve, users must first select at least one filter set to analyze. Filter Sets can be created and saved using the procedure described above.</p>
+<p>Use the drop down labeled “Select Filter Set to Analyze” to select a saved filter set, then click the <strong>Add</strong> button to add the filter set. Optionally, a user may select “All Subjects” to see the entire data set. Additional filter sets can be added using the steps above. </p>
+<p><img alt="Survival Analysis" src="../img/image38.png" /></p>
+<p>Once selected, users can see the survival curve by hitting the <strong>Apply</strong> button at the bottom of the screen. </p>
+<p>Multiple data sets can be selected and shown simultaneously. In the example below, two data sets are used: one for male and one for female participants. </p>
+<p><img alt="Survival Analysis" src="../img/image40.png" /></p>
+<h4 id="options">Options</h4>
+<p>The survival curve can be adjusted using the options available. </p>
+<p><img alt="Survival Analysis" src="../img/image28.png" /></p>
+<p>The <strong>Survival type</strong> drop down can be used to select Overall or Event-Free survival. </p>
+<p><strong>Start time</strong> can be used to select the start time of the x-axis. Default is zero (0).</p>
+<p><strong>End time</strong> is used to select the maximum time (in years) that will appear on the x-axis. </p>
+<p><strong>Time interval</strong> is used to determine the frequency of hash marks appearing on the x-axis, both on the survival curve and in the Number at risk table shown below the curve. </p>
+<h3 id="query">Query</h3>
+<p>The <strong>Query</strong> page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide).</p>
+<h3 id="user-menu">User Menu</h3>
+<p>Users can access the User Menu by clicking on the username at the top right corner of the screen. The <strong>View Profile</strong> option allows users to make changes to their name and institutional affiliation. </p>
+<p><img alt="User Menu" src="../img/image39.png" /></p>
+<h3 id="data-requests">Data Requests</h3>
+<p>The <strong>Data Requests</strong> screen allows users to see the status of their data requests and, when approved, download data. At the top of the screen is a toggle button to see All Requests or only Approved Requests. </p>
+<p><img alt="Data Requests" src="../img/image22.png" /></p>
+<p>Only users who are authorized to receive requested data will see the Download Data button activated when the data is ready.  </p>
+<p><img alt="Data Requests" src="../img/image19.png" /></p>
+<p>The <a href="../PcdcPrivacyNotice/">Privacy Policy</a> and <a href="../TermsAndConditions/">Terms &amp; Conditions</a> documents are also available from the User Menu. </p>
+<p>This page can also be used to create API Keys (additional information to be provided in a future release of the User Guide).  </p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../StatisticalManual/" class="md-footer__link md-footer__link--prev" aria-label="Previous: PCDC Data Portal Statistical Manual" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              PCDC Data Portal Statistical Manual
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../PcdcPrivacyNotice/" class="md-footer__link md-footer__link--next" aria-label="Next: Privacy Notice" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Privacy Notice
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a6c66575.min.js"></script>
+      
+    
+  </body>
+</html>
