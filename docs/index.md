@@ -1,6 +1,6 @@
 ![Logo](img/PcdcLogo.png)
-# Welcome to the PCDC Documentation Site
+# Welcome to the Beta PCDC Documentation Site
 
-This site contains up-to-date documentation on PCDC policy as well as PCDC products (e.g. PCDC Data Portal).
+This site is a beta site for deploying documentation on PCDC policy as well as PCDC products (e.g. PCDC Data Portal).
 
 Questions?  Contact us at <pcdc_help@lists.uchicago.edu>
