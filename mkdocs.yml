@@ -1,6 +1,6 @@
 site_name: PCDC Documentation
 nav:
-  - Acceptable Use Policy: 'AcceptableUsePolicy.md'
+  - PCDC Data Portal Acceptable Use Policy: 'AcceptableUsePolicy.md'
   - PCDC Data Portal Statistical Manual: 'StatisticalManual.md'
   - PCDC Data Portal User Guide: 'DataPortalUserGuide.md'
   - Privacy Notice: 'PcdcPrivacyNotice.md'
