@@ -98,7 +98,7 @@ Click on the Node to see the properties.
 
 ![Search Results Node](img/image21.png)
 
-Matching search results are highlighted in yellow text. Click on the **See All** button to toggle between matched results and all properties. 
+Matching search results are highlighted in amber text. Click on the **See All** button to toggle between matched results and all properties. 
 
 ![Search Results Highlight](img/image31.png)
 
