@@ -1,28 +1,25 @@
-![Logo](Images/PcdcLogo.png)
+![Logo](img/PcdcLogo.png)
 <h1 align= "center">
  Privacy Notice
 </h1> <br>
 The Pediatric Cancer Data Commons (PCDC) is a research program operated by the University of Chicago. This privacy notice will explain how our organization uses the personal data we collect from you when you visit our websites. Other University offices and functions may have separate notices. If you would like to know more about how another University office or function uses personal information, please contact that office or function directly.
-<br>
-<p align= "center">
-  <strong> Topics </strong>
-</p>
-<ul>
-    <li>What data do we collect?</li>
-    <li>How do we collect your data?</li>
-    <li>How will we use your data?</li>
-    <li>How do we store your data?</li>
-    <li>Information and updates</li>
-    <li>What are your data protection rights?</li>
-    <li>What are cookies?</li>
-    <li>How do we use cookies?</li>
-    <li>What types of cookies do we use?</li>
-    <li>How to manage your cookies</li>
-    <li>Privacy policies of other websites</li>
-    <li>Changes to our privacy policy</li>
-    <li>How to contact us</li>
-    <li>Remedies and right to file a complaint</li>
- </ul>
+<br> <br>
+
+**Topics** <br>
+* What data do we collect?
+* How do we collect your data?
+* How will we use your data?
+* How do we store your data?
+* Information and updates
+* What are your data protection rights?
+* What are cookies?
+* How do we use cookies?
+* What types of cookies do we use?
+* How to manage your cookies
+* Privacy policies of other websites
+* Changes to our privacy policy
+* How to contact us
+* Remedies and right to file a complaint
  
 **What data do we collect?** <br>
 * Name
