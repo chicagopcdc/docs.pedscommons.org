@@ -1,4 +1,4 @@
-![Logo](Images/PcdcLogo.png)
+![Logo](img/PcdcLogo.png)
 <br>
 **Acceptable Use Policy: Pediatric Cancer Data Commons**
 
