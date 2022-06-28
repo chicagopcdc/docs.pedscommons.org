@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
-# PCDC Data Portal v1.5 User Guide
-
+# Pediatric Cancer Data Commons<br> Data Portal User Guide
+###### v1.6.1 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -110,13 +110,7 @@ Users can refer to [this video](https://youtu.be/0TJJpx3m0GY) for an overview of
 
 For users who do not have access to line-level data, the top of the Exploration page will display a **Request Access** button. 
 
-![Explore Request Access](img/image34.png)
-
-Clicking this button will download the PCDC Project Request Form (MS Word format). Follow the instructions on the form to provide project information and request access to line-level data.
-
-The main **Exploration** page shows a summary view of distributions across some key demographic variables for all cases in the PCDC that match the currently-selected filters. 
-
-![Explore Main](img/image4.png)
+Clicking this button will download the PCDC Project Request Form (MS Word format). Follow the instructions on the form to provide project information and request access to line-level data
 
 The **Table View** tab on the main page is restricted to approved researchers who have access to line-level data. 
 
@@ -126,15 +120,7 @@ The current Release Version of the data is included at the bottom of the left pa
 
 The Filters panel on the left side of the **Exploration** page can be used to narrow the Summary View results by selected variables. Filters act upon variables in the underlying data and are available for variables in the **Subject**, **Disease** and **Molecular** data domains. Use the expand icon (>) to see the controls available for a given filter.  
 
-![Explore Expand](img/image3.png)
-
-Different variable types (e.g. continuous variables, discrete variables, categorical variables) will have different controls available. For example, **Race** is a categorical (enumerative) variable, and categorical variable filters can be selected using checkboxes with one checkbox per value within that variable. The user can select the values of a variable they are interested in seeing as part of the population. Multiple selections ***within a single filter*** are treated as logical ‘ORs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ would see a result set where the subjects have a **Race** value of either ‘Asian’ OR ‘Black or African American’. 
-
-Multiple selections made ***across multiple filters*** are treated as logical ‘ANDs’. Therefore, a user who selects  ‘Asian’ and ‘Black or African American’ from the Race filter and who select ‘Male’ from the **Sex** filter would see a result set where the subjects have a **Race** value of either ‘Asian’ OR ‘Black or African American’ ***AND*** who have a **Sex** value of ‘Male’.
-
-Using the above example, the **Filters in Use** bar at the top of the graph view shows “Sex is “Male” AND “Race is any of (logial OR) Black or African American, Asian” The AND can be switched to OR by clicking on the AND button between the two expressions. Each filter can be removed by clicking on the “x” at the end of the string. 
-
-![Explore Remove Filter](img/image25.png)
+![Explore Expand](img/imageW1.png)
 
 Note: some filters, such as **Age at LKSS** (Last Known Survival Status) have a slider to select an age range.
 
@@ -144,46 +130,85 @@ A bin size limit of five has been implemented for all data filters as an additio
 
 ![Lock](img/image14.png)
 
-For patient observations that may be captured longitudinally, for example **Tumor Site** within the **Disease** tab, users can restrict filtering activity to a specific disease phase (e.g. Initial Diagnosis, Relapse) by clicking one of the radio buttons under **Disease Phase**. 
+The main **Exploration** page shows a summary view of distributions across some key demographic variables for all cases in the PCDC that match the currently-selected filters.
 
-![Disease Phase](img/image10.png)
+![Consortium](img/imageW2.png)
 
-For example, a user who was interested in patients with relapse disease of the bladder would select Relapse under **Disease Phase** and Bladder under **Tumor Site** to see the count of subjects that have an observation of relapse at the bladder.  
+Different variable types (e.g. continuous variables, discrete variables, categorical variables) will have different controls available. For example, **Race** is a categorical (enumerative) variable, and categorical variable filters can be selected using checkboxes with one checkbox per value within that variable. The user can select the values of a variable they are interested in seeing as part of the population. Multiple selections <u>within a single filter</u> are treated as logical ‘ORs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ would see a result set where the subjects have a **Race** value of either ‘Asian’ OR ‘Black or African American’
 
-![Bladder](img/image27.png)
+Multiple selections made <u>across multiple filters</u> are treated as logical ‘ANDs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ from the Race filter and who select ‘Male’ from the **Sex** filter would see a result set where the subjects have a **Race** value of either ‘Asian’ OR ‘Black or African American’ <u>AND</u> who have a **Sex** value of ‘Male’.
 
-Clicking on the search icon (:octicons-search-16:) to the right of a filter name (e.g. Tumor Site) allows users to search for a specific value in a list of categorical levels by keyword,  Matching categorical level values will appear if there is a full or partial match, allowing the user to select it. The filter value can be selected by checking the box next to the name.
+Using the above example, the Active filter at the top of the graph view shows “Sex is “Male” AND “Race is any of (logial OR) Black or African American, Asian” The AND can be switched to OR by clicking on the AND button between the two parts of the expression. Each filter can be removed by clicking on the “x” at the end of the string.
 
-![Search Tumor Site](img/image11.png)
+![Conjuctive Search](img/imageW3.png)
 
+For patient observations that may be captured longitudinally, for example **Tumor Site** within the **Disease** tab, users can restrict filtering activity to a specific disease phase (e.g. Initial Diagnosis, Relapse) with an Anchor filter by clicking one of the radio buttons under **Disease Phase**.
 
-Once selected, the main page will show the filtered data set. To clear the search and see an unfiltered list of variable levels, the user should hit clear (x) within the search box. 
+![Disease Phase](img/imageW4.png)
 
-![Search Tumor Site](img/image20.png)
+For example, a user who was interested in patients with relapse disease of the bladder would select Relapse under **Disease Phase** and Bladder under **Tumor Site** to see the count of subjects that have an observation of relapse at the bladder.
 
-An underline in the filter name indicates that filters are active within that tab. In the below example, both the **Disease** and **Molecular** tabs have active filters. Clicking into the tabs will show which filters are selected (also underlined). In the example below, **Initial Diagnosis** is selected, along with **Tumor Site** from within the **Disease** tab. 
+![Tumor Site](img/image27.png)
 
-![Init Dx Tumor Site](img/image36.png)
+Note: when changing the Anchor filter (e.g., switching from Relapse to Initial Diagnosis), users must remove the associated filters, in this case: “Bladder”, in order to see the filter options available under the new Anchor.
+
+Clicking on the search icon to the right of a filter name (e.g. Tumor Site) allows users to search for a specific value in a list of categorical levels by keyword, Matching categorical level values will appear if there is a full or partial match, allowing the user to select it. The filter value can be selected by checking the box next to the name.
+
+![Site Search](img/imageW5.png)
+
+Once selected, the main page will show the filtered data set. To clear the search and see an unfiltered list of variable levels, the user can hit clear (x) within the search box.
+
+![Filtered Data](img/imageW6.png)
+
+An underline in the filter name indicates that filters are active within that tab. In the below example, the **Subject**, **Disease** and **Molecular** tabs have active filters. Clicking into the tabs will show which filters are selected (also underlined). In the example below, **Initial Diagnosis** is selected, along with **Tumor Site** from within the **Disease** tab.
+
+![Summary View](img/imageW7.png)
 
 Some filters have an interdependency. Example: selecting the FOXO1-PAX3 fusion molecular abnormality should be followed by a selection of Positive, Negative, or Unknown from the Molecular Abnormality Result filter set.
 
-![Molecular Abnormality](img/image6.png)
+![Molecular Abnormality](img/imageW8.png)
+
+### Filters and Workspace
+
+Users can refer to [this video](https://youtu.be/mZniH9yVi9Y) for an overview of the Filter Sets and Survival Curve functionality.
+
+The Filter Set Workspace allows the user to manage multiple filter sets and switch among available filter sets to see summary statistics based on the filters selected in each set.
+
+![Multiple Filter Sets](img/imageW9.png)
+
+The active filter is labeled in green on the far left. Each filter shows the expression statement that describes the filter set. Example:
+
+![Active Search](img/imageW10.png)
+
+Filter Workspace commands allow the user to load, save and make changes to filter sets. The following commands are included:
+
+- **Load**: Loads a saved filter set to the Workspace
+- **Save**: Saves the active filter set. Changing the name of an existing filter set will save it with the new name.
+- **New**: When at least one filter set is active, pressing New will add another, empty set.
+- **Duplicate**: Copies the active filter set. Note: an empty set cannot be duplicated.
+- **Remove**: Removes the active filter set from the workspace and makes the filter set at the top of the list active.
+- **Clear**: Clears the filter selections from the active filter set.
+-  **Clear all**: Clears the Workspace of all filter sets
+- **Reset**: When a change is made to the active filter, Reset will revert any changes to the saved version of the filter set. If the filter was not previously saved, Reset will not be active.
 
 #### Saving a Filter Set
 
-Once a desired filter set has been selected, users can save it accessing the **Manage Filter Set** drop down and clicking **Save**. 
-
-![Save Filter Set](img/image12.png)
-
-Users will be prompted to enter a name for the saved filter set.
+Once a set of filters has been selected, a user can save the set by clicking **Save**. The user will be prompted to enter a name for the saved filter set. A description can also be added.
 
 ![Save Filter Set](img/image16.png)
 
-When changes are made to a saved filter set, the system will indicate the change by showing a warning icon next to “My filter sets” in the left panel. Clicking on the warning icon :warning: will revert any changes made to the original saved filter set. 
+When changes are made to a saved filter set, the Workspace will indicate the change by making the **Reset** button active. Clicking on Reset will revert any changes made to the original, saved filter set.
 
-Users can save changes to the filter set using the drop down menu, or use **Save As** to create a new filter set. Once changes have been saved, the warning icon will no longer be visible. 
+To save changes to a filter set and keep the original, users can 1) use the **Duplicate** function, make changes to the new filter set, and 2) **Save** the new filter set with a new name.
 
-![Changes](img/image23.png)
+1) Use **Duplicate** to Create a copy of the active filter set
+
+![Duplicate Filter Set](img/imageW11.png)
+
+2) Make changes to the new filter set and hit Save. Note, the new filter set has no name until it is saved.
+
+![Save Filter Set](img/imageW12.png)
+
 
 ### Survival Analysis
 
@@ -204,6 +229,7 @@ Once selected, users can see the survival curve by hitting the **Apply** button 
 Multiple data sets can be selected and shown simultaneously. In the example below, two data sets are used: one for male and one for female participants. 
 
 ![Survival Analysis](img/image40.png)
+
 
 
 #### Options
@@ -241,5 +267,13 @@ Only users who are authorized to receive requested data will see the Download Da
 The [Privacy Policy](PcdcPrivacyNotice.md) and [Terms & Conditions](TermsAndConditions.md) documents are also available from the User Menu. 
 
 This page can also be used to create API Keys (additional information to be provided in a future release of the User Guide).  
+
+
+
+
+
+
+
+
 
 
