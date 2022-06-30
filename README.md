@@ -21,3 +21,12 @@ Publish using `mkdocs gh-deploy`
 # Release Process
 1. Once the `dev` branch has reached the expected state make a PR to `main`
 2. 
+
+## Email Notifications
+Document update emails default to lgraglia@bsd.uchicago.edu
+Instructions to change email address:
+- Go to settings
+- on the left click the 'Secrets' tab
+- select action
+- go to the secret called EMAILLIST
+- put 'None' for default email or add alternative email address 
