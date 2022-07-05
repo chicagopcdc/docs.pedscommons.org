@@ -110,7 +110,7 @@ Users can refer to [this video](https://youtu.be/0TJJpx3m0GY) for an overview of
 
 For users who do not have access to line-level data, the top of the Exploration page will display a **Request Access** button. 
 
-Clicking this button will download the PCDC Project Request Form (MS Word format). Follow the instructions on the form to provide project information and request access to line-level data
+Clicking this [button](PCDC-request_form.docx) will download the PCDC Project Request Form (MS Word format). Follow the instructions on the form to provide project information and request access to line-level data
 
 The **Table View** tab on the main page is restricted to approved researchers who have access to line-level data. 
 
