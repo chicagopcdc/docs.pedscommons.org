@@ -8,9 +8,13 @@ on:
   push:
     paths:
       - 'AcceptableUsePolicy.md'
+    branches:
+      - main
   pull_request:
     paths:
       - 'AcceptableUsePolicy.md'
+    branches:
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
