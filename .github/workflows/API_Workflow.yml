@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Trigger API
+
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    paths:
+      - 'TermsAndConditions.md'
+      - 'PCDCPrivacyNotice.md'
+  pull_request:
+    paths:
+      - 'TermsAndConditions.md'
+      - 'PCDCPrivacyNotice.md'
+      
+  workflow_dispatch:
+
+jobs:
+  API_Trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: script
+      - uses: actions/checkout@v1
+      run: sh compose-serice/tools/add_new_document.sh
+      shell: bash
