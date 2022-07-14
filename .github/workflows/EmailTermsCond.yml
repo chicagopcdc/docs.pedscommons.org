@@ -1,0 +1,58 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Email Notification For Terms and Conditions
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    paths:
+      - 'TermsAndConditions.md'
+    branches:
+      - main
+  pull_request:
+    paths:
+      - 'TermsAndConditions.md'
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  check-secret:
+      runs-on: ubuntu-latest
+      outputs:
+        my-key: ${{ steps.my-key.outputs.defined }}
+      steps:
+          - id: my-key
+            if: "${{ env.MY_KEY != 'None' }}"
+            run: echo "::set-output name=defined::true"
+            env:
+                MY_KEY: ${{ secrets.EMAILLIST }}
+  job1:
+      runs-on: ubuntu-latest
+      needs: [check-secret]
+      if: needs.check-secret.outputs.my-key == 'true'
+      steps:
+        - uses: actions/checkout@v3
+        - name: Send Email Action
+          uses: cinotify/github-action@v1.1.0
+          with:
+            to: ${{ secrets.EMAILLIST }}
+            subject: 'Document Commit'
+            body: 'Document(s) in ${{github.repository}} called StatisticalManual.md was comitted'
+
+  job2:
+      runs-on: ubuntu-latest
+      needs: [check-secret]
+      if: needs.check-secret.outputs.my-key != 'true'
+      steps:
+        - uses: actions/checkout@v3
+        - name: Send Email Action
+          uses: cinotify/github-action@v1.1.0
+          with:
+            to: 'lgraglia@bsd.uchicago.edu'
+            subject: 'Document Commit'
+            body: 'Document(s) in ${{github.repository}} called StatisticalManual.md was comitted'

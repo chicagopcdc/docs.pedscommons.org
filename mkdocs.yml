@@ -3,8 +3,13 @@ nav:
   - PCDC Data Portal Acceptable Use Policy: 'AcceptableUsePolicy.md'
   - PCDC Data Portal Statistical Manual: 'StatisticalManual.md'
   - PCDC Data Portal User Guide: 'DataPortalUserGuide.md'
+  - PCDC Project Request Form: 'PCDCProjectRequestForm.md'
   - Privacy Notice: 'PcdcPrivacyNotice.md'
   - Terms and Conditions: 'TermsAndConditions.md'
+  - Introduction to the PCDC <br> (Video): 'https://youtu.be/uSUFthO4aBs'
+  - Cohort Explorer Overview (Video): 'https://youtu.be/0TJJpx3m0GY'
+  - Filter Sets and Survival Analysis (Video): 'https://www.youtube.com/watch?v=mZniH9yVi9Y'
+  - Statistical Considerations   (Video): 'https://youtu.be/d_x8taJ-lP8'
 theme:
   name: material
   font:
