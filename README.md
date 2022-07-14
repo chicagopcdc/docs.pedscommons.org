@@ -29,4 +29,5 @@ Instructions to change email address:
 - on the left click the 'Secrets' tab
 - select action
 - go to the secret called EMAILLIST
-- put 'None' for default email or add alternative email address 
+- If EMAILLIST doesn't exists create a new repository secret **not** an enviorment secret
+- Put **'None'** for default email or add alternative email address 
