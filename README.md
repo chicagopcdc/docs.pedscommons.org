@@ -17,6 +17,15 @@ Publish using `mkdocs gh-deploy`
 - pip install -r requirements.txt
 - `mkdocs serve` to run it locally
 
+# Setup local DEV env with Windows
+- bash
+- sudo apt-get update
+- sudo apt install python3.8-venv
+- python3 -m venv env
+- source env/bin/activate
+- pip3 install -r requirements.txt
+- `mkdocs serve` to run it locally
+
 
 # Release Process
 1. Once the `dev` branch has reached the expected state make a PR to `main`
