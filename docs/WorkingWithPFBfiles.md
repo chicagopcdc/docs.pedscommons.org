@@ -27,9 +27,11 @@ Usage: pfb to [PARENT OPTIONS] tsv [OPTIONS] [OUTPUT]
 
 Convert PFB into TSV files under [OUTPUT] for modification of data in TSV format.
 
-[PARENT OPTIONS]: -i  FILENAME(The PFB file)
+\[PARENT OPTIONS\]: -i  FILENAME(The PFB file)
+
 The default [OUTPUT] is ./tsvs/.
-[OPTION]: None
+
+\[OPTION\]: None
 
 Example:
  > pfb to -i data.avro tsv
