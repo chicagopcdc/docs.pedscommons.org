@@ -15,7 +15,6 @@ Publish using `mkdocs gh-deploy`
 - python -m venv env
 - source env/bin/activate
 - pip install -r requirements.txt
-- `mkdocs serve` to run it locally
 
 # Setup local DEV env with Windows
 - bash
@@ -24,7 +23,11 @@ Publish using `mkdocs gh-deploy`
 - python3 -m venv env
 - source env/bin/activate
 - pip3 install -r requirements.txt
+
+# Run local DEV env
+- source env/bin/activate
 - `mkdocs serve` to run it locally
+
 
 
 # Release Process
