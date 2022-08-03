@@ -60,7 +60,7 @@ jobs:
       env:
         type: "portal-acceptable-use-policy"
         version: 1
-        name: "Data Portal Accetable Use Policy"
+        name: "Data Portal Acceptable Use Policy"
         raw: "https://github.com/chicagopcdc/chicagopcdc.github.io/blob/main/docs/AcceptableUsePolicy.md"
         formatted: "https://docs.pedscommons.org/AcceptableUsePolicy/"
         required: true
