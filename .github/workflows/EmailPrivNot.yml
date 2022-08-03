@@ -66,6 +66,7 @@ jobs:
         required: true
         API_KEY: ${{ secrets.APIKEY }}
         KEY_ID: ${{ secrets.KEYID }}
+        REQUESTURL: ${{ secrets.REQUESTURL }}
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@3
