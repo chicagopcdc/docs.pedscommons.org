@@ -8,11 +8,14 @@ def main():
   KEY_ID = os.environ.get("KEYID")
   if not KEY_ID:
     raise RuntimeError("KEY_ID env var and or secret is not set!")
+  url = os.environ.get("REQUESTURL")
+  if not url:
+    raise RuntimeError("url env var and or secret is not set!")
   key =  {
       "api_key": str(API_KEY)
       "key_id": str(KEY_ID)
       }
-  url_var = 'http://localhost/user/credentials/cdis/access_token'
+  url_var = str(url)
   token = (requests.post(url_var, json=key).json())['access_token']
   write_in_string = "TOKEN={}".format(token)
   env_file = os.getenv('GITHUB_ENV')
