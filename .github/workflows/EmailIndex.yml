@@ -53,6 +53,8 @@ jobs:
         - name: Send Email Action
           uses: cinotify/github-action@v1.1.0
           with:
-            to: 'lgraglia@bsd.uchicago.edu'
+            to: 'wandersen01@gmail.com'
             subject: 'Document Commit'
             body: 'Document(s) in ${{github.repository}} called index.md was comitted'
+  
+  
