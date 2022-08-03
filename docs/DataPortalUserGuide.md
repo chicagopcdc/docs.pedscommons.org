@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.6.1 User Guide
+###### v1.7.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -251,9 +251,10 @@ The **Survival type** drop down can be used to select Overall or Event-Free surv
 The **Query** page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide).
 
 ### User Menu
-Users can access the User Menu by clicking on the username at the top right corner of the screen. The **View Profile** option allows users to make changes to their name and institutional affiliation. 
+The User Menu can be accessed by clicking on the user icon in the top right corner of the screen. The **View Profile** option allows users to make changes to their name and institutional affiliation. The View Profile page can also be used to create API Keys (additional information to be provided in a future release of the User Guide).  
 
-![User Menu](img/image39.png)
+
+![User Menu](img/user_menu.png)
 
 ### Data Requests
 The **Data Requests** screen allows users to see the status of their data requests and, when approved, download data. At the top of the screen is a toggle button to see All Requests or only Approved Requests. 
@@ -264,9 +265,12 @@ Only users who are authorized to receive requested data will see the Download Da
 
 ![Data Requests](img/image19.png)
 
-The [Privacy Policy](PcdcPrivacyNotice.md) and [Terms & Conditions](TermsAndConditions.md) documents are also available from the User Menu. 
+### Documentation
+![Documents Menu](img/documents_menu.png)
 
-This page can also be used to create API Keys (additional information to be provided in a future release of the User Guide).  
+The Documents menu allows users to access reference documents related to the Data Portal such as the _Privacy Notice_ and _Terms and Conditions_. Additional documents will be added in the future. All documents can also be accessed at the [PCDC Documentation site](https://docs.pedscommons.org/).
+
+
 
 
 

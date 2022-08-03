@@ -15,7 +15,19 @@ Publish using `mkdocs gh-deploy`
 - python -m venv env
 - source env/bin/activate
 - pip install -r requirements.txt
+
+# Setup local DEV env with Windows
+- bash
+- sudo apt-get update
+- sudo apt install python3.8-venv
+- python3 -m venv env
+- source env/bin/activate
+- pip3 install -r requirements.txt
+
+# Run local DEV env
+- source env/bin/activate
 - `mkdocs serve` to run it locally
+
 
 
 # Release Process
@@ -29,6 +41,7 @@ Instructions to change email address:
 - on the left click the 'Secrets' tab
 - select action
 - go to the secret called EMAILLIST
+- If EMAILLIST doesn't exists create a new repository secret **not** an enviorment secret
 - put **'None'** for default email or add alternative email address 
 
 ## Adding API Key and Key ID
@@ -42,3 +55,4 @@ The API request requires three redentials (Request URL, API key, & key ID) to co
 - put in corrisponding credentials
   - credentials can be gathered by going to the profile page and clicking the orange get API key button
   - further explanation at [here](https://gen3.org/resources/user/using-api/#credentials-to-send-api-requests)
+
