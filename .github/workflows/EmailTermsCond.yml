@@ -69,7 +69,7 @@ jobs:
         required: true
         API_KEY: ${{ secrets.APIKEY }}
         KEY_ID: ${{ secrets.KEYID }}
-        
+        REQUESTURL: ${{ secrets.REQUESTURL }}
         
       
         #DOCUMENT_JSON: { type: $type, version: $version, name: $name, raw: $raw, formatted: $formatted, required: $required }
