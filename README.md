@@ -55,4 +55,11 @@ The API request requires three redentials (Request URL, API key, & key ID) to co
 - put in corrisponding credentials
   - credentials can be gathered by going to the profile page and clicking the orange get API key button
   - further explanation at [here](https://gen3.org/resources/user/using-api/#credentials-to-send-api-requests)
+ 
+## Running Workflows and Actions Locally
+Use this [link](https://formulae.brew.sh/formula/act) for refernce
+- install correct version of Homebrew for your device [here](https://brew.sh/)
+- download Act extension using:
+  - `brew install act`
+- test actions using act
 
