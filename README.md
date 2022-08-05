@@ -5,12 +5,6 @@ Built with mkdocs material
 
 Publish using `mkdocs gh-deploy`
 
-# Dev Process
-1. Create your feature branch out of dev
-2. Make the necessary changes 
-3. Test locally with `mkdocs serve` and/or `mkdocs build`
-4. Once satified with the changes submit a PR to the `dev` branch
-
 # Setup local DEV env
 - python -m venv env
 - source env/bin/activate
@@ -28,12 +22,13 @@ Publish using `mkdocs gh-deploy`
 - source env/bin/activate
 - `mkdocs serve` to run it locally
 
+# Dev Process
+1. Create your feature branch out of dev
+2. Make the necessary changes 
+3. Test locally with `mkdocs serve` and/or `mkdocs build`
+4. Once satified with the changes submit a PR to the `dev` branch
 
-
-# Release Process
-1. Once the `dev` branch has reached the expected state make a PR to `main`
-2. 
-
+# Github Action Setting setup
 ## Email Notifications
 Document update emails default to lgraglia@bsd.uchicago.edu
 Instructions to change email address:
@@ -61,5 +56,7 @@ Use this [link](https://formulae.brew.sh/formula/act) for refernce
 - install correct version of Homebrew for your device [here](https://brew.sh/)
 - download Act extension using:
   - `brew install act`
-- test actions using act
+- test actions using [act](https://github.com/nektos/act/blob/master/README.md)
 
+examples:
+- act -W /path/to/chicagopcdc.github.io/.github/workflows/EmailDatPortGuide.yml -s EMAILLIST=None
