@@ -56,3 +56,24 @@ jobs:
             to: 'lgraglia@bsd.uchicago.edu'
             subject: 'Document Commit'
             body: 'Document(s) in ${{github.repository}} called AcceptableUsePolicy.md was comitted'
+  Trigger_API_ActUsePol:
+      env:
+        type: "portal-acceptable-use-policy"
+        version: 1
+        name: "Data Portal Acceptable Use Policy"
+        raw: "https://github.com/chicagopcdc/chicagopcdc.github.io/blob/main/docs/AcceptableUsePolicy.md"
+        formatted: "https://docs.pedscommons.org/AcceptableUsePolicy/"
+        required: true
+        API_KEY: ${{ secrets.APIKEY }}
+        KEY_ID: ${{ secrets.KEYID }}
+        REQUESTURL: ${{ secrets.REQUESTURL }}
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@3
+      - name: Run a Python script
+        run: python .github/workflows/key.py
+      - name: Trigger API
+        run: |
+          curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ env.TOKEN }}" -d '{ "type": "'"$type"'", "version": "'"$version"'", "name": "'"$name"'", "raw": "'"$raw"'", "formatted": "'"$formatted"'", "required": true }' http://localhost/user/admin/add_document
+  
+  
