@@ -1,0 +1,743 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.3.3">
+    
+    
+      
+        <title>PCDC Data Access and Governance - PCDC Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4a0965b7.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Raleway";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pcdc-data-portal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="PCDC Documentation" class="md-header__button md-logo" aria-label="PCDC Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PCDC Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PCDC Data Access and Governance
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="PCDC Documentation" class="md-nav__button md-logo" aria-label="PCDC Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    PCDC Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AcceptableUsePolicy/" class="md-nav__link">
+        PCDC Data Portal Acceptable Use Policy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StatisticalManual/" class="md-nav__link">
+        PCDC Data Portal Statistical Manual
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DataPortalUserGuide/" class="md-nav__link">
+        PCDC Data Portal User Guide
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          PCDC Data Access and Governance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        PCDC Data Access and Governance
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-access-and-governance" class="md-nav__link">
+    Data Access and Governance
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Access and Governance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-data-are-available-for-research" class="md-nav__link">
+    What data are available for research?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-were-these-data-elements-selected" class="md-nav__link">
+    How were these data elements selected?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#are-all-the-disease-data-dictionaries-finalized" class="md-nav__link">
+    Are all the disease data dictionaries finalized?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#may-i-use-your-data-dictionary-in-my-own-work" class="md-nav__link">
+    May I use your data dictionary in my own work?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-explore-data-on-the-pcdc-data-portal" class="md-nav__link">
+    How do I explore data on the PCDC Data Portal?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-request-data-from-the-pcdc-data-portal" class="md-nav__link">
+    How do I request data from the PCDC Data Portal?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PCDCProjectRequestForm/" class="md-nav__link">
+        PCDC Project Request Forms
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PcdcPrivacyNotice/" class="md-nav__link">
+        Privacy Notice
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TermsAndConditions/" class="md-nav__link">
+        Terms and Conditions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WorkingWithPFBfiles/" class="md-nav__link">
+        Working with PFB Files
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://youtu.be/uSUFthO4aBs" class="md-nav__link">
+        Introduction to the PCDC <br> (Video)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://youtu.be/0TJJpx3m0GY" class="md-nav__link">
+        Cohort Explorer Overview (Video)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.youtube.com/watch?v=mZniH9yVi9Y" class="md-nav__link">
+        Filter Sets and Survival Analysis (Video)
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://youtu.be/d_x8taJ-lP8" class="md-nav__link">
+        Statistical Considerations   (Video)
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-access-and-governance" class="md-nav__link">
+    Data Access and Governance
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Access and Governance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-data-are-available-for-research" class="md-nav__link">
+    What data are available for research?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-were-these-data-elements-selected" class="md-nav__link">
+    How were these data elements selected?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#are-all-the-disease-data-dictionaries-finalized" class="md-nav__link">
+    Are all the disease data dictionaries finalized?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#may-i-use-your-data-dictionary-in-my-own-work" class="md-nav__link">
+    May I use your data dictionary in my own work?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-explore-data-on-the-pcdc-data-portal" class="md-nav__link">
+    How do I explore data on the PCDC Data Portal?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-request-data-from-the-pcdc-data-portal" class="md-nav__link">
+    How do I request data from the PCDC Data Portal?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<p><img alt="Logo" src="../img/PcdcLogo.png" /></p>
+<h1 id="pcdc-data-portal">PCDC Data Portal</h1>
+<h2 id="data-access-and-governance">Data Access and Governance</h2>
+<h3 id="what-data-are-available-for-research">What data are available for research?</h3>
+<p>All of the data currently within the PCDC are derived from completed clinical trials. The data are formatted according to disease-based data dictionaries. Disease-based data dictionaries drive the PCDC Data Portal by defining a standard format for representing data collected from various sources. </p>
+<p>Currently data are available for the following diseases:<br />
+- Rhabdomyosarcoma<br />
+- Neuroblastoma</p>
+<h3 id="how-were-these-data-elements-selected">How were these data elements selected?</h3>
+<p>The <a href="https://commons.cri.uchicago.edu/data-dictionaries/">data dictionaries</a> were developed through a consensus-based process and are regularly revised and updated. While many data fields are described in the data dictionaries, some data fields may not be available for individual patients. </p>
+<h3 id="are-all-the-disease-data-dictionaries-finalized">Are all the disease data dictionaries finalized?</h3>
+<p>Some data dictionaries have been formally adopted, while others are still in development. Please see the README and/or Background Information tab of each data dictionary for development and version information. The disease experts continue to identify data elements that would enrich the commons and support more research. We have a standard process for expanding the data dictionary or making changes when necessary.</p>
+<h3 id="may-i-use-your-data-dictionary-in-my-own-work">May I use your data dictionary in my own work?</h3>
+<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
+<h3 id="how-do-i-explore-data-on-the-pcdc-data-portal">How do I explore data on the PCDC Data Portal?</h3>
+<p>Anyone can access the PCDC Data Portal by visiting <a href="https://portal.pedscommons.org/">https://portal.pedscommons.org/</a> and creating a free account. Information on how to use the PCDC Data Portal can be found on our <a href="https://commons.cri.uchicago.edu/data-portal-documentation/">documentation page</a>. For technical support and assistance with the PCDC Data Portal, please contact us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#112;&#99;&#100;&#99;&#95;&#104;&#101;&#108;&#112;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#117;&#99;&#104;&#105;&#99;&#97;&#103;&#111;&#46;&#101;&#100;&#117;">&#112;&#99;&#100;&#99;&#95;&#104;&#101;&#108;&#112;&#64;&#108;&#105;&#115;&#116;&#115;&#46;&#117;&#99;&#104;&#105;&#99;&#97;&#103;&#111;&#46;&#101;&#100;&#117;</a>.</p>
+<p><strong>Data Exploration</strong></p>
+<p>With your account, you are able to explore data dictionaries, perform cohort exploration, and generate data visualizations for patient cohorts you define based on data filters. Participant line-level data are not accessible using these tools but can be requested through the data/project request process.</p>
+<p><strong>Acceptable Use</strong></p>
+<p>Outputs from the cohort discovery and visualization tools are intended only for the purpose of determining feasibility of a proposed research study and early hypothesis exploration following generally-acceptable statistical principles. These outputs are neither suitable nor permitted for dissemination or publication.</p>
+<ul>
+<li><a href="../AcceptableUsePolicy/">Acceptable Use Policy</a>   </li>
+<li><a href="../TermsAndConditions/">Terms and Conditions</a> </li>
+</ul>
+<h3 id="how-do-i-request-data-from-the-pcdc-data-portal">How do I request data from the PCDC Data Portal?</h3>
+<p>If you wish to perform research with data from the PCDC, your proposed project must undergo review and approval, and a data use agreement must be executed.</p>
+<ul>
+<li>You may request access to a specific dataset by following the project request process (see below). </li>
+<li>Following the approval of the project request, the PCDC legal team will work with you to put the appropriate legal agreements in place and then the PCDC will make the data available.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Disease/Cancer</th>
+<th>Consortium</th>
+<th>Data Dictionary</th>
+<th>Publication Policy</th>
+<th>Project Request Form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>★ Rhabdomyosarcoma</td>
+<td>INSTRuCT <br>Contact: <a href="mailto:sbirz@bsd.uchicago.edu">Suzi Birz</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1hDLvT3O_VfsMuWNR2sWWlIWTyzY8sopYY4e7z5Z1wmQ">RMS Link</a></td>
+<td><a href="https://commons.cri.uchicago.edu/wp-content/uploads/2021/07/INSTRuCT_PublicationPolicy-20200914.pdf">Link</a></td>
+<td><a href="https://commons.cri.uchicago.edu/wp-content/uploads/2021/07/INSTRuCT_ApplicationForm-20200703.docx">Link</a></td>
+</tr>
+<tr>
+<td>★ Neuroblastoma</td>
+<td>INRG  <br>Contact: <a href="mailto:sbirz@bsd.uchicago.edu">Suzi Birz</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1tdXKN6Al4xtEH2eoIdRM6vEMra1A3bdCQHQIv-IZy6k/edit#gid=705170204">NBL Link</a></td>
+<td><a href="https://inrgdb.org/publication-policy/">Link</a></td>
+<td><a href="https://inrgdb.org/publication-policy/apply/">Link</a></td>
+</tr>
+<tr>
+<td>◕ Acute lymphoblastic leukemia</td>
+<td>Contact: <a href="mailto:ehindi@bsd.uchicago.edu">Enal Hindi</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1sTygI0GtyaT2C0iZ9YzXTKRnAcELuV2BblaLGPG0EPc/edit#gid=249286314">ALL Link</a></td>
+<td>In development</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>◕ Acute myeloid leukemia</td>
+<td>INTERACT <br>Contact: <a href="mailto:ehindi@bsd.uchicago.edu">Enal Hindi</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1_KyfeZNsepIxSU0Nzw5Mi8mk1PiKCWlSBjatw0AECQ0/edit#gid=1553670248">AML Link</a></td>
+<td><a href="https://commons.cri.uchicago.edu/wp-content/uploads/2021/10/INTERACT_PublicationPolicy-2021Sept23.docx.pdf">Link</a></td>
+<td>In development</td>
+</tr>
+<tr>
+<td>◕ Cancer predisposition</td>
+<td>C3P <br>Contact: <a href="mailto:Nia.Moyer@choa.org">Nia Moyer</a></td>
+<td>C3P Link</td>
+<td>In development</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>◕ Embryonal (CNS)</td>
+<td>INSPiRE <br>Contact: <a href="mailto:mmaric@bsd.uchicago.edu">Maya Maric</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1SczmUILX2kIzAM_lG45zbhhTNaLvn0jmCOUcTDdoQBM/edit#gid=1837295410">CNS Link</a></td>
+<td>In development</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>◕ Ewing sarcoma (Bone)</td>
+<td>HIBiSCus <br>Contact: <a href="mailto:kblumhardt@uchicago.edu">Kat Blumhardt</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1VkTfEObeLSle-Ti_JZHaxh9jzmDqvuQ852wnTvdS3jI/edit#gid=249286314">EWS Link</a></td>
+<td><a href="https://commons.cri.uchicago.edu/wp-content/uploads/2022/02/HIBiSCus-PublicationPolicy.pdf">Link</a></td>
+<td><a href="https://commons.cri.uchicago.edu/wp-content/uploads/2022/02/HIBiSCus-ProjectProposalForm20220218.docx">Link</a></td>
+</tr>
+<tr>
+<td>◕ Germ cell tumors</td>
+<td>MaGIC <br>Contact: <a href="mailto:lindsay_klosterkemper@dfci.harvard.edu">Lindsay Klosterkemper</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1ePkD-21wWCokR1MClnMrSl0dpj-Dvgid0knn5jfYHCY/edit#gid=1858833093">GCT Link</a></td>
+<td>In development</td>
+<td>In development</td>
+</tr>
+<tr>
+<td>◕ Hodgkin lymphoma</td>
+<td>NODAL <br>Contact: <a href="mailto:sbirz@bsd.uchicago.edu">Suzi Birz</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1H0DqYqYHKqH1KNK13cs14LKW6vpwKvDxzPMlW1tkm4U/edit#gid=249286314">HL Link</a></td>
+<td><a href="https://commons.cri.uchicago.edu/wp-content/uploads/2022/05/NODAL_PublicationPolicy.pdf">Link</a></td>
+<td><a href="https://commons.cri.uchicago.edu/wp-content/uploads/2022/05/NODAL_ProjectRequestForm.docx">Link</a></td>
+</tr>
+<tr>
+<td>◕ Non-rhabdomyosarcoma soft tissue sarcoma</td>
+<td>INSTRuCT <br>Contact: <a href="mailto:sbirz@bsd.uchicago.edu">Suzi Birz</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1gDTwDYylH0UakFcNoGBp6etUKKkLVCkZGr-P6NoyN5Y/edit#gid=957552363">NRSTS Link</a></td>
+<td><a href="https://commons.cri.uchicago.edu/wp-content/uploads/2021/07/INSTRuCT_PublicationPolicy-20200914.pdf">Link</a></td>
+<td><a href="https://commons.cri.uchicago.edu/wp-content/uploads/2021/07/INSTRuCT_ApplicationForm-20200703.docx">Link</a></td>
+</tr>
+<tr>
+<td>◕ Osteosarcoma (Bone)</td>
+<td>HIBiSCus <br>Contact: <a href="mailto:kblumhardt@uchicago.edu">Kat Blumhardt</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/15g8aOtaZ9DS7-mBO42AR18g0ScqlPHkalOiV457ddoU/edit#gid=249286314">OS Link</a></td>
+<td><a href="https://commons.cri.uchicago.edu/wp-content/uploads/2022/02/HIBiSCus-PublicationPolicy.pdf">Link</a></td>
+<td><a href="https://commons.cri.uchicago.edu/wp-content/uploads/2022/02/HIBiSCus-ProjectProposalForm20220218.docx">Link</a></td>
+</tr>
+<tr>
+<td>◕ Retinoblastoma</td>
+<td>Global REACH <br>Contact: <a href="mailto:mmaric@bsd.uchicago.edu">Maya Maric</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1ytw-GJgWJv2NWD3EthEiCrQo-v1tUGHMNJlm7Thiers/edit#gid=812161907">RB Link</a></td>
+<td>In development</td>
+<td>In development</td>
+</tr>
+</tbody>
+</table>
+<p>Key:<br />
+★: data available in the PCDC Data Portal<br />
+◕: data in progress</p>
+<p>To request data from the PCDC, you will use the project request process defined by the individual disease consortium. For example, to request rhabdomyosarcoma data, you would follow the INSTRuCT process as detailed in the INSTRuCT Publication Policy. You can find Publication Policies and other detailed information for each disease with data available in the Data Portal through the links in the table above.</p>
+<p>The PCDC disease consortium Executive Committee or designated group is responsible for review and approval of project requests associated with the consortium. You will receive feedback and next steps on your proposal following review. The review process will result in the project being accepted, rejected, or requiring revision. If revisions are requested, the project must be resubmitted to the disease consortium. If your project requires data from participants with more than one cancer type, each consortium will separately review your project proposal.</p>
+<p><img alt="Review Process" src="/img/Data_Access_Review_Process.png" /></p>
+<p>For consortium-specific questions on this process, please contact the consortium manager listed in the table above. For general questions, contact PCDC Program Manager <a href="mailto:kblumhardt@uchicago.edu">Kat Blumhardt</a>. </p>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../DataPortalUserGuide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: PCDC Data Portal User Guide" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              PCDC Data Portal User Guide
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../PCDCProjectRequestForm/" class="md-footer__link md-footer__link--next" aria-label="Next: PCDC Project Request Forms" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              PCDC Project Request Forms
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b028fd86.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f758a944.min.js"></script>
+      
+    
+  </body>
+</html>
