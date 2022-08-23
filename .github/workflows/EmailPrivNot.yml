@@ -56,3 +56,27 @@ jobs:
             to: 'lgraglia@bsd.uchicago.edu'
             subject: 'Document Commit'
             body: 'Document(s) in ${{github.repository}} called PcdcPrivacyNotice.md was comitted'
+  Trigger_API_PrivNot:
+      env:
+        type: "privacy-policy"
+        version: 1
+        name: "PCDC Privacy Notice"
+        raw: "https://github.com/chicagopcdc/chicagopcdc.github.io/blob/main/docs/PcdcPrivacyNotice.md"
+        formatted: "https://docs.pedscommons.org/PcdcPrivacyNotice/"
+        required: true
+        API_KEY: ${{ secrets.APIKEY }}
+        KEY_ID: ${{ secrets.KEYID }}
+        REQUESTURL: ${{ secrets.REQUESTURL }}
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@3
+      - name: Run a Python script
+        run: python .github/workflows/key.py
+      - name: Trigger API
+        run: |
+          curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${{ env.TOKEN }}" -d '{ "type": "'"$type"'", "version": "'"$version"'", "name": "'"$name"'", "raw": "'"$raw"'", "formatted": "'"$formatted"'", "required": true }' http://localhost/user/admin/add_document
+  
+  
+
+
+
