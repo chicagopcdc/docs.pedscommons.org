@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.7.0 User Guide
+###### v1.8.2 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -42,6 +42,11 @@ The main navigation buttons to PCDC Data Portal pages are in the upper right-han
 - Query
 
 Profile settings can be accessed by clicking the username at the top of the page. See the [Profile section](#user-menu) below.
+
+Note: to change the magnification of text, access the browser controls and use the zoom function to increase or decrease the font size. The screenshot below shows the zoom control in the Chrome browser.
+
+![Zoom](img/Chrome_zoom_control.png)
+
 
 ### Dictionary
 
@@ -224,7 +229,7 @@ Use the drop down labeled “Select Filter Set to Analyze” to select a saved f
 
 ![Survival Analysis](img/image38.png)
 
-Once selected, users can see the survival curve by hitting the **Apply** button at the bottom of the screen. 
+Once selected, users can see the survival curve by hitting the **Apply** button at the bottom of the screen. Note: When changes are made to filter sets that are currently selected for the Survival curve, users must hit the Apply button after editing to see the changes reflected in the curve. 
 
 Multiple data sets can be selected and shown simultaneously. In the example below, two data sets are used: one for male and one for female participants. 
 
@@ -266,9 +271,9 @@ Only users who are authorized to receive requested data will see the Download Da
 ![Data Requests](img/image19.png)
 
 ### Documentation
-![Documents Menu](img/documents_menu.png)
+![Documentation Menu](img/Documentation_menu.png)
 
-The Documents menu allows users to access reference documents related to the Data Portal such as the _Privacy Notice_ and _Terms and Conditions_. Additional documents will be added in the future. All documents can also be accessed at the [PCDC Documentation site](https://docs.pedscommons.org/).
+The Documentation menu allows users to access reference documents related to the Data Portal such as the _Privacy Notice_ and _Terms and Conditions_. Clicking on any of the documents in the list will redirect users to the [PCDC Documentation site](https://docs.pedscommons.org/).
 
 
 
