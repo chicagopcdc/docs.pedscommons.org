@@ -245,8 +245,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v182-user-guide" class="md-nav__link">
-    v1.8.2 User Guide
+  <a href="#v190-user-guide" class="md-nav__link">
+    v1.9.0 User Guide
   </a>
   
 </li>
@@ -318,6 +318,13 @@
           <li class="md-nav__item">
   <a href="#saving-a-filter-set" class="md-nav__link">
     Saving a Filter Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-compose-to-combine-filter-sets" class="md-nav__link">
+    Using Compose to Combine Filter Sets
   </a>
   
 </li>
@@ -550,8 +557,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v182-user-guide" class="md-nav__link">
-    v1.8.2 User Guide
+  <a href="#v190-user-guide" class="md-nav__link">
+    v1.9.0 User Guide
   </a>
   
 </li>
@@ -623,6 +630,13 @@
           <li class="md-nav__item">
   <a href="#saving-a-filter-set" class="md-nav__link">
     Saving a Filter Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-compose-to-combine-filter-sets" class="md-nav__link">
+    Using Compose to Combine Filter Sets
   </a>
   
 </li>
@@ -701,7 +715,7 @@
 
 <p><img alt="Logo" src="../img/PcdcLogo.png" /></p>
 <h1 id="pediatric-cancer-data-commons-data-portal-user-guide">Pediatric Cancer Data Commons<br> Data Portal User Guide</h1>
-<h6 id="v182-user-guide">v1.8.2 User Guide</h6>
+<h6 id="v190-user-guide">v1.9.0 User Guide</h6>
 <h2 id="introduction">Introduction</h2>
 <p>The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. </p>
 <p>By harmonizing existing clinical research data and leading international efforts to standardize data collection, we are breaking down long-standing barriers that have held back advancements in research on rare diseases. Our aim is to leverage this unique collaborative consortium-based approach to enable new and meaningful discoveries about pediatric cancers.</p>
@@ -767,7 +781,7 @@
 <p>The <strong>Exploration</strong> button at the top of the home page takes the user to the main data page allowing users to see summary data. </p>
 <p>Users can refer to <a href="https://youtu.be/0TJJpx3m0GY">this video</a> for an overview of the Exploration functionality. </p>
 <p>For users who do not have access to line-level data, the top of the Exploration page will display a <strong>Request Access</strong> button. </p>
-<p>Clicking this <a href="PCDC-request_form.docx">button</a> will download the PCDC Project Request Form (MS Word format). Follow the instructions on the form to provide project information and request access to line-level data</p>
+<p>Clicking Request Access will redirect users to the <a href="https://docs.pedscommons.org/PCDCProjectRequestForm/">PCDC Project Request Forms</a> page. The page contains forms and instructions for requesting access to line-level data.</p>
 <p>The <strong>Table View</strong> tab on the main page is restricted to approved researchers who have access to line-level data. </p>
 <p>The current Release Version of the data is included at the bottom of the left panel.</p>
 <h3 id="filters-and-search">Filters and Search</h3>
@@ -782,7 +796,7 @@
 <p>Different variable types (e.g. continuous variables, discrete variables, categorical variables) will have different controls available. For example, <strong>Race</strong> is a categorical (enumerative) variable, and categorical variable filters can be selected using checkboxes with one checkbox per value within that variable. The user can select the values of a variable they are interested in seeing as part of the population. Multiple selections <u>within a single filter</u> are treated as logical ‘ORs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ would see a result set where the subjects have a <strong>Race</strong> value of either ‘Asian’ OR ‘Black or African American’</p>
 <p>Multiple selections made <u>across multiple filters</u> are treated as logical ‘ANDs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ from the Race filter and who select ‘Male’ from the <strong>Sex</strong> filter would see a result set where the subjects have a <strong>Race</strong> value of either ‘Asian’ OR ‘Black or African American’ <u>AND</u> who have a <strong>Sex</strong> value of ‘Male’.</p>
 <p>Using the above example, the Active filter at the top of the graph view shows “Sex is “Male” AND “Race is any of (logial OR) Black or African American, Asian” The AND can be switched to OR by clicking on the AND button between the two parts of the expression. Each filter can be removed by clicking on the “x” at the end of the string.</p>
-<p><img alt="Conjuctive Search" src="../img/imageW3.png" /></p>
+<p><img alt="Conjuctive Search" src="../img/workspace_and_x.png" /></p>
 <p>For patient observations that may be captured longitudinally, for example <strong>Tumor Site</strong> within the <strong>Disease</strong> tab, users can restrict filtering activity to a specific disease phase (e.g. Initial Diagnosis, Relapse) with an Anchor filter by clicking one of the radio buttons under <strong>Disease Phase</strong>.</p>
 <p><img alt="Disease Phase" src="../img/imageW4.png" /></p>
 <p>For example, a user who was interested in patients with relapse disease of the bladder would select Relapse under <strong>Disease Phase</strong> and Bladder under <strong>Tumor Site</strong> to see the count of subjects that have an observation of relapse at the bladder.</p>
@@ -794,24 +808,25 @@
 <p><img alt="Filtered Data" src="../img/imageW6.png" /></p>
 <p>An underline in the filter name indicates that filters are active within that tab. In the below example, the <strong>Subject</strong>, <strong>Disease</strong> and <strong>Molecular</strong> tabs have active filters. Clicking into the tabs will show which filters are selected (also underlined). In the example below, <strong>Initial Diagnosis</strong> is selected, along with <strong>Tumor Site</strong> from within the <strong>Disease</strong> tab.</p>
 <p><img alt="Summary View" src="../img/imageW7.png" /></p>
-<p>Some filters have an interdependency. Example: selecting the FOXO1-PAX3 fusion molecular abnormality should be followed by a selection of Positive, Negative, or Unknown from the Molecular Abnormality Result filter set.</p>
-<p><img alt="Molecular Abnormality" src="../img/imageW8.png" /></p>
+<p>Some filters have an interdependency. Example: selecting the FOXO1-PAX3 fusion molecular abnormality should be followed by a selection of Absent, Present, or Unknown from the Molecular Abnormality Result filters.</p>
+<p><img alt="Molecular Abnormality" src="../img/molecular_abnormality.png" /></p>
 <h3 id="filters-and-workspace">Filters and Workspace</h3>
 <p>Users can refer to <a href="https://youtu.be/mZniH9yVi9Y">this video</a> for an overview of the Filter Sets and Survival Curve functionality.</p>
 <p>The Filter Set Workspace allows the user to manage multiple filter sets and switch among available filter sets to see summary statistics based on the filters selected in each set.</p>
-<p><img alt="Multiple Filter Sets" src="../img/imageW9.png" /></p>
+<p><img alt="Multiple Filter Sets" src="../img/filter_set_workspace.png" /></p>
 <p>The active filter is labeled in green on the far left. Each filter shows the expression statement that describes the filter set. Example:</p>
 <p><img alt="Active Search" src="../img/imageW10.png" /></p>
-<p>Filter Workspace commands allow the user to load, save and make changes to filter sets. The following commands are included:</p>
+<p>Filter Set Workspace commands allow the user to load, save and make changes to filter sets. The following commands are included:</p>
 <ul>
-<li><strong>Load</strong>: Loads a saved filter set to the Workspace</li>
-<li><strong>Save</strong>: Saves the active filter set. Changing the name of an existing filter set will save it with the new name.</li>
 <li><strong>New</strong>: When at least one filter set is active, pressing New will add another, empty set.</li>
+<li><strong>Compose</strong>: Allows the user to combine two or more saved filter sets using AND/OR logic. </li>
 <li><strong>Duplicate</strong>: Copies the active filter set. Note: an empty set cannot be duplicated.</li>
 <li><strong>Remove</strong>: Removes the active filter set from the workspace and makes the filter set at the top of the list active.</li>
 <li><strong>Clear</strong>: Clears the filter selections from the active filter set.</li>
 <li><strong>Clear all</strong>: Clears the Workspace of all filter sets</li>
-<li><strong>Reset</strong>: When a change is made to the active filter, Reset will revert any changes to the saved version of the filter set. If the filter was not previously saved, Reset will not be active.</li>
+<li><strong>Load</strong>: Loads a saved filter set to the Workspace</li>
+<li><strong>Save</strong>: Saves the active filter set. Changing the name of an existing filter set will save it with the new name.</li>
+<li><strong>Reset</strong>: When a change is made to the active filter, Reset will revert any changes to the saved version of the filter set. If the filter set was not previously saved, Reset will not be active.</li>
 </ul>
 <h4 id="saving-a-filter-set">Saving a Filter Set</h4>
 <p>Once a set of filters has been selected, a user can save the set by clicking <strong>Save</strong>. The user will be prompted to enter a name for the saved filter set. A description can also be added.</p>
@@ -819,19 +834,25 @@
 <p>When changes are made to a saved filter set, the Workspace will indicate the change by making the <strong>Reset</strong> button active. Clicking on Reset will revert any changes made to the original, saved filter set.</p>
 <p>To save changes to a filter set and keep the original, users can 1) use the <strong>Duplicate</strong> function, make changes to the new filter set, and 2) <strong>Save</strong> the new filter set with a new name.</p>
 <p>1) Use <strong>Duplicate</strong> to Create a copy of the active filter set</p>
-<p><img alt="Duplicate Filter Set" src="../img/imageW11.png" /></p>
+<p><img alt="Duplicate Filter Set" src="../img/duplicate_step1.png" /></p>
 <p>2) Make changes to the new filter set and hit Save. Note, the new filter set has no name until it is saved.</p>
-<p><img alt="Save Filter Set" src="../img/imageW12.png" /></p>
+<p><img alt="Save Filter Set" src="../img/duplicate_step2.png" /></p>
+<h4 id="using-compose-to-combine-filter-sets">Using Compose to Combine Filter Sets</h4>
+<p>The Compose function allows users to combine filter sets using AND/OR logic. Example: Selecting <strong>Compose</strong> in the Filter Workspace, the two separate filters shown below can be combined into one using a logical AND. Click <strong>Done</strong> when the desired filters are selected. </p>
+<p><img alt="Compsing a filter" src="../img/composed_filter_sets.png" /></p>
+<p>The resulting filter is added to the Workspace and made Active. It can now be saved to the user's list of filters. </p>
+<p><img alt="Save Composed Filters" src="../img/save_composed_filter_set.png" /></p>
 <h3 id="survival-analysis">Survival Analysis</h3>
 <p>The PCDC platform includes a <strong>Survival Analysis</strong> tool that can display survival curves and Number at Risk tables. This tool will be available temporarily during a pilot phase to test the functionality and usability of the tool.</p>
-<p>When first accessing the survival curve generator, users must agree to the Acceptable User Policy. Subsequent sessions will include a reminder of the terms whenever the Apply button is pressed.</p>
-<p><img alt="Survival Analysis" src="../img/image8.png" /></p>
-<p>To create a survival curve, users must first select at least one filter set to analyze. Filter Sets can be created and saved using the procedure described above.</p>
+<p>When first accessing the survival curve generator, users must agree to follow the Acceptable Use Policy. Subsequent sessions will include a reminder of the terms whenever the Apply button is pressed.</p>
+<p><img alt="Survival Analysis" src="../img/survival_analysis_tool.png" /></p>
+<p>To create a survival curve, users must first select at least one filter set to analyze. Filter Sets can be created and saved using the procedure described above. <strong>Note:</strong> Only saved filter sets can be used to create a Survival Curve. </p>
 <p>Use the drop down labeled “Select Filter Set to Analyze” to select a saved filter set, then click the <strong>Add</strong> button to add the filter set. Optionally, a user may select “All Subjects” to see the entire data set. Additional filter sets can be added using the steps above. </p>
+<p>The "Consortium" information label shows which data are available to create a survival curve. Filter sets that include values from other consortia are disabled.</p>
 <p><img alt="Survival Analysis" src="../img/image38.png" /></p>
 <p>Once selected, users can see the survival curve by hitting the <strong>Apply</strong> button at the bottom of the screen. Note: When changes are made to filter sets that are currently selected for the Survival curve, users must hit the Apply button after editing to see the changes reflected in the curve. </p>
 <p>Multiple data sets can be selected and shown simultaneously. In the example below, two data sets are used: one for male and one for female participants. </p>
-<p><img alt="Survival Analysis" src="../img/image40.png" /></p>
+<p><img alt="Survival Analysis" src="../img/curve_multiple_datasets.png" /></p>
 <h4 id="options">Options</h4>
 <p>The survival curve can be adjusted using the options available. </p>
 <p><img alt="Survival Analysis" src="../img/image28.png" /></p>
