@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.8.2 User Guide
+###### v1.9.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -115,7 +115,7 @@ Users can refer to [this video](https://youtu.be/0TJJpx3m0GY) for an overview of
 
 For users who do not have access to line-level data, the top of the Exploration page will display a **Request Access** button. 
 
-Clicking this [button](PCDC-request_form.docx) will download the PCDC Project Request Form (MS Word format). Follow the instructions on the form to provide project information and request access to line-level data
+Clicking Request Access will redirect users to the [PCDC Project Request Forms](https://docs.pedscommons.org/PCDCProjectRequestForm/) page. The page contains forms and instructions for requesting access to line-level data.
 
 The **Table View** tab on the main page is restricted to approved researchers who have access to line-level data. 
 
@@ -145,7 +145,7 @@ Multiple selections made <u>across multiple filters</u> are treated as logical �
 
 Using the above example, the Active filter at the top of the graph view shows “Sex is “Male” AND “Race is any of (logial OR) Black or African American, Asian” The AND can be switched to OR by clicking on the AND button between the two parts of the expression. Each filter can be removed by clicking on the “x” at the end of the string.
 
-![Conjuctive Search](img/imageW3.png)
+![Conjuctive Search](img/workspace_and_x.png)
 
 For patient observations that may be captured longitudinally, for example **Tumor Site** within the **Disease** tab, users can restrict filtering activity to a specific disease phase (e.g. Initial Diagnosis, Relapse) with an Anchor filter by clicking one of the radio buttons under **Disease Phase**.
 
@@ -169,9 +169,9 @@ An underline in the filter name indicates that filters are active within that ta
 
 ![Summary View](img/imageW7.png)
 
-Some filters have an interdependency. Example: selecting the FOXO1-PAX3 fusion molecular abnormality should be followed by a selection of Positive, Negative, or Unknown from the Molecular Abnormality Result filter set.
+Some filters have an interdependency. Example: selecting the FOXO1-PAX3 fusion molecular abnormality should be followed by a selection of Absent, Present, or Unknown from the Molecular Abnormality Result filters.
 
-![Molecular Abnormality](img/imageW8.png)
+![Molecular Abnormality](img/molecular_abnormality.png)
 
 ### Filters and Workspace
 
@@ -179,22 +179,24 @@ Users can refer to [this video](https://youtu.be/mZniH9yVi9Y) for an overview of
 
 The Filter Set Workspace allows the user to manage multiple filter sets and switch among available filter sets to see summary statistics based on the filters selected in each set.
 
-![Multiple Filter Sets](img/imageW9.png)
+![Multiple Filter Sets](img/filter_set_workspace.png)
 
 The active filter is labeled in green on the far left. Each filter shows the expression statement that describes the filter set. Example:
 
 ![Active Search](img/imageW10.png)
 
-Filter Workspace commands allow the user to load, save and make changes to filter sets. The following commands are included:
+Filter Set Workspace commands allow the user to load, save and make changes to filter sets. The following commands are included:
 
-- **Load**: Loads a saved filter set to the Workspace
-- **Save**: Saves the active filter set. Changing the name of an existing filter set will save it with the new name.
+
 - **New**: When at least one filter set is active, pressing New will add another, empty set.
+- **Compose**: Allows the user to combine two or more saved filter sets using AND/OR logic. 
 - **Duplicate**: Copies the active filter set. Note: an empty set cannot be duplicated.
 - **Remove**: Removes the active filter set from the workspace and makes the filter set at the top of the list active.
 - **Clear**: Clears the filter selections from the active filter set.
 -  **Clear all**: Clears the Workspace of all filter sets
-- **Reset**: When a change is made to the active filter, Reset will revert any changes to the saved version of the filter set. If the filter was not previously saved, Reset will not be active.
+- **Load**: Loads a saved filter set to the Workspace
+- **Save**: Saves the active filter set. Changing the name of an existing filter set will save it with the new name.
+- **Reset**: When a change is made to the active filter, Reset will revert any changes to the saved version of the filter set. If the filter set was not previously saved, Reset will not be active.
 
 #### Saving a Filter Set
 
@@ -208,24 +210,36 @@ To save changes to a filter set and keep the original, users can 1) use the **Du
 
 1) Use **Duplicate** to Create a copy of the active filter set
 
-![Duplicate Filter Set](img/imageW11.png)
+![Duplicate Filter Set](img/duplicate_step1.png)
 
 2) Make changes to the new filter set and hit Save. Note, the new filter set has no name until it is saved.
 
-![Save Filter Set](img/imageW12.png)
+![Save Filter Set](img/duplicate_step2.png)
 
+#### Using Compose to Combine Filter Sets
+
+The Compose function allows users to combine filter sets using AND/OR logic. Example: Selecting **Compose** in the Filter Workspace, the two separate filters shown below can be combined into one using a logical AND. Click **Done** when the desired filters are selected. 
+
+![Compsing a filter](img/composed_filter_sets.png)
+
+The resulting filter is added to the Workspace and made Active. It can now be saved to the user's list of filters. 
+
+![Save Composed Filters](img/save_composed_filter_set.png)
 
 ### Survival Analysis
 
 The PCDC platform includes a **Survival Analysis** tool that can display survival curves and Number at Risk tables. This tool will be available temporarily during a pilot phase to test the functionality and usability of the tool.
 
-When first accessing the survival curve generator, users must agree to the Acceptable User Policy. Subsequent sessions will include a reminder of the terms whenever the Apply button is pressed.
+When first accessing the survival curve generator, users must agree to follow the Acceptable Use Policy. Subsequent sessions will include a reminder of the terms whenever the Apply button is pressed.
 
-![Survival Analysis](img/image8.png)
 
-To create a survival curve, users must first select at least one filter set to analyze. Filter Sets can be created and saved using the procedure described above.
+![Survival Analysis](img/survival_analysis_tool.png)
+
+To create a survival curve, users must first select at least one filter set to analyze. Filter Sets can be created and saved using the procedure described above. **Note:** Only saved filter sets can be used to create a Survival Curve. 
 
 Use the drop down labeled “Select Filter Set to Analyze” to select a saved filter set, then click the **Add** button to add the filter set. Optionally, a user may select “All Subjects” to see the entire data set. Additional filter sets can be added using the steps above. 
+
+The "Consortium" information label shows which data are available to create a survival curve. Filter sets that include values from other consortia are disabled.
 
 ![Survival Analysis](img/image38.png)
 
@@ -233,7 +247,7 @@ Once selected, users can see the survival curve by hitting the **Apply** button 
 
 Multiple data sets can be selected and shown simultaneously. In the example below, two data sets are used: one for male and one for female participants. 
 
-![Survival Analysis](img/image40.png)
+![Survival Analysis](img/curve_multiple_datasets.png)
 
 
 
@@ -274,15 +288,6 @@ Only users who are authorized to receive requested data will see the Download Da
 ![Documentation Menu](img/Documentation_menu.png)
 
 The Documentation menu allows users to access reference documents related to the Data Portal such as the _Privacy Notice_ and _Terms and Conditions_. Clicking on any of the documents in the list will redirect users to the [PCDC Documentation site](https://docs.pedscommons.org/).
-
-
-
-
-
-
-
-
-
 
 
 
