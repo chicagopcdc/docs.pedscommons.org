@@ -99,7 +99,7 @@ Researchers should also understand that some data may be missing because it is n
 
 #### Limitations of underlying studies
 
-The quality of evidence generated from studies influences the degree of certainty we can have that the study results accurately answer a clinical question. Quality of evidence can vary due to a variety of reasons, including inherent study limitations (e.g., study design), confounding factors, measurement of indirect outcomes, imprecision and reporting bias.
+The quality of evidence generated from studies influences the degree of certainty we can have that the study results accurately answer a clinical question. Quality of evidence can vary due to a variety of reasons, including inherent study limitations (e.g., study design), confounding factors, measurement of indirect outcomes, imprecision and reporting bias. Length of follow up may vary for individual subjects within a given study and across studies, which may affect outcome estimates.
 
 ### Statistical pitfalls
 
