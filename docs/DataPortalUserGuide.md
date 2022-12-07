@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.9.0 User Guide
+###### v1.11.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -131,7 +131,11 @@ Note: some filters, such as **Age at LKSS** (Last Known Survival Status) have a 
 
 ![LKSS](img/image13.png)
 
+#### Bin Size
+
 A bin size limit of five has been implemented for all data filters as an additional measure of participant privacy. Bin size refers to the minimum sample size reporting threshold. A lock icon will appear next to the filter that includes less than five subjects. 
+
+#### Summary View
 
 ![Lock](img/image14.png)
 
@@ -139,11 +143,11 @@ The main **Exploration** page shows a summary view of distributions across some 
 
 ![Consortium](img/imageW2.png)
 
-Different variable types (e.g. continuous variables, discrete variables, categorical variables) will have different controls available. For example, **Race** is a categorical (enumerative) variable, and categorical variable filters can be selected using checkboxes with one checkbox per value within that variable. The user can select the values of a variable they are interested in seeing as part of the population. Multiple selections <u>within a single filter</u> are treated as logical ‘ORs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ would see a result set where the subjects have a **Race** value of either ‘Asian’ OR ‘Black or African American’
+Different variable types (e.g. continuous variables, discrete variables, categorical variables) will have different controls available. For example, **Race** is a categorical (enumerative) variable, and categorical variable filters can be selected using checkboxes with one checkbox per value within that variable. The user can select the values of a variable they are interested in as part of the population. Multiple selections <u>within a single filter</u> are treated as logical ‘ORs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ would see a result set where the subjects have a **Race** value of either ‘Asian’ OR ‘Black OR African American’
 
 Multiple selections made <u>across multiple filters</u> are treated as logical ‘ANDs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ from the Race filter and who select ‘Male’ from the **Sex** filter would see a result set where the subjects have a **Race** value of either ‘Asian’ OR ‘Black or African American’ <u>AND</u> who have a **Sex** value of ‘Male’.
 
-Using the above example, the Active filter at the top of the graph view shows “Sex is “Male” AND “Race is any of (logial OR) Black or African American, Asian” The AND can be switched to OR by clicking on the AND button between the two parts of the expression. Each filter can be removed by clicking on the “x” at the end of the string.
+Using the above example, the Active filter at the top of the graph view shows “Sex is “Male” AND “Race is any of (logial OR) Black or African American, Asian”. The AND can be switched to OR by clicking on the AND button between the two parts of the expression. Each filter can be removed by clicking on the “x” at the end of the string.
 
 ![Conjuctive Search](img/workspace_and_x.png)
 
@@ -157,6 +161,8 @@ For example, a user who was interested in patients with relapse disease of the b
 
 Note: when changing the Anchor filter (e.g., switching from Relapse to Initial Diagnosis), users must remove the associated filters, in this case: “Bladder”, in order to see the filter options available under the new Anchor.
 
+#### Search
+
 Clicking on the search icon to the right of a filter name (e.g. Tumor Site) allows users to search for a specific value in a list of categorical levels by keyword, Matching categorical level values will appear if there is a full or partial match, allowing the user to select it. The filter value can be selected by checking the box next to the name.
 
 ![Site Search](img/imageW5.png)
@@ -165,15 +171,25 @@ Once selected, the main page will show the filtered data set. To clear the searc
 
 ![Filtered Data](img/imageW6.png)
 
+#### Selected Filters
+
 An underline in the filter name indicates that filters are active within that tab. In the below example, the **Subject**, **Disease** and **Molecular** tabs have active filters. Clicking into the tabs will show which filters are selected (also underlined). In the example below, **Initial Diagnosis** is selected, along with **Tumor Site** from within the **Disease** tab.
 
 ![Summary View](img/imageW7.png)
+
+#### Interdependent Filters
 
 Some filters have an interdependency. Example: selecting the FOXO1-PAX3 fusion molecular abnormality should be followed by a selection of Absent, Present, or Unknown from the Molecular Abnormality Result filters.
 
 ![Molecular Abnormality](img/molecular_abnormality.png)
 
-### Filters and Workspace
+#### Filter by Consortium  
+
+The left panel includes a Consortium filter in the Subject tab which allows users to select the disease consortium data from which to create a cohort. The below screenshot shows data is available from INRG (International Neuroblastoma Risk Group) and INSTRuCT (INternational Soft Tissue saRcoma ConsorTium) subjects. 
+
+![Consortium Selection](img/consortium_selection.png)
+
+### Filters Set Workspace
 
 Users can refer to [this video](https://youtu.be/mZniH9yVi9Y) for an overview of the Filter Sets and Survival Curve functionality.
 
@@ -225,6 +241,11 @@ The Compose function allows users to combine filter sets using AND/OR logic. Exa
 The resulting filter is added to the Workspace and made Active. It can now be saved to the user's list of filters. 
 
 ![Save Composed Filters](img/save_composed_filter_set.png)
+
+Note: when using a Composed filter, the left filter panel becomes inactivated. 
+
+![Composed filter warning](img/composed_filter_warning.png)
+
 
 ### Survival Analysis
 
