@@ -245,8 +245,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v190-user-guide" class="md-nav__link">
-    v1.9.0 User Guide
+  <a href="#v1110-user-guide" class="md-nav__link">
+    v1.11.0 User Guide
   </a>
   
 </li>
@@ -305,14 +305,62 @@
     Filters and Search
   </a>
   
+    <nav class="md-nav" aria-label="Filters and Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bin-size" class="md-nav__link">
+    Bin Size
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#filters-and-workspace" class="md-nav__link">
-    Filters and Workspace
+  <a href="#summary-view" class="md-nav__link">
+    Summary View
   </a>
   
-    <nav class="md-nav" aria-label="Filters and Workspace">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-filters" class="md-nav__link">
+    Selected Filters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interdependent-filters" class="md-nav__link">
+    Interdependent Filters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-by-consortium" class="md-nav__link">
+    Filter by Consortium
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filters-set-workspace" class="md-nav__link">
+    Filters Set Workspace
+  </a>
+  
+    <nav class="md-nav" aria-label="Filters Set Workspace">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -557,8 +605,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v190-user-guide" class="md-nav__link">
-    v1.9.0 User Guide
+  <a href="#v1110-user-guide" class="md-nav__link">
+    v1.11.0 User Guide
   </a>
   
 </li>
@@ -617,14 +665,62 @@
     Filters and Search
   </a>
   
+    <nav class="md-nav" aria-label="Filters and Search">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bin-size" class="md-nav__link">
+    Bin Size
+  </a>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#filters-and-workspace" class="md-nav__link">
-    Filters and Workspace
+  <a href="#summary-view" class="md-nav__link">
+    Summary View
   </a>
   
-    <nav class="md-nav" aria-label="Filters and Workspace">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search" class="md-nav__link">
+    Search
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selected-filters" class="md-nav__link">
+    Selected Filters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interdependent-filters" class="md-nav__link">
+    Interdependent Filters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter-by-consortium" class="md-nav__link">
+    Filter by Consortium
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filters-set-workspace" class="md-nav__link">
+    Filters Set Workspace
+  </a>
+  
+    <nav class="md-nav" aria-label="Filters Set Workspace">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -715,7 +811,7 @@
 
 <p><img alt="Logo" src="../img/PcdcLogo.png" /></p>
 <h1 id="pediatric-cancer-data-commons-data-portal-user-guide">Pediatric Cancer Data Commons<br> Data Portal User Guide</h1>
-<h6 id="v190-user-guide">v1.9.0 User Guide</h6>
+<h6 id="v1110-user-guide">v1.11.0 User Guide</h6>
 <h2 id="introduction">Introduction</h2>
 <p>The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. </p>
 <p>By harmonizing existing clinical research data and leading international efforts to standardize data collection, we are breaking down long-standing barriers that have held back advancements in research on rare diseases. Our aim is to leverage this unique collaborative consortium-based approach to enable new and meaningful discoveries about pediatric cancers.</p>
@@ -789,28 +885,36 @@
 <p><img alt="Explore Expand" src="../img/imageW1.png" /></p>
 <p>Note: some filters, such as <strong>Age at LKSS</strong> (Last Known Survival Status) have a slider to select an age range.</p>
 <p><img alt="LKSS" src="../img/image13.png" /></p>
+<h4 id="bin-size">Bin Size</h4>
 <p>A bin size limit of five has been implemented for all data filters as an additional measure of participant privacy. Bin size refers to the minimum sample size reporting threshold. A lock icon will appear next to the filter that includes less than five subjects. </p>
+<h4 id="summary-view">Summary View</h4>
 <p><img alt="Lock" src="../img/image14.png" /></p>
 <p>The main <strong>Exploration</strong> page shows a summary view of distributions across some key demographic variables for all cases in the PCDC that match the currently-selected filters.</p>
 <p><img alt="Consortium" src="../img/imageW2.png" /></p>
-<p>Different variable types (e.g. continuous variables, discrete variables, categorical variables) will have different controls available. For example, <strong>Race</strong> is a categorical (enumerative) variable, and categorical variable filters can be selected using checkboxes with one checkbox per value within that variable. The user can select the values of a variable they are interested in seeing as part of the population. Multiple selections <u>within a single filter</u> are treated as logical ‘ORs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ would see a result set where the subjects have a <strong>Race</strong> value of either ‘Asian’ OR ‘Black or African American’</p>
+<p>Different variable types (e.g. continuous variables, discrete variables, categorical variables) will have different controls available. For example, <strong>Race</strong> is a categorical (enumerative) variable, and categorical variable filters can be selected using checkboxes with one checkbox per value within that variable. The user can select the values of a variable they are interested in as part of the population. Multiple selections <u>within a single filter</u> are treated as logical ‘ORs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ would see a result set where the subjects have a <strong>Race</strong> value of either ‘Asian’ OR ‘Black OR African American’</p>
 <p>Multiple selections made <u>across multiple filters</u> are treated as logical ‘ANDs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ from the Race filter and who select ‘Male’ from the <strong>Sex</strong> filter would see a result set where the subjects have a <strong>Race</strong> value of either ‘Asian’ OR ‘Black or African American’ <u>AND</u> who have a <strong>Sex</strong> value of ‘Male’.</p>
-<p>Using the above example, the Active filter at the top of the graph view shows “Sex is “Male” AND “Race is any of (logial OR) Black or African American, Asian” The AND can be switched to OR by clicking on the AND button between the two parts of the expression. Each filter can be removed by clicking on the “x” at the end of the string.</p>
+<p>Using the above example, the Active filter at the top of the graph view shows “Sex is “Male” AND “Race is any of (logial OR) Black or African American, Asian”. The AND can be switched to OR by clicking on the AND button between the two parts of the expression. Each filter can be removed by clicking on the “x” at the end of the string.</p>
 <p><img alt="Conjuctive Search" src="../img/workspace_and_x.png" /></p>
 <p>For patient observations that may be captured longitudinally, for example <strong>Tumor Site</strong> within the <strong>Disease</strong> tab, users can restrict filtering activity to a specific disease phase (e.g. Initial Diagnosis, Relapse) with an Anchor filter by clicking one of the radio buttons under <strong>Disease Phase</strong>.</p>
 <p><img alt="Disease Phase" src="../img/imageW4.png" /></p>
 <p>For example, a user who was interested in patients with relapse disease of the bladder would select Relapse under <strong>Disease Phase</strong> and Bladder under <strong>Tumor Site</strong> to see the count of subjects that have an observation of relapse at the bladder.</p>
 <p><img alt="Tumor Site" src="../img/image27.png" /></p>
 <p>Note: when changing the Anchor filter (e.g., switching from Relapse to Initial Diagnosis), users must remove the associated filters, in this case: “Bladder”, in order to see the filter options available under the new Anchor.</p>
+<h4 id="search">Search</h4>
 <p>Clicking on the search icon to the right of a filter name (e.g. Tumor Site) allows users to search for a specific value in a list of categorical levels by keyword, Matching categorical level values will appear if there is a full or partial match, allowing the user to select it. The filter value can be selected by checking the box next to the name.</p>
 <p><img alt="Site Search" src="../img/imageW5.png" /></p>
 <p>Once selected, the main page will show the filtered data set. To clear the search and see an unfiltered list of variable levels, the user can hit clear (x) within the search box.</p>
 <p><img alt="Filtered Data" src="../img/imageW6.png" /></p>
+<h4 id="selected-filters">Selected Filters</h4>
 <p>An underline in the filter name indicates that filters are active within that tab. In the below example, the <strong>Subject</strong>, <strong>Disease</strong> and <strong>Molecular</strong> tabs have active filters. Clicking into the tabs will show which filters are selected (also underlined). In the example below, <strong>Initial Diagnosis</strong> is selected, along with <strong>Tumor Site</strong> from within the <strong>Disease</strong> tab.</p>
 <p><img alt="Summary View" src="../img/imageW7.png" /></p>
+<h4 id="interdependent-filters">Interdependent Filters</h4>
 <p>Some filters have an interdependency. Example: selecting the FOXO1-PAX3 fusion molecular abnormality should be followed by a selection of Absent, Present, or Unknown from the Molecular Abnormality Result filters.</p>
 <p><img alt="Molecular Abnormality" src="../img/molecular_abnormality.png" /></p>
-<h3 id="filters-and-workspace">Filters and Workspace</h3>
+<h4 id="filter-by-consortium">Filter by Consortium</h4>
+<p>The left panel includes a Consortium filter in the Subject tab which allows users to select the disease consortium data from which to create a cohort. The below screenshot shows data is available from INRG (International Neuroblastoma Risk Group) and INSTRuCT (INternational Soft Tissue saRcoma ConsorTium) subjects. </p>
+<p><img alt="Consortium Selection" src="../img/consortium_selection.png" /></p>
+<h3 id="filters-set-workspace">Filters Set Workspace</h3>
 <p>Users can refer to <a href="https://youtu.be/mZniH9yVi9Y">this video</a> for an overview of the Filter Sets and Survival Curve functionality.</p>
 <p>The Filter Set Workspace allows the user to manage multiple filter sets and switch among available filter sets to see summary statistics based on the filters selected in each set.</p>
 <p><img alt="Multiple Filter Sets" src="../img/filter_set_workspace.png" /></p>
@@ -842,6 +946,8 @@
 <p><img alt="Compsing a filter" src="../img/composed_filter_sets.png" /></p>
 <p>The resulting filter is added to the Workspace and made Active. It can now be saved to the user's list of filters. </p>
 <p><img alt="Save Composed Filters" src="../img/save_composed_filter_set.png" /></p>
+<p>Note: when using a Composed filter, the left filter panel becomes inactivated. </p>
+<p><img alt="Composed filter warning" src="../img/composed_filter_warning.png" /></p>
 <h3 id="survival-analysis">Survival Analysis</h3>
 <p>The PCDC platform includes a <strong>Survival Analysis</strong> tool that can display survival curves and Number at Risk tables. This tool will be available temporarily during a pilot phase to test the functionality and usability of the tool.</p>
 <p>When first accessing the survival curve generator, users must agree to follow the Acceptable Use Policy. Subsequent sessions will include a reminder of the terms whenever the Apply button is pressed.</p>
