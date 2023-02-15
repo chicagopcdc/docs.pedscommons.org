@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.11.0 User Guide
+###### v1.12.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -210,9 +210,11 @@ Filter Set Workspace commands allow the user to load, save and make changes to f
 - **Remove**: Removes the active filter set from the workspace and makes the filter set at the top of the list active.
 - **Clear**: Clears the filter selections from the active filter set.
 -  **Clear all**: Clears the Workspace of all filter sets
-- **Load**: Loads a saved filter set to the Workspace
+- **Load**: Loads a saved filter set to the Workspace. The filter set can be the user's own saved filter set or a filter set defined by a shared token from another user (see "Share" below).
 - **Save**: Saves the active filter set. Changing the name of an existing filter set will save it with the new name.
+- **Share**: Generates a token that can be emailed to other users to re-create the selected filter set. 
 - **Reset**: When a change is made to the active filter, Reset will revert any changes to the saved version of the filter set. If the filter set was not previously saved, Reset will not be active.
+- **Delete**: Deletes the selected filter set, removing it from the screen and from the user's saved filters.
 
 #### Saving a Filter Set
 
@@ -279,13 +281,15 @@ The survival curve can be adjusted using the options available.
 ![Survival Analysis](img/image28.png)
 
 
+The **Consortium** field indicates which disease groups have data available to create a survival curve. 
+
 The **Survival type** drop down can be used to select Overall or Event-Free survival. 
 
-**Start time** can be used to select the start time of the x-axis. Default is zero (0).
+**Start time** is used to select the start time of the x-axis. Default is zero (0).
 
-**End time** is used to select the maximum time (in years) that will appear on the x-axis. 
+**End time** is used to select the maximum time (in years) that will appear on the x-axis. The default is five years. If left blank, the maximum number of years will be shown for which data is available. 
 
-**Time interval** is used to determine the frequency of hash marks appearing on the x-axis, both on the survival curve and in the Number at risk table shown below the curve. 
+**Time interval** is used to determine the frequency of hash marks appearing on the x-axis, both on the survival curve and in the Number at risk table shown below the curve. Default is one year. 
 
 ### Query
 The **Query** page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide).
