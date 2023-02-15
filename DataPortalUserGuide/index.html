@@ -245,8 +245,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v1110-user-guide" class="md-nav__link">
-    v1.11.0 User Guide
+  <a href="#v1120-user-guide" class="md-nav__link">
+    v1.12.0 User Guide
   </a>
   
 </li>
@@ -605,8 +605,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v1110-user-guide" class="md-nav__link">
-    v1.11.0 User Guide
+  <a href="#v1120-user-guide" class="md-nav__link">
+    v1.12.0 User Guide
   </a>
   
 </li>
@@ -811,7 +811,7 @@
 
 <p><img alt="Logo" src="../img/PcdcLogo.png" /></p>
 <h1 id="pediatric-cancer-data-commons-data-portal-user-guide">Pediatric Cancer Data Commons<br> Data Portal User Guide</h1>
-<h6 id="v1110-user-guide">v1.11.0 User Guide</h6>
+<h6 id="v1120-user-guide">v1.12.0 User Guide</h6>
 <h2 id="introduction">Introduction</h2>
 <p>The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. </p>
 <p>By harmonizing existing clinical research data and leading international efforts to standardize data collection, we are breaking down long-standing barriers that have held back advancements in research on rare diseases. Our aim is to leverage this unique collaborative consortium-based approach to enable new and meaningful discoveries about pediatric cancers.</p>
@@ -928,9 +928,11 @@
 <li><strong>Remove</strong>: Removes the active filter set from the workspace and makes the filter set at the top of the list active.</li>
 <li><strong>Clear</strong>: Clears the filter selections from the active filter set.</li>
 <li><strong>Clear all</strong>: Clears the Workspace of all filter sets</li>
-<li><strong>Load</strong>: Loads a saved filter set to the Workspace</li>
+<li><strong>Load</strong>: Loads a saved filter set to the Workspace. The filter set can be the user's own saved filter set or a filter set defined by a shared token from another user (see "Share" below).</li>
 <li><strong>Save</strong>: Saves the active filter set. Changing the name of an existing filter set will save it with the new name.</li>
+<li><strong>Share</strong>: Generates a token that can be emailed to other users to re-create the selected filter set. </li>
 <li><strong>Reset</strong>: When a change is made to the active filter, Reset will revert any changes to the saved version of the filter set. If the filter set was not previously saved, Reset will not be active.</li>
+<li><strong>Delete</strong>: Deletes the selected filter set, removing it from the screen and from the user's saved filters.</li>
 </ul>
 <h4 id="saving-a-filter-set">Saving a Filter Set</h4>
 <p>Once a set of filters has been selected, a user can save the set by clicking <strong>Save</strong>. The user will be prompted to enter a name for the saved filter set. A description can also be added.</p>
@@ -962,10 +964,11 @@
 <h4 id="options">Options</h4>
 <p>The survival curve can be adjusted using the options available. </p>
 <p><img alt="Survival Analysis" src="../img/image28.png" /></p>
+<p>The <strong>Consortium</strong> field indicates which disease groups have data available to create a survival curve. </p>
 <p>The <strong>Survival type</strong> drop down can be used to select Overall or Event-Free survival. </p>
-<p><strong>Start time</strong> can be used to select the start time of the x-axis. Default is zero (0).</p>
-<p><strong>End time</strong> is used to select the maximum time (in years) that will appear on the x-axis. </p>
-<p><strong>Time interval</strong> is used to determine the frequency of hash marks appearing on the x-axis, both on the survival curve and in the Number at risk table shown below the curve. </p>
+<p><strong>Start time</strong> is used to select the start time of the x-axis. Default is zero (0).</p>
+<p><strong>End time</strong> is used to select the maximum time (in years) that will appear on the x-axis. The default is five years. If left blank, the maximum number of years will be shown for which data is available. </p>
+<p><strong>Time interval</strong> is used to determine the frequency of hash marks appearing on the x-axis, both on the survival curve and in the Number at risk table shown below the curve. Default is one year. </p>
 <h3 id="query">Query</h3>
 <p>The <strong>Query</strong> page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide).</p>
 <h3 id="user-menu">User Menu</h3>
