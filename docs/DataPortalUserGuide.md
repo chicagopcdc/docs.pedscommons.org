@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.12.0 User Guide
+###### v1.14.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -56,9 +56,11 @@ The Dictionary is accessed by clicking the **Dictionary** button in the top-righ
 
 ![Dictionary Button](img/image26.png)
 
-Example: for the data entity named “Cytology”, the dictionary includes seven properties as shown below. 
+Example: for the data entity named “Cytology”, the dictionary includes seven properties as shown below.
 
-![Dictionary Cytology](img/image1.png)
+![Dictionary Cytology](img/dd_cytology.png)
+
+Terms used in the dictionary that are defined in the NCIt (National Cancer Institute thesaurus) include a link next to the term showing the NCIt code. Clicking the link will open a browser tab to the NCIt site. 
 
 On the right side of the Table View are Download Templates for each data element. 
 
@@ -125,7 +127,7 @@ The current Release Version of the data is included at the bottom of the left pa
 
 The Filters panel on the left side of the **Exploration** page can be used to narrow the Summary View results by selected variables. Filters act upon variables in the underlying data and are available for variables in the **Subject**, **Disease** and **Molecular** data domains. Use the expand icon (>) to see the controls available for a given filter.  
 
-![Explore Expand](img/imageW1.png)
+![Explore Expand](img/filters.png)
 
 Note: some filters, such as **Age at LKSS** (Last Known Survival Status) have a slider to select an age range.
 
@@ -157,7 +159,7 @@ For patient observations that may be captured longitudinally, for example **Tumo
 
 For example, a user who was interested in patients with relapse disease of the bladder would select Relapse under **Disease Phase** and Bladder under **Tumor Site** to see the count of subjects that have an observation of relapse at the bladder.
 
-![Tumor Site](img/image27.png)
+![Tumor Site](img/tumor_site.png)
 
 Note: when changing the Anchor filter (e.g., switching from Relapse to Initial Diagnosis), users must remove the associated filters, in this case: “Bladder”, in order to see the filter options available under the new Anchor.
 
@@ -165,11 +167,11 @@ Note: when changing the Anchor filter (e.g., switching from Relapse to Initial D
 
 Clicking on the search icon to the right of a filter name (e.g. Tumor Site) allows users to search for a specific value in a list of categorical levels by keyword, Matching categorical level values will appear if there is a full or partial match, allowing the user to select it. The filter value can be selected by checking the box next to the name.
 
-![Site Search](img/imageW5.png)
+![Site Search](img/search.png)
 
 Once selected, the main page will show the filtered data set. To clear the search and see an unfiltered list of variable levels, the user can hit clear (x) within the search box.
 
-![Filtered Data](img/imageW6.png)
+![Filtered Data](img/shoulder.png)
 
 #### Selected Filters
 
@@ -179,9 +181,9 @@ An underline in the filter name indicates that filters are active within that ta
 
 #### Interdependent Filters
 
-Some filters have an interdependency. Example: selecting the FOXO1-PAX3 fusion molecular abnormality should be followed by a selection of Absent, Present, or Unknown from the Molecular Abnormality Result filters.
+Some filters have an interdependency. Example: selecting the 11q deletion molecular abnormality should be followed by a selection of Absent, Present, or Unknown from the Molecular Abnormality Result filters.
 
-![Molecular Abnormality](img/molecular_abnormality.png)
+![Molecular Abnormality](img/interdependent_filters.png)
 
 #### Filter by Consortium  
 
@@ -278,10 +280,12 @@ Multiple data sets can be selected and shown simultaneously. In the example belo
 
 The survival curve can be adjusted using the options available. 
 
-![Survival Analysis](img/image28.png)
+![Survival Analysis](img/survival_curve_controls.png)
 
 
 The **Consortium** field indicates which disease groups have data available to create a survival curve. 
+
+The **Disallowed Variables** field shows which variables cannot be used to create a survival curve.
 
 The **Survival type** drop down can be used to select Overall or Event-Free survival. 
 
