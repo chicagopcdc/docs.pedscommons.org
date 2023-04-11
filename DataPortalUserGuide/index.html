@@ -245,8 +245,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v1120-user-guide" class="md-nav__link">
-    v1.12.0 User Guide
+  <a href="#v1140-user-guide" class="md-nav__link">
+    v1.14.0 User Guide
   </a>
   
 </li>
@@ -620,8 +620,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v1120-user-guide" class="md-nav__link">
-    v1.12.0 User Guide
+  <a href="#v1140-user-guide" class="md-nav__link">
+    v1.14.0 User Guide
   </a>
   
 </li>
@@ -826,7 +826,7 @@
 
 <p><img alt="Logo" src="../img/PcdcLogo.png" /></p>
 <h1 id="pediatric-cancer-data-commons-data-portal-user-guide">Pediatric Cancer Data Commons<br> Data Portal User Guide</h1>
-<h6 id="v1120-user-guide">v1.12.0 User Guide</h6>
+<h6 id="v1140-user-guide">v1.14.0 User Guide</h6>
 <h2 id="introduction">Introduction</h2>
 <p>The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. </p>
 <p>By harmonizing existing clinical research data and leading international efforts to standardize data collection, we are breaking down long-standing barriers that have held back advancements in research on rare diseases. Our aim is to leverage this unique collaborative consortium-based approach to enable new and meaningful discoveries about pediatric cancers.</p>
@@ -856,8 +856,9 @@
 <p><strong>Dictionary</strong> is the data dictionary used to define the data in the portal, including what each entity (Node) represents, properties associated with the entities, and possible values.</p>
 <p>The Dictionary is accessed by clicking the <strong>Dictionary</strong> button in the top-right hand corner of the PDCD Data Portal main page.</p>
 <p><img alt="Dictionary Button" src="../img/image26.png" /></p>
-<p>Example: for the data entity named “Cytology”, the dictionary includes seven properties as shown below. </p>
-<p><img alt="Dictionary Cytology" src="../img/image1.png" /></p>
+<p>Example: for the data entity named “Cytology”, the dictionary includes seven properties as shown below.</p>
+<p><img alt="Dictionary Cytology" src="../img/dd_cytology.png" /></p>
+<p>Terms used in the dictionary that are defined in the NCIt (National Cancer Institute thesaurus) include a link next to the term showing the NCIt code. Clicking the link will open a browser tab to the NCIt site. </p>
 <p>On the right side of the Table View are Download Templates for each data element. </p>
 <p><img alt="Template Download" src="../img/image18.png" /></p>
 <p>Templates are available in JSON (JavaScript Object Notation) or TSV (tab separated values) format. Templates are used when submitting clinical trial data for use in the portal. </p>
@@ -897,7 +898,7 @@
 <p>The current Release Version of the data is included at the bottom of the left panel.</p>
 <h3 id="filters-and-search">Filters and Search</h3>
 <p>The Filters panel on the left side of the <strong>Exploration</strong> page can be used to narrow the Summary View results by selected variables. Filters act upon variables in the underlying data and are available for variables in the <strong>Subject</strong>, <strong>Disease</strong> and <strong>Molecular</strong> data domains. Use the expand icon (&gt;) to see the controls available for a given filter.  </p>
-<p><img alt="Explore Expand" src="../img/imageW1.png" /></p>
+<p><img alt="Explore Expand" src="../img/filters.png" /></p>
 <p>Note: some filters, such as <strong>Age at LKSS</strong> (Last Known Survival Status) have a slider to select an age range.</p>
 <p><img alt="LKSS" src="../img/image13.png" /></p>
 <h4 id="bin-size">Bin Size</h4>
@@ -913,19 +914,19 @@
 <p>For patient observations that may be captured longitudinally, for example <strong>Tumor Site</strong> within the <strong>Disease</strong> tab, users can restrict filtering activity to a specific disease phase (e.g. Initial Diagnosis, Relapse) with an Anchor filter by clicking one of the radio buttons under <strong>Disease Phase</strong>.</p>
 <p><img alt="Disease Phase" src="../img/imageW4.png" /></p>
 <p>For example, a user who was interested in patients with relapse disease of the bladder would select Relapse under <strong>Disease Phase</strong> and Bladder under <strong>Tumor Site</strong> to see the count of subjects that have an observation of relapse at the bladder.</p>
-<p><img alt="Tumor Site" src="../img/image27.png" /></p>
+<p><img alt="Tumor Site" src="../img/tumor_site.png" /></p>
 <p>Note: when changing the Anchor filter (e.g., switching from Relapse to Initial Diagnosis), users must remove the associated filters, in this case: “Bladder”, in order to see the filter options available under the new Anchor.</p>
 <h4 id="search">Search</h4>
 <p>Clicking on the search icon to the right of a filter name (e.g. Tumor Site) allows users to search for a specific value in a list of categorical levels by keyword, Matching categorical level values will appear if there is a full or partial match, allowing the user to select it. The filter value can be selected by checking the box next to the name.</p>
-<p><img alt="Site Search" src="../img/imageW5.png" /></p>
+<p><img alt="Site Search" src="../img/search.png" /></p>
 <p>Once selected, the main page will show the filtered data set. To clear the search and see an unfiltered list of variable levels, the user can hit clear (x) within the search box.</p>
-<p><img alt="Filtered Data" src="../img/imageW6.png" /></p>
+<p><img alt="Filtered Data" src="../img/shoulder.png" /></p>
 <h4 id="selected-filters">Selected Filters</h4>
 <p>An underline in the filter name indicates that filters are active within that tab. In the below example, the <strong>Subject</strong>, <strong>Disease</strong> and <strong>Molecular</strong> tabs have active filters. Clicking into the tabs will show which filters are selected (also underlined). In the example below, <strong>Initial Diagnosis</strong> is selected, along with <strong>Tumor Site</strong> from within the <strong>Disease</strong> tab.</p>
 <p><img alt="Summary View" src="../img/imageW7.png" /></p>
 <h4 id="interdependent-filters">Interdependent Filters</h4>
-<p>Some filters have an interdependency. Example: selecting the FOXO1-PAX3 fusion molecular abnormality should be followed by a selection of Absent, Present, or Unknown from the Molecular Abnormality Result filters.</p>
-<p><img alt="Molecular Abnormality" src="../img/molecular_abnormality.png" /></p>
+<p>Some filters have an interdependency. Example: selecting the 11q deletion molecular abnormality should be followed by a selection of Absent, Present, or Unknown from the Molecular Abnormality Result filters.</p>
+<p><img alt="Molecular Abnormality" src="../img/interdependent_filters.png" /></p>
 <h4 id="filter-by-consortium">Filter by Consortium</h4>
 <p>The left panel includes a Consortium filter in the Subject tab which allows users to select the disease consortium data from which to create a cohort. The below screenshot shows data is available from INRG (International Neuroblastoma Risk Group) and INSTRuCT (INternational Soft Tissue saRcoma ConsorTium) subjects. </p>
 <p><img alt="Consortium Selection" src="../img/consortium_selection.png" /></p>
@@ -978,8 +979,9 @@
 <p><img alt="Survival Analysis" src="../img/curve_multiple_datasets.png" /></p>
 <h4 id="options">Options</h4>
 <p>The survival curve can be adjusted using the options available. </p>
-<p><img alt="Survival Analysis" src="../img/image28.png" /></p>
+<p><img alt="Survival Analysis" src="../img/survival_curve_controls.png" /></p>
 <p>The <strong>Consortium</strong> field indicates which disease groups have data available to create a survival curve. </p>
+<p>The <strong>Disallowed Variables</strong> field shows which variables cannot be used to create a survival curve.</p>
 <p>The <strong>Survival type</strong> drop down can be used to select Overall or Event-Free survival. </p>
 <p><strong>Start time</strong> is used to select the start time of the x-axis. Default is zero (0).</p>
 <p><strong>End time</strong> is used to select the maximum time (in years) that will appear on the x-axis. The default is five years. If left blank, the maximum number of years will be shown for which data is available. </p>
