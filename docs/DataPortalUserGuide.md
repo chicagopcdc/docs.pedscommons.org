@@ -175,7 +175,7 @@ Once selected, the main page will show the filtered data set. To clear the searc
 
 #### Selected Filters
 
-An underline in the filter name indicates that filters are active within that tab. In the below example, the **Subject**, **Disease** and **Molecular** tabs have active filters. Clicking into the tabs will show which filters are selected (also underlined). In the example below, **Initial Diagnosis** is selected, along with **Tumor Site** from within the **Disease** tab.
+An underline in the filter name indicates that filters are active within that tab. In the below example, the **Subject** and **Disease** tabs have active filters. Clicking into the tabs will show which filters are selected (also underlined). In the example below, **Initial Diagnosis** is selected, along with **Tumor Site** from within the **Disease** tab.
 
 ![Summary View](img/imageW7.png)
 
@@ -250,6 +250,21 @@ Note: when using a Composed filter, the left filter panel becomes inactivated.
 
 ![Composed filter warning](img/composed_filter_warning.png)
 
+### Explore in An External Data Commons
+
+Some subjects within the PCDC can be further explored in external Data Commons'. Currently, Gabriela Miller Kids First and the Genomic Data Commons are available for exploration. 
+
+**To explore subjects within an external commons:**
+
+1) Create a data set using the Filter Set Workspace. It is recommended users save their data set before using the "Explore in" function. 
+
+2) Click on the **Explore in** button in the upper right part of the Exploration page. A pop-up window will open. The drop-down menu is used to select the external data commons. 
+
+![Explore in](img/explore_in.png)
+
+3) For data sets with fewer than 40 subjects, the **Open in new tab** button will be active. Clicking on the button will take the user to the selected website where the subjects will be available for analysis. 
+
+4) Data sets with more than 40 subjects will require a manifest file to be downloaded to the user's computer and uploaded to the target data commons. The "Open in new tab" button will not be active until the user downloads the manifest. Follow the instructions on the target website to upload the manifest. 
 
 ### Survival Analysis
 
