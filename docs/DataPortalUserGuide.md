@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.14.0 User Guide
+###### v1.15.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -125,13 +125,13 @@ The current Release Version of the data is included at the bottom of the left pa
 
 ### Filters and Search
 
-The Filters panel on the left side of the **Exploration** page can be used to narrow the Summary View results by selected variables. Filters act upon variables in the underlying data and are available for variables in the **Subject**, **Disease** and **Molecular** data domains. Use the expand icon (>) to see the controls available for a given filter.  
+The Filters panel on the left side of the **Exploration** page can be used to narrow the Summary View results by selected variables. Filters act upon variables in the underlying data and are available for variables in the **Subject**, **Disease**, **Molecular**, etc. data domains. Use the expand icon (>) to see the controls available for a given filter.  
 
 ![Explore Expand](img/filters.png)
 
-Note: some filters, such as **Age at LKSS** (Last Known Survival Status) have a slider to select an age range.
+Note: some filters, such as **Age at Censor Status** have a slider to select an age range.
 
-![LKSS](img/image13.png)
+![Age at Censor Status](img/image13.png)
 
 #### Bin Size
 
@@ -143,7 +143,7 @@ A bin size limit of five has been implemented for all data filters as an additio
 
 The main **Exploration** page shows a summary view of distributions across some key demographic variables for all cases in the PCDC that match the currently-selected filters.
 
-![Consortium](img/imageW2.png)
+![Exploration](img/imageW2.png)
 
 Different variable types (e.g. continuous variables, discrete variables, categorical variables) will have different controls available. For example, **Race** is a categorical (enumerative) variable, and categorical variable filters can be selected using checkboxes with one checkbox per value within that variable. The user can select the values of a variable they are interested in as part of the population. Multiple selections <u>within a single filter</u> are treated as logical ‘ORs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ would see a result set where the subjects have a **Race** value of either ‘Asian’ OR ‘Black OR African American’
 
@@ -169,9 +169,9 @@ Clicking on the search icon to the right of a filter name (e.g. Tumor Site) allo
 
 ![Site Search](img/search.png)
 
-Once selected, the main page will show the filtered data set. To clear the search and see an unfiltered list of variable levels, the user can hit clear (x) within the search box.
+Once selected, the main page will show the filtered data set. To clear the search, the user can hit the "x" on the right side of the search box.
 
-![Filtered Data](img/shoulder.png)
+<! ![Filtered Data](img/shoulder.png) (commented out this image) ->
 
 #### Selected Filters
 
@@ -187,7 +187,7 @@ Some filters have an interdependency. Example: selecting the 11q deletion molecu
 
 #### Filter by Consortium  
 
-The left panel includes a Consortium filter in the Subject tab which allows users to select the disease consortium data from which to create a cohort. The below screenshot shows data is available from INRG (International Neuroblastoma Risk Group) and INSTRuCT (INternational Soft Tissue saRcoma ConsorTium) subjects. 
+The left panel includes a Consortium filter in the Subject tab which allows users to select the disease consortium data from which to create a cohort. Data is available from INRG (International Neuroblastoma Risk Group) and INSTRuCT (INternational Soft Tissue saRcoma ConsorTium) subjects. 
 
 ![Consortium Selection](img/consortium_selection.png)
 
