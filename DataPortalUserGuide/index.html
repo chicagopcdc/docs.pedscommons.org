@@ -245,8 +245,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v1140-user-guide" class="md-nav__link">
-    v1.14.0 User Guide
+  <a href="#v1150-user-guide" class="md-nav__link">
+    v1.15.0 User Guide
   </a>
   
 </li>
@@ -627,8 +627,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v1140-user-guide" class="md-nav__link">
-    v1.14.0 User Guide
+  <a href="#v1150-user-guide" class="md-nav__link">
+    v1.15.0 User Guide
   </a>
   
 </li>
@@ -840,7 +840,7 @@
 
 <p><img alt="Logo" src="../img/PcdcLogo.png" /></p>
 <h1 id="pediatric-cancer-data-commons-data-portal-user-guide">Pediatric Cancer Data Commons<br> Data Portal User Guide</h1>
-<h6 id="v1140-user-guide">v1.14.0 User Guide</h6>
+<h6 id="v1150-user-guide">v1.15.0 User Guide</h6>
 <h2 id="introduction">Introduction</h2>
 <p>The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. </p>
 <p>By harmonizing existing clinical research data and leading international efforts to standardize data collection, we are breaking down long-standing barriers that have held back advancements in research on rare diseases. Our aim is to leverage this unique collaborative consortium-based approach to enable new and meaningful discoveries about pediatric cancers.</p>
@@ -911,16 +911,16 @@
 <p>The <strong>Table View</strong> tab on the main page is restricted to approved researchers who have access to line-level data. </p>
 <p>The current Release Version of the data is included at the bottom of the left panel.</p>
 <h3 id="filters-and-search">Filters and Search</h3>
-<p>The Filters panel on the left side of the <strong>Exploration</strong> page can be used to narrow the Summary View results by selected variables. Filters act upon variables in the underlying data and are available for variables in the <strong>Subject</strong>, <strong>Disease</strong> and <strong>Molecular</strong> data domains. Use the expand icon (&gt;) to see the controls available for a given filter.  </p>
+<p>The Filters panel on the left side of the <strong>Exploration</strong> page can be used to narrow the Summary View results by selected variables. Filters act upon variables in the underlying data and are available for variables in the <strong>Subject</strong>, <strong>Disease</strong>, <strong>Molecular</strong>, etc. data domains. Use the expand icon (&gt;) to see the controls available for a given filter.  </p>
 <p><img alt="Explore Expand" src="../img/filters.png" /></p>
-<p>Note: some filters, such as <strong>Age at LKSS</strong> (Last Known Survival Status) have a slider to select an age range.</p>
-<p><img alt="LKSS" src="../img/image13.png" /></p>
+<p>Note: some filters, such as <strong>Age at Censor Status</strong> have a slider to select an age range.</p>
+<p><img alt="Age at Censor Status" src="../img/image13.png" /></p>
 <h4 id="bin-size">Bin Size</h4>
 <p>A bin size limit of five has been implemented for all data filters as an additional measure of participant privacy. Bin size refers to the minimum sample size reporting threshold. A lock icon will appear next to the filter that includes less than five subjects. </p>
 <h4 id="summary-view">Summary View</h4>
 <p><img alt="Lock" src="../img/image14.png" /></p>
 <p>The main <strong>Exploration</strong> page shows a summary view of distributions across some key demographic variables for all cases in the PCDC that match the currently-selected filters.</p>
-<p><img alt="Consortium" src="../img/imageW2.png" /></p>
+<p><img alt="Exploration" src="../img/imageW2.png" /></p>
 <p>Different variable types (e.g. continuous variables, discrete variables, categorical variables) will have different controls available. For example, <strong>Race</strong> is a categorical (enumerative) variable, and categorical variable filters can be selected using checkboxes with one checkbox per value within that variable. The user can select the values of a variable they are interested in as part of the population. Multiple selections <u>within a single filter</u> are treated as logical ‘ORs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ would see a result set where the subjects have a <strong>Race</strong> value of either ‘Asian’ OR ‘Black OR African American’</p>
 <p>Multiple selections made <u>across multiple filters</u> are treated as logical ‘ANDs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ from the Race filter and who select ‘Male’ from the <strong>Sex</strong> filter would see a result set where the subjects have a <strong>Race</strong> value of either ‘Asian’ OR ‘Black or African American’ <u>AND</u> who have a <strong>Sex</strong> value of ‘Male’.</p>
 <p>Using the above example, the Active filter at the top of the graph view shows “Sex is “Male” AND “Race is any of (logial OR) Black or African American, Asian”. The AND can be switched to OR by clicking on the AND button between the two parts of the expression. Each filter can be removed by clicking on the “x” at the end of the string.</p>
@@ -933,8 +933,8 @@
 <h4 id="search">Search</h4>
 <p>Clicking on the search icon to the right of a filter name (e.g. Tumor Site) allows users to search for a specific value in a list of categorical levels by keyword, Matching categorical level values will appear if there is a full or partial match, allowing the user to select it. The filter value can be selected by checking the box next to the name.</p>
 <p><img alt="Site Search" src="../img/search.png" /></p>
-<p>Once selected, the main page will show the filtered data set. To clear the search and see an unfiltered list of variable levels, the user can hit clear (x) within the search box.</p>
-<p><img alt="Filtered Data" src="../img/shoulder.png" /></p>
+<p>Once selected, the main page will show the filtered data set. To clear the search, the user can hit the "x" on the right side of the search box.</p>
+<!-- ![Filtered Data](img/shoulder.png) (commented out this image) --->
 <h4 id="selected-filters">Selected Filters</h4>
 <p>An underline in the filter name indicates that filters are active within that tab. In the below example, the <strong>Subject</strong> and <strong>Disease</strong> tabs have active filters. Clicking into the tabs will show which filters are selected (also underlined). In the example below, <strong>Initial Diagnosis</strong> is selected, along with <strong>Tumor Site</strong> from within the <strong>Disease</strong> tab.</p>
 <p><img alt="Summary View" src="../img/imageW7.png" /></p>
@@ -942,7 +942,7 @@
 <p>Some filters have an interdependency. Example: selecting the 11q deletion molecular abnormality should be followed by a selection of Absent, Present, or Unknown from the Molecular Abnormality Result filters.</p>
 <p><img alt="Molecular Abnormality" src="../img/interdependent_filters.png" /></p>
 <h4 id="filter-by-consortium">Filter by Consortium</h4>
-<p>The left panel includes a Consortium filter in the Subject tab which allows users to select the disease consortium data from which to create a cohort. The below screenshot shows data is available from INRG (International Neuroblastoma Risk Group) and INSTRuCT (INternational Soft Tissue saRcoma ConsorTium) subjects. </p>
+<p>The left panel includes a Consortium filter in the Subject tab which allows users to select the disease consortium data from which to create a cohort. Data is available from INRG (International Neuroblastoma Risk Group) and INSTRuCT (INternational Soft Tissue saRcoma ConsorTium) subjects. </p>
 <p><img alt="Consortium Selection" src="../img/consortium_selection.png" /></p>
 <h3 id="filters-set-workspace">Filters Set Workspace</h3>
 <p>Users can refer to <a href="https://youtu.be/mZniH9yVi9Y">this video</a> for an overview of the Filter Sets and Survival Curve functionality.</p>
