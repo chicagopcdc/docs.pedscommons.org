@@ -245,8 +245,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v1150-user-guide" class="md-nav__link">
-    v1.15.0 User Guide
+  <a href="#v1161-user-guide" class="md-nav__link">
+    v1.16.1 User Guide
   </a>
   
 </li>
@@ -346,6 +346,13 @@
           <li class="md-nav__item">
   <a href="#filter-by-consortium" class="md-nav__link">
     Filter by Consortium
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-or-exclude-filters" class="md-nav__link">
+    Include or Exclude Filters
   </a>
   
 </li>
@@ -627,8 +634,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v1150-user-guide" class="md-nav__link">
-    v1.15.0 User Guide
+  <a href="#v1161-user-guide" class="md-nav__link">
+    v1.16.1 User Guide
   </a>
   
 </li>
@@ -728,6 +735,13 @@
           <li class="md-nav__item">
   <a href="#filter-by-consortium" class="md-nav__link">
     Filter by Consortium
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#include-or-exclude-filters" class="md-nav__link">
+    Include or Exclude Filters
   </a>
   
 </li>
@@ -840,7 +854,7 @@
 
 <p><img alt="Logo" src="../img/PcdcLogo.png" /></p>
 <h1 id="pediatric-cancer-data-commons-data-portal-user-guide">Pediatric Cancer Data Commons<br> Data Portal User Guide</h1>
-<h6 id="v1150-user-guide">v1.15.0 User Guide</h6>
+<h6 id="v1161-user-guide">v1.16.1 User Guide</h6>
 <h2 id="introduction">Introduction</h2>
 <p>The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. </p>
 <p>By harmonizing existing clinical research data and leading international efforts to standardize data collection, we are breaking down long-standing barriers that have held back advancements in research on rare diseases. Our aim is to leverage this unique collaborative consortium-based approach to enable new and meaningful discoveries about pediatric cancers.</p>
@@ -849,8 +863,8 @@
 <h2 id="access">Access</h2>
 <p>The PCDC Data Portal can be accessed using a web browser by visiting <a href="https://portal.pedscommons.org/">https://portal.pedscommons.org/</a>.  New users to the PCDC Data Portal are prompted to login using an approved authentication provider (i.e., Google).  </p>
 <p><img alt="Landing" src="../img/image33.png" /></p>
-<p>After a user successfully logs in using the authentication provider (Google) for the first time, they are prompted to associate their account with the PCDC Data Portal. </p>
-<p>Registration of an account with the PCDC Data Portal requires users to provide their email (supplied by the authentication provider), first name, last name, and institutional affiliation (e.g. University of California Berkeley).  Registration also requires that users read and acknowledge agreement with the <a href="../PcdcPrivacyNotice/">PCDC Privacy Notice</a>, the <a href="../TermsAndConditions/">PCDC Terms and Conditions</a>, and the <a href="../AcceptableUsePolicy/">Acceptable Use Policy</a>. </p>
+<p>After successfully loggin in with Google for the first time, users are prompted to associate their account with the PCDC Data Portal. </p>
+<p>Registration of an account with the PCDC Data Portal requires users to provide their email (supplied by the authentication provider), first name, last name, and institutional affiliation (e.g. University of California Berkeley). Registration also requires that users read and acknowledge agreement with the <a href="../PcdcPrivacyNotice/">PCDC Privacy Notice</a>, the <a href="../TermsAndConditions/">PCDC Terms and Conditions</a>, and the <a href="../AcceptableUsePolicy/">Acceptable Use Policy</a>. </p>
 <p><img alt="Registration" src="../img/image5.png" /></p>
 <p>Users who have previously registered an account will be taken directly to the main page of the PCDC Data Portal after authentication.</p>
 <p>Users will initially have access to summary data only. Researchers can request access to line-level data by clicking the <strong>Request Access</strong> button on the Exploration page. See the <strong>Exploration</strong> section below. </p>
@@ -913,7 +927,7 @@
 <h3 id="filters-and-search">Filters and Search</h3>
 <p>The Filters panel on the left side of the <strong>Exploration</strong> page can be used to narrow the Summary View results by selected variables. Filters act upon variables in the underlying data and are available for variables in the <strong>Subject</strong>, <strong>Disease</strong>, <strong>Molecular</strong>, etc. data domains. Use the expand icon (&gt;) to see the controls available for a given filter.  </p>
 <p><img alt="Explore Expand" src="../img/filters.png" /></p>
-<p>Note: some filters, such as <strong>Age at Censor Status</strong> have a slider to select an age range.</p>
+<p>Note: some filters, such as <strong>Age at Censor Status</strong> have a slider to select an age range. Age is shown in days.</p>
 <p><img alt="Age at Censor Status" src="../img/image13.png" /></p>
 <h4 id="bin-size">Bin Size</h4>
 <p>A bin size limit of five has been implemented for all data filters as an additional measure of participant privacy. Bin size refers to the minimum sample size reporting threshold. A lock icon will appear next to the filter that includes less than five subjects. </p>
@@ -944,6 +958,8 @@
 <h4 id="filter-by-consortium">Filter by Consortium</h4>
 <p>The left panel includes a Consortium filter in the Subject tab which allows users to select the disease consortium data from which to create a cohort. Data is available from INRG (International Neuroblastoma Risk Group) and INSTRuCT (INternational Soft Tissue saRcoma ConsorTium) subjects. </p>
 <p><img alt="Consortium Selection" src="../img/consortium_selection.png" /></p>
+<h4 id="include-or-exclude-filters">Include or Exclude Filters</h4>
+<p>Most filters have an Include or Exclude mode below the filter name. By default, Include is selcted. Clicking on Exclude will show results for all but the selected filters. </p>
 <h3 id="filters-set-workspace">Filters Set Workspace</h3>
 <p>Users can refer to <a href="https://youtu.be/mZniH9yVi9Y">this video</a> for an overview of the Filter Sets and Survival Curve functionality.</p>
 <p>The Filter Set Workspace allows the user to manage multiple filter sets and switch among available filter sets to see summary statistics based on the filters selected in each set.</p>
