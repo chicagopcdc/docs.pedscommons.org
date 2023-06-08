@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.15.0 User Guide
+###### v1.16.1 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -18,9 +18,9 @@ The PCDC Data Portal can be accessed using a web browser by visiting <https://po
 
 ![Landing](img/image33.png)
 
-After a user successfully logs in using the authentication provider (Google) for the first time, they are prompted to associate their account with the PCDC Data Portal. 
+After successfully loggin in with Google for the first time, users are prompted to associate their account with the PCDC Data Portal. 
 
-Registration of an account with the PCDC Data Portal requires users to provide their email (supplied by the authentication provider), first name, last name, and institutional affiliation (e.g. University of California Berkeley).  Registration also requires that users read and acknowledge agreement with the [PCDC Privacy Notice](PcdcPrivacyNotice.md), the [PCDC Terms and Conditions](TermsAndConditions.md), and the [Acceptable Use Policy](AcceptableUsePolicy.md). 
+Registration of an account with the PCDC Data Portal requires users to provide their email (supplied by the authentication provider), first name, last name, and institutional affiliation (e.g. University of California Berkeley). Registration also requires that users read and acknowledge agreement with the [PCDC Privacy Notice](PcdcPrivacyNotice.md), the [PCDC Terms and Conditions](TermsAndConditions.md), and the [Acceptable Use Policy](AcceptableUsePolicy.md). 
 
 ![Registration](img/image5.png)
 
@@ -129,7 +129,7 @@ The Filters panel on the left side of the **Exploration** page can be used to na
 
 ![Explore Expand](img/filters.png)
 
-Note: some filters, such as **Age at Censor Status** have a slider to select an age range.
+Note: some filters, such as **Age at Censor Status** have a slider to select an age range. Age is shown in days.
 
 ![Age at Censor Status](img/image13.png)
 
@@ -190,6 +190,10 @@ Some filters have an interdependency. Example: selecting the 11q deletion molecu
 The left panel includes a Consortium filter in the Subject tab which allows users to select the disease consortium data from which to create a cohort. Data is available from INRG (International Neuroblastoma Risk Group) and INSTRuCT (INternational Soft Tissue saRcoma ConsorTium) subjects. 
 
 ![Consortium Selection](img/consortium_selection.png)
+
+#### Include or Exclude Filters
+
+Most filters have an Include or Exclude mode below the filter name. By default, Include is selcted. Clicking on Exclude will show results for all but the selected filters. 
 
 ### Filters Set Workspace
 
