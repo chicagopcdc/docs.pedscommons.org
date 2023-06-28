@@ -76,16 +76,19 @@ The mappings column typically contains standardized mappings to the previous ver
 >Example 1: <I>Rename the TUMOR_CLASSIFICATION variable in the EWS data dictionary [v2.1]  to CLASSIFICATION in the EWS data dictionary [v2.2]</i><br /><br />
 > (In the mapping column of the EWS data dictionary [v2.2] in the row of the renamed CLASSIFICATION variable) <br />
 > <code>skos:exactMatch [EWS].[v2.1].[Tumor Assessment].[TUMOR_CLASSIFICATION]</code>
+***  
 
 >Example 2: <I>Rename the "MYCN Mutation" permissible value of the ALTERATION variable in the NBL data dictionary [v3.0]  to "MYCN Variant" in the NBL data dictionary [v3.1]</i><br /><br />
 > (In the mapping column of the NBL data dictionary [v3.1] in the row of the renamed "MYCN Variant" permissible value) <br />
 > <code>skos:exactMatch [NBL].[v3.0].[Genetic Analysis].[ALTERATION].[MYCN Mutation]</code>
+***  
 
 >Example 3: <I>Combine Karnofsky and Lanksy performance scores in the HL data dictionary [v1.0] into a single "PERFORMANCE_SCORE" variable in the HL data dictionary [v2.0]</i><br /><br />
 > (In the mapping column of the HL data dictionary [v2.0] in the row of the new "PERFORMANCE_SCORE" variable) <br />
 > <code>skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[KARNOFSKY] || skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[LANSKY]</code><br /><br />
 > (In the mapping column of the HL data dictionary [v2.0] in the row of the "100" permissible value of the "PERFORMANCE_SCORE" variable) <br />
-> <code>skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[KARNOFSKY].[100] || skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[LANSKY].[100]</code><br />...
+> <code>skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[KARNOFSKY].[100] || skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[LANSKY].[100]</code><br />
+***  
 
 >Example 4: <I>Split some permissible values for the ENERGY_TYPE variable of the CNS data dictionary [v1.0] into a new "TECHNIQUE" variable in the CNS data dictionary [v1.1]</i><br /><br />
 > (In the mapping column of the CNS data dictionary [v1.1] in the rows for <u>both</u> the ENERGY_TYPE and TECHNIQUE variables) <br />
