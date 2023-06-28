@@ -9,6 +9,11 @@ nav:
   - PCDC Terms and Conditions: 'TermsAndConditions.md'
   - GEARBOx Terms and Conditions: 'GEARBOxTermsandConditions.md'
   - Working with PFB Files: 'WorkingWithPFBfiles.md'
+  - 'Data Modeling and Reporting':
+    - Overview: 'DataModelingOverview.md'
+    - Longitudinal Reporting: 'LongitudinalReporting.md'
+    - Genomic Reporting: 'GenomicReporting.md'
+    - Tumor Reporting:  'TumorReporting.md'
   - Introduction to the PCDC <br> (Video): 'https://youtu.be/uSUFthO4aBs'
   - Cohort Explorer Overview (Video): 'https://youtu.be/0TJJpx3m0GY'
   - Filter Sets and Survival Analysis (Video): 'https://youtu.be/oosUz_M8gfs'
