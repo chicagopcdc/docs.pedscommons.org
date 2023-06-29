@@ -4,7 +4,8 @@
 
 By definition, a data commons has a single data model. This means that when any PCDC-affiliate disease consortia are reporting similar data--from dosing units to biopsy types--they use the same variables and permissible values. 
 
-However, that's not to say that each disease uses _all_ the same variables and permissible values. Data dictionaries are used to create a custom view of the data model. The figure below shows how the AML data dictionary and NBL data dictionary are two custom views of a single data model.
+However, that's not to say that each disease uses _all_ the same variables and permissible values. Data dictionaries are used to constrain the data model to certain areas. The figure below shows how the data dictionaries for AML, neuroblastoma, and Hodgkin's lymphoma each draw from the same PCDC data model--using many of the same tables (collections of variables and values).
+
 
 ![model_vs_dictionary](img/model_vs_dictionary.png)
 
@@ -12,12 +13,14 @@ However, that's not to say that each disease uses _all_ the same variables and p
 
 To allow computational parsing of the data dictionaries, each row is tagged with a "RowType" which are explained below:
 
-<code>DD</code> Row contains a domain declaration<br />
-<code>TD</code> Row contains a table declaration<br />
-<code>TG</code> Row contains guidance on how the table should be implemented<br />
-<code>VD</code> Row contains a variable declaration<br />
-<code>PD</code> Row contains a permissible value declaration<br />
-<code>DPD</code> Row contains a deprecated permissible value
+<code>DD</code> <u>D</u>omain <u>D</u>eclaration -  The row indicates the domain of the next table in the spreadsheet.<br />
+<code>TD</code> <u>T</u>able <u>D</u>eclaration - The row is the beginning of a new table and includes the name of the table.<br />
+<code>TG</code> <u>T</u>able <u>G</u>uidance - The row contains a short description of how the table should be implemented by contributors.<br />
+<code>VD</code> <u>V</u>ariable <u>D</u>eclaration - The row describes a variable. The placeholder "&#95;undefined&#95;" is used to ensure that permissible values are not declared on the same row.<br />
+<code>PD</code> <u>P</u>ermissible Value <u>D</u>eclaration - The row describes a permissible value.<br />
+<code>DPD</code> <u>D</u>eprecated <u>P</u>ermissible Value <u>D</u>eclaration - The row describes a permissible value that was in the previous version of the data dictionary but is not to be used in the current version.
+
+![rowtypes](img/rowtypes.png)
 
 ### Domains
 
@@ -35,17 +38,15 @@ At the highest level, the PCDC data model has seven domains. These are used to g
 
 Tables are the primary structural organization in the PCDC data model. Variable names are unique within tables. Data are contributed to PCDC in spreadsheets--one for each table. Each table has specific guidance that specifies how it should be instantiated
 
-
 ### Variables
 
-PCDC variables are named in UPPER_CASE and delimited with underscores "_". They are unique within their table, but not within the model. Data dictionaries include a column to identify which disease groups use a given variable. Each variable has a description and one or more |-delimited terminology bindings.
+PCDC variables are named in UPPER_CASE and delimited with underscores "_". They are unique within their table, but not within the model. Data dictionaries include a column to identify which disease groups use a given variable. Each variable has a description and one or more terminology bindings (codes) each separated by a vertical pipe character " | ".
 
 #### Data Types
 <code>String</code> - free-text, can be a single word or multiple words.<br />
 <code>Code</code> - one of a set list of permissible values.<br />
 <code>Integer</code> - a whole number, typically reserved for ordinal variables (such as time period number) or the age of a patient.<br />
 <code>Decimal</code> - for variables that are not guaranteed to be whole values, such as lab results, doses, etc.
-
 
 #### Tiers
 <code>1</code> - contributors must include, regardless of the resource cost <br />
@@ -54,11 +55,11 @@ PCDC variables are named in UPPER_CASE and delimited with underscores "_". They 
 
 ### Values
 
-Coded variables are followed by a list of permissible values. Data dictionaries include a column to identify which disease groups use a given permissible value. Each permissible value has a description and one or more "|"-delimited terminology bindings.
+Coded variables are followed by a list of permissible values. Data dictionaries include a column to identify which disease groups use a given permissible value. Each permissible value has a description and one or more terminology bindings separated by a vertical pipe character " | ".
 
 ### Implementation Notes
 
-Any row can have one or more "|"-delimited notes included in the implementation notes column. These notes provide additional guidance on how a table, variable, or value should be implemented by one or more data contributors. There is no established format for implementation notes and the individual groups can decide how to best use them.
+Any row can have one or more notes included in the implementation notes column. Each are separated by a vertical pipe character " | " and should indicate if the note is specific to a particular contributor or should be used by all contributors who are using that data dictionary. These notes provide additional guidance on how a table, variable, or value should be implemented by one or more data contributors. There is no additional required formatting for implementation notes and the individual groups can decide how to best use them.
 
 ### Mappings
 
@@ -68,7 +69,6 @@ The mappings column typically contains standardized mappings to the previous ver
 <code>skos:exactMatch</code>- target (current version) is the same as the source (previous version).<br />
 <code>skos:narrowMatch</code>- the target (current version) is a narrower concept than the source (previous version).<br />
 <code>skos:broadMatch</code>- the target (current version) is a broader concept than the source (previous version).
-
 
 #### Standardized Mapping Format  
 <code>_predicate_ [_disease_group_].[_previous_data_dictionary_version_].[_table_name_].[_variable_name_].[_permissible_value_]</code>

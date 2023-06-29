@@ -7,7 +7,7 @@ The tumor assessment table can be used to describe all types of tumors associate
 |----------------|------------------------------------------------------|
 | Primary | A tumor at the original site of origin.              |
 | Regional | Non-contiguous spread of primary to a regional site. |
-| Metastatic | Non-contiguous spread of primary to a new site.      |
+| Metastatic | Non-contiguous spread of primary to a distant site.  |
 | Local Extension | Contiguous growth of primary to a new site.          |
 
 Each tumor can have several reported attributes, these are detailed in the data dictionary of each disease group (sample included below).
