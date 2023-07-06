@@ -11,7 +11,7 @@ Below are examples of permissible values for ALTERATION that demonstrate this va
 
 Additional details about an alteration can be represented in the remainder of the structured fields in the model (shown below).
 
-![gr_diagram](img/gr_diagram.png)
+![gr_tree](img/gr_tree.png)
 
 ### Chromosomal vs Genic 
 Since the PCDC uses a flat data model it is important to remember that some variables and permissible values will only apply to chromosomal alterations and others will only apply to genic alterations. Although they are "mixed together" in the Genetic Analysis table, specific implementation guidance and quality checks will ensure that proper values are used for chromosomal and genic alterations respectively.
