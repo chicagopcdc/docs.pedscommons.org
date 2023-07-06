@@ -783,16 +783,17 @@
 <h1 id="pcdc-data-modeling-overview">PCDC Data Modeling Overview</h1>
 <h2 id="data-model-vs-data-dictionaries">Data Model vs Data Dictionaries</h2>
 <p>By definition, a data commons has a single data model. This means that when any PCDC-affiliate disease consortia are reporting similar data--from dosing units to biopsy types--they use the same variables and permissible values. </p>
-<p>However, that's not to say that each disease uses <em>all</em> the same variables and permissible values. Data dictionaries are used to create a custom view of the data model. The figure below shows how the AML data dictionary and NBL data dictionary are two custom views of a single data model.</p>
+<p>However, that's not to say that each disease uses <em>all</em> the same variables and permissible values. Data dictionaries are used to constrain the data model to certain areas. The figure below shows how the data dictionaries for AML, neuroblastoma, and Hodgkin's lymphoma each draw from the same PCDC data model--using many of the same tables (collections of variables and values).</p>
 <p><img alt="model_vs_dictionary" src="../img/model_vs_dictionary.png" /></p>
 <h2 id="data-dictionary-format">Data Dictionary Format</h2>
 <p>To allow computational parsing of the data dictionaries, each row is tagged with a "RowType" which are explained below:</p>
-<p><code>DD</code> Row contains a domain declaration<br />
-<code>TD</code> Row contains a table declaration<br />
-<code>TG</code> Row contains guidance on how the table should be implemented<br />
-<code>VD</code> Row contains a variable declaration<br />
-<code>PD</code> Row contains a permissible value declaration<br />
-<code>DPD</code> Row contains a deprecated permissible value</p>
+<p><code>DD</code> <u>D</u>omain <u>D</u>eclaration -  The row indicates the domain of the next table in the spreadsheet.<br />
+<code>TD</code> <u>T</u>able <u>D</u>eclaration - The row is the beginning of a new table and includes the name of the table.<br />
+<code>TG</code> <u>T</u>able <u>G</u>uidance - The row contains a short description of how the table should be implemented by contributors.<br />
+<code>VD</code> <u>V</u>ariable <u>D</u>eclaration - The row describes a variable. The placeholder "&#95;undefined&#95;" is used to ensure that permissible values are not declared on the same row.<br />
+<code>PD</code> <u>P</u>ermissible Value <u>D</u>eclaration - The row describes a permissible value.<br />
+<code>DPD</code> <u>D</u>eprecated <u>P</u>ermissible Value <u>D</u>eclaration - The row describes a permissible value that was in the previous version of the data dictionary but is not to be used in the current version.</p>
+<p><img alt="rowtypes" src="../img/rowtypes.png" /></p>
 <h3 id="domains">Domains</h3>
 <p>At the highest level, the PCDC data model has seven domains. These are used to group related information and improves the human readability of the model. Domains have no computational meaning. Each domain is explained below:<br /></p>
 <p><code>Protocol</code> - relating to the consortium and institutional data contributor, to the timing of reported event, and to the patient's involvement in a clinical trial or study. <br />
@@ -805,7 +806,7 @@
 <h3 id="tables">Tables</h3>
 <p>Tables are the primary structural organization in the PCDC data model. Variable names are unique within tables. Data are contributed to PCDC in spreadsheets--one for each table. Each table has specific guidance that specifies how it should be instantiated</p>
 <h3 id="variables">Variables</h3>
-<p>PCDC variables are named in UPPER_CASE and delimited with underscores "_". They are unique within their table, but not within the model. Data dictionaries include a column to identify which disease groups use a given variable. Each variable has a description and one or more |-delimited terminology bindings.</p>
+<p>PCDC variables are named in UPPER_CASE and delimited with underscores "_". They are unique within their table, but not within the model. Data dictionaries include a column to identify which disease groups use a given variable. Each variable has a description and one or more terminology bindings (codes) each separated by a vertical pipe character " | ".</p>
 <h4 id="data-types">Data Types</h4>
 <p><code>String</code> - free-text, can be a single word or multiple words.<br />
 <code>Code</code> - one of a set list of permissible values.<br />
@@ -816,9 +817,9 @@
 <code>2</code> - contributors should prioritize inclusion if resources are available<br />
 <code>3</code> - contributors shouldn’t prioritize inclusion, but can include if resources are available</p>
 <h3 id="values">Values</h3>
-<p>Coded variables are followed by a list of permissible values. Data dictionaries include a column to identify which disease groups use a given permissible value. Each permissible value has a description and one or more "|"-delimited terminology bindings.</p>
+<p>Coded variables are followed by a list of permissible values. Data dictionaries include a column to identify which disease groups use a given permissible value. Each permissible value has a description and one or more terminology bindings separated by a vertical pipe character " | ".</p>
 <h3 id="implementation-notes">Implementation Notes</h3>
-<p>Any row can have one or more "|"-delimited notes included in the implementation notes column. These notes provide additional guidance on how a table, variable, or value should be implemented by one or more data contributors. There is no established format for implementation notes and the individual groups can decide how to best use them.</p>
+<p>Any row can have one or more notes included in the implementation notes column. Each are separated by a vertical pipe character " | " and should indicate if the note is specific to a particular contributor or should be used by all contributors who are using that data dictionary. These notes provide additional guidance on how a table, variable, or value should be implemented by one or more data contributors. There is no additional required formatting for implementation notes and the individual groups can decide how to best use them.</p>
 <h3 id="mappings">Mappings</h3>
 <p>The mappings column typically contains standardized mappings to the previous version of the data dictionary. Ideally, they allow transformation code to take the data from the previous version of the data dictionary into the current version. If there is no prior established version, this column is sometimes used to provide mappings to the source case report form (CRF) or registry.</p>
 <h4 id="sssom-predicates"><a href="https://mapping-commons.github.io/sssom/spec/#common-mapping-predicates">SSSOM</a> Predicates</h4>
@@ -831,14 +832,23 @@
 <p>Example 1: <I>Rename the TUMOR_CLASSIFICATION variable in the EWS data dictionary [v2.1]  to CLASSIFICATION in the EWS data dictionary [v2.2]</i><br /><br />
 (In the mapping column of the EWS data dictionary [v2.2] in the row of the renamed CLASSIFICATION variable) <br />
 <code>skos:exactMatch [EWS].[v2.1].[Tumor Assessment].[TUMOR_CLASSIFICATION]</code></p>
+</blockquote>
+<hr />
+<blockquote>
 <p>Example 2: <I>Rename the "MYCN Mutation" permissible value of the ALTERATION variable in the NBL data dictionary [v3.0]  to "MYCN Variant" in the NBL data dictionary [v3.1]</i><br /><br />
 (In the mapping column of the NBL data dictionary [v3.1] in the row of the renamed "MYCN Variant" permissible value) <br />
 <code>skos:exactMatch [NBL].[v3.0].[Genetic Analysis].[ALTERATION].[MYCN Mutation]</code></p>
+</blockquote>
+<hr />
+<blockquote>
 <p>Example 3: <I>Combine Karnofsky and Lanksy performance scores in the HL data dictionary [v1.0] into a single "PERFORMANCE_SCORE" variable in the HL data dictionary [v2.0]</i><br /><br />
 (In the mapping column of the HL data dictionary [v2.0] in the row of the new "PERFORMANCE_SCORE" variable) <br />
 <code>skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[KARNOFSKY] || skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[LANSKY]</code><br /><br />
 (In the mapping column of the HL data dictionary [v2.0] in the row of the "100" permissible value of the "PERFORMANCE_SCORE" variable) <br />
-<code>skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[KARNOFSKY].[100] || skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[LANSKY].[100]</code><br />...</p>
+<code>skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[KARNOFSKY].[100] || skos:narrowMatch [HL].[v1.0].[Disease Characteristics].[LANSKY].[100]</code><br /></p>
+</blockquote>
+<hr />
+<blockquote>
 <p>Example 4: <I>Split some permissible values for the ENERGY_TYPE variable of the CNS data dictionary [v1.0] into a new "TECHNIQUE" variable in the CNS data dictionary [v1.1]</i><br /><br />
 (In the mapping column of the CNS data dictionary [v1.1] in the rows for <u>both</u> the ENERGY_TYPE and TECHNIQUE variables) <br />
 <code>skos:broadMatch [CNS].[v1.0].[Radiation Therapy].[ENERGY_TYPE]</code></p>
