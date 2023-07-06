@@ -17,6 +17,6 @@ Additional details about an alteration can be represented in the remainder of th
 Since the PCDC uses a flat data model it is important to remember that some variables and permissible values will only apply to chromosomal alterations and others will only apply to genic alterations. Although they are "mixed together" in the Genetic Analysis table, specific implementation guidance and quality checks will ensure that proper values are used for chromosomal and genic alterations respectively.
 
 ## Example
-Below are example of how alterations can be reported along with as many or few additional details as are present in the source data.
+Below are examples of how alterations can be reported along with as many or few additional details as are present in the source data.
 
 ![gr_example](img/gr_example1.png)
