@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.16.1 User Guide
+###### v1.17.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -18,7 +18,7 @@ The PCDC Data Portal can be accessed using a web browser by visiting <https://po
 
 ![Landing](img/image33.png)
 
-After successfully loggin in with Google for the first time, users are prompted to associate their account with the PCDC Data Portal. 
+After successfully logging in with Google for the first time, users are prompted to associate their account with the PCDC Data Portal. 
 
 Registration of an account with the PCDC Data Portal requires users to provide their email (supplied by the authentication provider), first name, last name, and institutional affiliation (e.g. University of California Berkeley). Registration also requires that users read and acknowledge agreement with the [PCDC Privacy Notice](PcdcPrivacyNotice.md), the [PCDC Terms and Conditions](TermsAndConditions.md), and the [Acceptable Use Policy](AcceptableUsePolicy.md). 
 
