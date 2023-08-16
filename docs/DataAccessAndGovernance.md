@@ -7,6 +7,7 @@ All of the data currently within the PCDC are derived from completed clinical tr
 
 Currently data are available for the following diseases:  
 - Rhabdomyosarcoma  
+- Non-rhabdomyosarcoma  
 - Neuroblastoma
 
 ### How were these data elements selected?
