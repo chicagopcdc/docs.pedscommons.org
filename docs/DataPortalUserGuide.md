@@ -215,7 +215,7 @@ Filter Set Workspace commands allow the user to load, save and make changes to f
 - **Duplicate**: Copies the active filter set. Note: an empty set cannot be duplicated.
 - **Remove**: Removes the active filter set from the workspace and makes the filter set at the top of the list active.
 - **Clear**: Clears the filter selections from the active filter set.
--  **Clear all**: Clears the Workspace of all filter sets
+-  **Remove all**: Removes all filter sets from the Workspace.
 - **Load**: Loads a saved filter set to the Workspace. The filter set can be the user's own saved filter set or a filter set defined by a shared token from another user (see "Share" below).
 - **Save**: Saves the active filter set. Changing the name of an existing filter set will save it with the new name.
 - **Share**: Generates a token that can be emailed to other users to re-create the selected filter set. 
