@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.18.0 User Guide
+###### v1.19.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -127,10 +127,9 @@ The current Release Version of the data is included at the bottom of the left pa
 
 The Filters panel on the left side of the **Exploration** page can be used to narrow the Summary View results by selected variables. Filters act upon variables in the underlying data and are available for variables in the **Subject**, **Disease**, **Molecular**, etc. data domains. Use the expand icon (>) to see the controls available for a given filter.  
 
-![Explore Expand](img/filters.png)
-
-Note: some filters, such as **Age at Censor Status** have a slider to select an age range. Age is shown in days.
-
+![Explore Expand](img/filters.png)  
+  
+Note: some filters, such as **Age at Censor Status** have a slider to select an age range. Age is shown in days.  
 ![Age at Censor Status](img/image13.png)
 
 #### Bin Size
@@ -187,7 +186,7 @@ Some filters have an interdependency. Example: selecting the 11q deletion molecu
 
 #### Filter by Consortium  
 
-The left panel includes a Consortium filter in the Subject tab which allows users to select the disease consortium data from which to create a cohort. Data is available from INRG (International Neuroblastoma Risk Group) and INSTRuCT (INternational Soft Tissue saRcoma ConsorTium) subjects. 
+The left panel includes a Consortium filter in the Subject tab which allows users to select the disease consortium data from which to create a cohort. Data is available from INRG (International Neuroblastoma Risk Group), INSTRuCT (INternational Soft Tissue saRcoma ConsorTium), MaGIC (Malignant Germ Cell International Consortium), and NODAL (hodgkiN lymphOma DatA coLlaboration) subjects. 
 
 ![Consortium Selection](img/consortium_selection.png)
 
@@ -217,7 +216,7 @@ Filter Set Workspace commands allow the user to load, save and make changes to f
 - **Clear**: Clears the filter selections from the active filter set.
 -  **Remove all**: Removes all filter sets from the Workspace.
 - **Load**: Loads a saved filter set to the Workspace. The filter set can be the user's own saved filter set or a filter set defined by a shared token from another user (see "Share" below).
-- **Save**: Saves the active filter set. Changing the name of an existing filter set will save it with the new name.
+- **Save**: Saves the active filter set that has been newly created. When a change has been made to an existing filter set, the Save button changes to **Update**.
 - **Share**: Generates a token that can be emailed to other users to re-create the selected filter set. 
 - **Reset**: When a change is made to the active filter, Reset will revert any changes to the saved version of the filter set. If the filter set was not previously saved, Reset will not be active.
 - **Delete**: Deletes the selected filter set, removing it from the screen and from the user's saved filters.
