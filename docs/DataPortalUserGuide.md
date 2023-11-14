@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.20.0 User Guide
+###### v1.21.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -201,6 +201,10 @@ Users can refer to [this video](https://youtu.be/mZniH9yVi9Y) for an overview of
 The Filter Set Workspace allows the user to manage multiple filter sets and switch among available filter sets to see summary statistics based on the filters selected in each set.
 
 ![Multiple Filter Sets](img/filter_set_workspace.png)
+
+Use the resizing handle in the lower right corner of the Workspace area to resize the window. 
+
+![Workspace resizing handle](img/Workspace_drag_handle.png)
 
 The active filter is labeled in green on the far left. Each filter shows the expression statement that describes the filter set. Example:
 

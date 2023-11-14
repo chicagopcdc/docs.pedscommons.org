@@ -9,6 +9,8 @@ nav:
     - Data Access and Governance: 'DataAccessAndGovernance.md'
     - Project Request Forms: 'PCDCProjectRequestForm.md'
     - Terms and Conditions: 'TermsAndConditions.md'
+    - Software Updates: 'SoftwareUpdates.md'
+    - Data Release Updates: 'DataReleases.md'
     - Working with PFB Files: 'WorkingWithPFBfiles.md'
   - 'Data Modeling and Reporting':
     - Overview: 'DataModelingOverview.md'
