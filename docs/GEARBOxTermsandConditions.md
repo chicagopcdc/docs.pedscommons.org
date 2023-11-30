@@ -1,4 +1,4 @@
-![Logo](img/PcdcLogo.png)
+![Logo](img/D4CG_Header.png)
 # GEARBOx Terms and Conditions
 The following Terms and Conditions apply to the use of GEARBOx. Your use of GEARBOx and the matching results indicates your acceptance of the following Terms and Conditions. These Terms and Conditions apply to all data obtained from GEARBOx, independent of format and method of acquisition.
 
