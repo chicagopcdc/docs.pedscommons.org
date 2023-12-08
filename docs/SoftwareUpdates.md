@@ -1,5 +1,6 @@
 | Version | Release Date   | Description |
 | ------- | -------------- | ----------------------------|
+| v1.22.0 | Dec 12, 2023 | Minor improvements to user interface within the Data Requests page |
 | v1.21.0 | Nov 14, 2023 | Users can change the Filter Set Workspace window size |
 | v1.20.0 | Oct 10, 2023 | Includes minor enhancements and bug fixes |
 | v1.19.0 | Sept 12, 2023 | "Save" button changed to Update when using an existing filter set. Bug fix to normalize Event-Free Survival curve to "1" at time zero for INRG data |
