@@ -13,7 +13,7 @@
     
     
       
-        <title>Tumor Reporting - D4CG Documentation</title>
+        <title>Gearbox Data and Software Updates - D4CG Documentation</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tumor-reporting-in-the-pcdc-data-model" class="md-skip">
+        <a href="#gearbox-data-and-software-updates" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tumor Reporting
+              Gearbox Data and Software Updates
             
           </span>
         </div>
@@ -236,7 +236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../GEARBOxDataAndSoftwareUpdates" class="md-nav__link">
+      <a href="." class="md-nav__link">
         Data and Software Updates
       </a>
     </li>
@@ -416,14 +416,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -486,59 +484,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tumor Reporting
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../TumorReporting/" class="md-nav__link">
         Tumor Reporting
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tumor-assessment" class="md-nav__link">
-    Tumor Assessment
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -660,28 +610,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tumor-assessment" class="md-nav__link">
-    Tumor Assessment
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
-    Example
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -694,51 +622,28 @@
                 
 
 
-<h1 id="tumor-reporting-in-the-pcdc-data-model">Tumor Reporting in the PCDC Data Model</h1>
-<h2 id="tumor-assessment">Tumor Assessment</h2>
-<p>The tumor assessment table can be used to describe all types of tumors associated with the cancer of a patient. These types currently include:</p>
+<h1 id="gearbox-data-and-software-updates">Gearbox Data and Software Updates</h1>
 <table>
 <thead>
 <tr>
-<th>Classification</th>
+<th>Version</th>
+<th>Release Date</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Primary</td>
-<td>A tumor at the original site of origin.</td>
+<td>v1.2.0</td>
+<td>Dec 05, 2023</td>
+<td>Addition of four clinical trials for neuroblastoma and germ cell tumors</td>
 </tr>
 <tr>
-<td>Regional</td>
-<td>Non-contiguous spread of primary to a regional site.</td>
-</tr>
-<tr>
-<td>Metastatic</td>
-<td>Non-contiguous spread of primary to a distant site.</td>
-</tr>
-<tr>
-<td>Local Extension</td>
-<td>Contiguous growth of primary to a new site.</td>
+<td>v1.1.0</td>
+<td>Dec 06, 2022</td>
+<td>Addition of two clinical trials for AML</td>
 </tr>
 </tbody>
 </table>
-<p>Each tumor can have several reported attributes, these are detailed in the data dictionary of each disease group (sample included below).</p>
-<p><img alt="tu_assess_table" src="../img/tu_assess_table.png" /></p>
-<h2 id="example">Example</h2>
-<p>While it may seem non-intuitive to separately report primary tumors, regional and/or extension sites, metastases, etc., it prevents the duplication of concepts in the data model. For example, rather than maintaining 4 site variables (primary site, regional site, metastatic site, extension site) we can use the same generic site variable for all tumor classifications. </p>
-<p>Consider these two variations of an example:</p>
-<blockquote>
-<ol>
-<li>A patient is diagnosed with alveolar rhabdomyosarcoma of the prostate with regional pelvic lymph node involvement and metastatic disease to the chest. </li>
-<li>A patient is diagnosed with alveolar rhabdomyosarcoma of the prostate with local extension (from the prostate through the urethra and into the bladder) and metastatic disease to the chest.</li>
-</ol>
-</blockquote>
-<p>In the first variation of this example, there are three observations to report: the primary tumor, the regional lymph node involvement, and the lung metastasis.</p>
-<p>In the second variation of this example, there are four observations to report: the primary tumor, the local extension to the urethra, the local extension to the bladder, and the lung metastasis.
-<img alt="tu_as_diagram" src="../img/tu_as_diagram.png" /></p>
-<p>So, what does reporting tumors this way look like? As it is with any table in the PCDC data model, each observation is reported in separate rows. In order to keep both contiguous and non-contiguous growth to new sites in the context of the primary tumor, reference IDs are used, as shown below:</p>
-<p><img alt="tu_as_ref_ids" src="../img/tu_as_ref_ids.png" /></p>
 
               
             </article>
@@ -749,27 +654,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../GenomicReporting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Genomic Reporting" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Genomic Reporting
-            </div>
-          </div>
-        </a>
-      
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
