@@ -1,7 +1,9 @@
 site_name: D4CG Documentation
 nav:
   - Privacy Notice: 'PcdcPrivacyNotice.md'
-  - GEARBOx Terms and Conditions: 'GEARBOxTermsandConditions.md'
+  - 'GEARBOx Documentation':
+    - GEARBOx Terms and Conditions: 'GEARBOxTermsandConditions.md'
+    - Data and Software Updates: 'GEARBOxDataAndSoftwareUpdates'
   - 'PCDC Documentation':
     - Acceptable Use Policy: 'AcceptableUsePolicy.md'
     - Statistical Manual: 'StatisticalManual.md'
