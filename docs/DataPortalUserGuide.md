@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.22.0 User Guide
+###### v1.23.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -277,7 +277,7 @@ Some subjects within the PCDC can be further explored in external Data Commons'.
 
 The PCDC platform includes a **Survival Analysis** tool that can display survival curves and Number at Risk tables. This tool will be available temporarily during a pilot phase to test the functionality and usability of the tool.
 
-When first accessing the survival curve generator, users must agree to follow the Acceptable Use Policy. Subsequent sessions will include a reminder of the terms whenever the Apply button is pressed.
+When first accessing the survival curve generator, users must agree to follow the Acceptable Use Policy. Subsequent sessions will include a reminder of the terms whenever the Survival tab is first used.
 
 
 ![Survival Analysis](img/survival_analysis_tool.png)
