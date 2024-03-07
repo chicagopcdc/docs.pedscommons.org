@@ -1,5 +1,6 @@
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
+| v1.24.0 | Mar 12, 2024 | Improvements to the admin functions on the Data Requests page; updated Explore In function for GDC 2.0  |
 | v1.23.0 | Jan 30, 2024 | Changes to the Data Request filters; improved look of the Survival Analysis tab |
 | v1.22.0 | Dec 12, 2023 | Minor improvements to user interface within the Data Requests page |
 | v1.21.0 | Nov 14, 2023 | Users can change the Filter Set Workspace window size |
