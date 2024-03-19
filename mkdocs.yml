@@ -32,6 +32,9 @@ theme:
   favicon: img/favicon.ico
 extra:
   generator: false
+  analytics:
+    provider: google
+    property: G-VVD2WQMB03
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
