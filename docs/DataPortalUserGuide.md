@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.23.0 User Guide
+###### v1.24.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -259,19 +259,18 @@ Note: when using a Composed filter, the left filter panel becomes inactivated.
 
 ### Explore in An External Data Commons
 
-Some subjects within the PCDC can be further explored in external Data Commons'. Currently, Gabriela Miller Kids First and the Genomic Data Commons are available for exploration. 
+Some subjects within the PCDC can be further explored in external Data Commons'. Currently, Gabriela Miller Kids First (GMKF) and the Genomic Data Commons (GDC) are available for exploration. 
 
 **To explore subjects within an external commons:**
 
-1) Create a data set using the Filter Set Workspace. It is recommended users save their data set before using the "Explore in" function. 
+1) Create a data set using the Filter Set Workspace. It is recommended users save their data set before using the "Explore in" function. Set the desired data set as "Active" by clicking on it within the Workspace.
 
 2) Click on the **Explore in** button in the upper right part of the Exploration page. A pop-up window will open. The drop-down menu is used to select the external data commons. 
 
 ![Explore in](img/explore_in.png)
 
-3) For data sets with fewer than 40 subjects, the **Open in new tab** button will be active. Clicking on the button will take the user to the selected website where the subjects will be available for analysis. 
+3) Download the manifest. The "Open in new tab" button will activate after downloading the file. Follow the instructions on the target website to upload the manifest. 
 
-4) Data sets with more than 40 subjects will require a manifest file to be downloaded to the user's computer and uploaded to the target data commons. The "Open in new tab" button will not be active until the user downloads the manifest. Follow the instructions on the target website to upload the manifest. 
 
 ### Survival Analysis
 

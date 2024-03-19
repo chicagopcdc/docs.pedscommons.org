@@ -3,7 +3,7 @@ nav:
   - Privacy Notice: 'PcdcPrivacyNotice.md'
   - 'GEARBOx Documentation':
     - GEARBOx Terms and Conditions: 'GEARBOxTermsandConditions.md'
-    - Data and Software Updates: 'GEARBOxDataAndSoftwareUpdates'
+    - Data and Software Updates: 'GEARBOxDataAndSoftwareUpdates.md'
   - 'PCDC Documentation':
     - Acceptable Use Policy: 'AcceptableUsePolicy.md'
     - Statistical Manual: 'StatisticalManual.md'
@@ -32,6 +32,9 @@ theme:
   favicon: img/favicon.ico
 extra:
   generator: false
+  analytics:
+    provider: google
+    property: G-VVD2WQMB03
 extra_css:
   - stylesheets/extra.css
 markdown_extensions:
