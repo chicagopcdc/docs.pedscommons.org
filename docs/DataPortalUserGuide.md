@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.25.0 User Guide
+###### v1.27.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -97,7 +97,7 @@ The **Search Results** on the left side shows the number of matches in the Node 
 
 ![Search Results Counts](img/image29.png)
 
-The **Last Search** field shows the number of Nodes where the term appears – in this example: 3.
+The **Last Search** field shows the number of Nodes where the term appears – in this example:
 
 ![Search Results Node Count](img/image15.png)
 

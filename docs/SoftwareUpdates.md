@@ -1,5 +1,7 @@
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
+| v1.27.0 | Jun 11, 2024 | Performance improvement: automatically load and update consortia into the amanuensis DB based on data in the graph. |
+| v1.26.0 | May 21, 2024 | Added version number to Survival Curve and Data Dictionary. |
 | v1.25.0 | Apr 09, 2024 | Removed the “Completed Date” column from the Data Requests page. Improved filtering of Data Requests table |
 | v1.24.0 | Mar 12, 2024 | Improvements to the admin functions on the Data Requests page; updated Explore In function for GDC 2.0  |
 | v1.23.0 | Jan 30, 2024 | Changes to the Data Request filters; improved look of the Survival Analysis tab |
