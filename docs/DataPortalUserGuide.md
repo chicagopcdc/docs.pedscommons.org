@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.27.0 User Guide
+###### v1.28.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -33,7 +33,7 @@ Users will initially have access to summary data only. Researchers can request a
 
 After successful login, users will see the main page. 
 
-![Main](img/image32.png)
+![Main](img/landing_page.png)
 
 The main navigation buttons to PCDC Data Portal pages are in the upper right-hand corner of the page:
 
@@ -136,13 +136,13 @@ Note: some filters, such as **Age at Censor Status** have a slider to select an 
 
 A bin size limit of five has been implemented for all data filters as an additional measure of participant privacy. Bin size refers to the minimum sample size reporting threshold. A lock icon will appear next to the filter that includes less than five subjects. 
 
-#### Summary View
-
 ![Lock](img/image14.png)
+
+#### Summary View
 
 The main **Exploration** page shows a summary view of distributions across some key demographic variables for all cases in the PCDC that match the currently-selected filters.
 
-![Exploration](img/imageW2.png)
+![Exploration](img/Exploration.png)
 
 Different variable types (e.g. continuous variables, discrete variables, categorical variables) will have different controls available. For example, **Race** is a categorical (enumerative) variable, and categorical variable filters can be selected using checkboxes with one checkbox per value within that variable. The user can select the values of a variable they are interested in as part of the population. Multiple selections <u>within a single filter</u> are treated as logical ‘ORs’. Therefore, a user who selects ‘Asian’ and ‘Black or African American’ would see a result set where the subjects have a **Race** value of either ‘Asian’ OR ‘Black OR African American’
 
