@@ -1,5 +1,8 @@
+Link to [Data Release Updates](https://docs.pedscommons.org/DataReleases/)
+
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
+| v1.29.0 | Aug 13, 2024 | Implemented new API for CCDI federation services |
 | v1.28.0 | Jul 09, 2024 | (data release only) |
 | v1.27.0 | Jun 11, 2024 | Performance improvement: automatically load and update consortia into the amanuensis DB based on data in the graph. |
 | v1.26.0 | May 21, 2024 | Added version number to Survival Curve and Data Dictionary. |
