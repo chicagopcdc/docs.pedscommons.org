@@ -6,7 +6,7 @@ Before submitting a project request form, please review the [PCDC Data Access an
 To request data from the **International Soft Tissue Sarcoma Consortium (INSTRuCT)**, please click [here](https://commons.cri.uchicago.edu/wp-content/uploads/2021/07/INSTRuCT_ApplicationForm-20200703.docx) to download the form and complete and e-mail the form as indicated.
 <br>
 <br>
-To request data from the **International Neuroblastoma Risk Group (INRG)**, please click [here](https://commons.cri.uchicago.edu/wp-content/uploads/2024/01/INRG-Project-Request-Form.doc/) to download the form and complete and e-mail the form as indicated.
+To request data from the **International Neuroblastoma Risk Group (INRG)**, please click [here](https://commons.cri.uchicago.edu/wp-content/uploads/2024/01/INRG-Project-Request-Form.doc) to download the form and complete and e-mail the form as indicated.
 <br>
 <br>
 To request data from the **Hodgkin Lymphoma Data Collaboration (NODAL)**, please click [here](https://commons.cri.uchicago.edu/wp-content/uploads/2022/05/NODAL_ProjectRequestForm.docx) to download the form and complete and e-mail the form as indicated.
