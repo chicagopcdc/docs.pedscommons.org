@@ -16,3 +16,6 @@ To request data from the **Malignant Germ Cell International Consortium (MaGIC)*
 <br>
 <br>
 To request data from the **International Acute Myeloid Leukemia Consortium (INTERACT)**, please click [here](https://commons.cri.uchicago.edu/wp-content/uploads/2024/01/INTERACT-Project-Request-Form.docx), complete the form and submit as indicated.
+<br>
+<br>
+To request data from the **International Central Nervous System Pediatric Research Consortium (INSPiRE)**, please click [here](https://commons.cri.uchicago.edu/wp-content/uploads/2024/09/INSPiRE-ProjectProposalForm.docx), complete the form and submit as indicated. 
