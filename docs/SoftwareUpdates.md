@@ -2,6 +2,7 @@ Link to [Data Release Updates](https://docs.pedscommons.org/DataReleases/)
 
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
+| v1.36.0 | Mar 11, 2025 | Improved backend functionality that assigns administrative permissions |
 | v1.35.0 | Feb 11, 2025 | Changes to user permissions for project requests; bug fix to resolve a web page server error |
 | v1.34.0 | Jan 14, 2025 | Changes to administrative functions and improved backend operation; added Biospecimen filter |
 | v1.33.0 | Dec 10, 2024 | Minor changes to improve administrative functionality and user authorization |
