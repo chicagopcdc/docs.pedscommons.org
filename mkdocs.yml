@@ -14,11 +14,12 @@ nav:
     - Software Updates: 'SoftwareUpdates.md'
     - Data Release Updates: 'DataReleases.md'
     - Working with PFB Files: 'WorkingWithPFBfiles.md'
-  - 'Data Modeling and Reporting':
-    - Overview: 'DataModelingOverview.md'
-    - Longitudinal Reporting: 'LongitudinalReporting.md'
-    - Genomic Reporting: 'GenomicReporting.md'
-    - Tumor Reporting:  'TumorReporting.md'
+  - Data Contribution Guide: 'DataContributionGuide.md'
+ # - 'Data Modeling and Reporting':
+ #   - Overview: 'DataModelingOverview.md'
+ #   - Longitudinal Reporting: 'LongitudinalReporting.md'
+ #   - Genomic Reporting: 'GenomicReporting.md'
+ #   - Tumor Reporting:  'TumorReporting.md'
   - 'Data Commons Video Tutorials':
     - Introduction to the PCDC <br>: 'https://youtu.be/uSUFthO4aBs'
     - Cohort Explorer Overview: 'https://youtu.be/0TJJpx3m0GY'
