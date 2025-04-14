@@ -19,7 +19,7 @@ If you have not received a Data Contributor Bundle, please reach out the the D4C
 The data dictionary you will use is the result of many months of modeling work by disease experts in your consortium.
 
 <video width="320" height="240" controls>
-  <source src="media/pcdc-overview-100mb.mp4" type="video/mp4">
+  <source src="video/pcdc-overview-100mb.mp4" type="video/mp4">
 </video>
 
 ## How long will this take?
@@ -38,7 +38,7 @@ The full transformation process for each dataset depends on a  variety of factor
 ## The Data Contributor Bundle
 
 <video width="320" height="240" controls>
-  <source src="media/data-contributor-bundle-100mb.mp4" type="video/mp4">
+  <source src="video/data-contributor-bundle-100mb.mp4" type="video/mp4">
 </video>
 
 ### Table guidance
@@ -46,11 +46,11 @@ Each table has a specific instruction as to how each observation should be encod
 
 The <code>Subject Characteristics</code> table directs implementers to include <code>"One row per subject per study"</code>, "row" here meaning a row in the data sheet (specifically within the <code>subject_characteristics</code> data sheet). This row will describe a given patient's enrollment, data contributor, consortium, etc.
 
-![subject-characteristics-guidance](media/subject-characteristics-guidance.png)
+![subject-characteristics-guidance](img/subject-characteristics-guidance.png)
 
 Contrast that to the <code>Laboratory Test</code> table, which some data dictionaries utilize. This directs implementers to include <code>"One row per subject per test result"</code>. This means that a single patient may have multiple rows/observations in the <code>laboratory_test</code> data sheet, as opposed to the single row/observation per patient within the <code>subject_characteristics</code> data sheet.
 
-![lab-test-guidance](media/lab-test-guidance.png)
+![lab-test-guidance](img/lab-test-guidance.png)
 
 These are straightforward examples, while other tables may be more complicated and context dependent. We encourage all questions about table guidance statements to be sent to the D4CG DSM Team who can explain in more detail and provide additional examples.
 
@@ -89,19 +89,19 @@ The DSM team is happy to facilitate any re-tiering sessions that may be requeste
 
 The University of Chicago uses Box, a cloud-based storage service, to store and share sensitive, confidential, or restricted information. A folder will be created for your institution by the D4CG Tech team which is where you can upload the transformed data for QA/QC. Data **should not be shared with D4CG** until a Data Contributor Agreement (DCA) has been fully executed for your institution.
 
-![box](media/box-upload.png)
+![box](img/box-upload.png)
 
 ### QA/QC
 
 Quality assurance and quality control checks are a vital step before data can be loaded into the PCDC. The D4CG Tech team have an extensive process for checking conformance of submitted data to the target data dictionary, using abnormal or outlier values to detect erroneous observations, and finding gaps or inappropriate missingness.
 
-![qc](media/qc.png)
+![qc](img/qc.png)
 
 ### Uploaded to PCDC and available in the Data Portal
 
 Once the dataset has passed QA/QC, it will be queued for an upcoming data release. When released it will be searchable on the Data Portal.
 
-![portal](media/portal.png)
+![portal](img/portal.png)
 
 <Hr>
 
@@ -133,11 +133,11 @@ Consider the following vignette and visualization that demonstrate the use of ti
 
 > A 13 month-old patient is diagnosed with neuroblastoma and enrolled on a clinical trial. Her initial imaging shows a primary tumor in the adrenal gland and a metastasis in the liver. Her trial protocol calls for 3 week cycles of induction therapy followed by consolidation therapy. She shows a partial response to the treatment. Relapse is diagnosed a little over 1 year later in one of her lymph nodes. She is given additional cycles of re-induction therapy and subsequent consolidation therapy.
 
-![tp-diagram](media/tp_diagram.png)
+![tp-diagram](img/tp_diagram.png)
 
 Once declared, these time periods can then be used to organize all of the reported data for the patient. This is done by using submitter_ids. A unique <code>SUBMITTER_ID</code> is declared for each time period and used throughout the rest of the tables in the data model, as shown below:
 
-![tp-refs](media/tp_refs.png)
+![tp-refs](img/tp_refs.png)
 
 <hr>
 last updated: 04/14/25
