@@ -5,9 +5,12 @@
 This guide is intended for the individuals tasked with transforming an existing dataset into the PCDC format. These individuals typically have a variety of backgrounds (statisticians, data scientists, data managers, clinicians, etc.), but this guide will refer to such individuals as _data analysts_.
 
 ## Resources
-Data analysts should have been provided with what D4CG calls a "Data Contributor Bundle". This is a spreadsheet consisting of three main components:
+Data analysts should have been provided with what D4CG calls a **Data Contributor Bundle**. This is a spreadsheet consisting of three main components:
+
 1. README - notes and guidance for your specific dataset.
+
 2. Data Dictionary - tables, variables, and permissible values that constitute the target data format.
+
 3. Data Sheets - with one sheet per data dictionary table, these are meant to contain your data once transformed and will be described in detail below.
 
 If you have not received a Data Contributor Bundle, please reach out the the D4CG Data Standards and Modeling (DSM) team.
@@ -15,7 +18,7 @@ If you have not received a Data Contributor Bundle, please reach out the the D4C
 ## What has already been done?
 The data dictionary you will use is the result of many months of modeling work by disease experts in your consortium.
 
-<video width="640" controls>
+<video width="320" height="240" controls>
   <source src="/video/pcdc-overview-100mb.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -35,8 +38,8 @@ The full transformation process for each dataset depends on a  variety of factor
 
 ## The Data Contributor Bundle
 
-<video width="640" controls>
-  <source src="/video/contributor-bundle-100mb.mp4" type="video/mp4">
+<video width="320" height="240" controls>
+  <source src="/video/data-contributor-bundle-100mb.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -66,40 +69,17 @@ These are straightforward examples, while other tables may be more complicated a
 
 Resources are finite, so part of the data modeling process for some consortia have been to tier variables in the data dictionary. This is meant to communicate priorities to the data analysts.
 
-#### Past Approaches
-Tiering has evolved as the PCDC has matured. Each of these two approaches have been used by PCDC consortia and may be found within some data dictionaries.
-
-|Tier|Explanation|
-|----|----|
-|Tier 1|Essential|
-|Tier 2|Good to have|
-|Tier 3|Nice to have, but not necessary|
-|Tier 4|If we have it, we'll keep it/Defer|
-|Tier 5|Don't care|
-
-|Tier|Explanation|
-|----|----|
-|Tier 1|Contributors must include, regardless of the resource cost.|
-|Tier 2|Contributors should prioritize inclusion if resources are available.|
-|Tier 3|Contributors shouldn't prioritize inclusion, but can include if resourcs are available.|
-
-
-#### Current Approach
-
-The current approach is a bit more involved, but is capable to capturing the nuances of inter-variable relation and observation type conditionals.
+Tiers may be standalone, or they may include a <code>ConditionalStatement</code> (in the "Implementation Notes" columnn of the data dictionary) to accommodate the nuances of interrelated variables and observation type conditionals. 
 
 |Tier|Example|Explanation|
 |----|----|----|
-|Mandatory|honest_broker_subject_id|Data can't go into the commons at all without this|
-|^        |lab_type|Observation (lab result) don't make sense without this field (type of lab test).|
-|Conditionally Mandatory|reconstruction_type|Mandatory field, but only relevant if this row/observation is a reconstruction procedure.|
-|Conditionally Optional|resection_extent|Optional field, but only relevant if this row/observation is a resection procedure.|
-|Optional|ethnicity|Not related to other variables, context, or conditions. Just purely optional.|
+|Mandatory|lab_type|The observation (lab result) doesn't make sense without this field (type of lab test).|
+|Priority|resection_extent|The observation should be included if it exists in the source data.|
+|Optional|detection_method|If the observation (imaging technique for a tumor assessment) is in the source data, then it would be nice to have. But it may not be directly relevant to priority research questions and could be skipped if resources are pressed.|
 
-Example condition: <code>ConditionalStatement: If 'PROCEDURE' = 'Resection'</code>
+_Example condition_: <code>ConditionalStatement: If PROCEDURE = 'Resection'</code>
 
 
-Any "conditional" tiers will have an accompanying ConditionalStatement included in the Implementation Notes column of the dictionary. These conditions provide context-specific guidance for why a certain variable may be mandatory for some observation types and optional for others.
 
 #### Re-tiering
 The DSM team is happy to facilitate any re-tiering sessions that may be requested by the data analysts. This would involve a comprehensive review of all variables by a consortium group that is organized from those who previously worked on the data dictionary and those who are familiar with the datasets in question.
@@ -129,10 +109,10 @@ Once the dataset has passed QA/QC, it will be queued for an upcoming data releas
 
 ## FAQs
 
-#### What does <code>&#95undefined&#95</code> mean?
+#### What does <code>\_undefined\_</code> mean?
 The tabular version of the data dictionaries (viewed on Google Sheets) are designed to be parsed by code. To help with this parsing, each row in the spreadsheet has been given a "RowType". The <code>\_undefined\_</code> cell values are added so that permissible values are not defined on the same row as a variable. It is **not a valid permissible value** for any enumerated variable. If source data is missing, or a certain variable is not applicable to the observation being reported, you should not use <code>\_undefined\_</code>, but rather should use <code>Not Reported</code> or just be left blank as explained below.
 
-####    <code><blank\></code> vs <code>Not Reported</code>
+#### <code>\<blank\></code> vs <code>Not Reported</code>
 Each enumerated variable will have a list of permissible values. Most of these permissible value lists will include one for <code>Not Reported</code>. This should be used for missing source data.
 
 However, there will also be times when the table in the data dictionary will have variables that are not related to a certain observation. To extend the tiering example above, the variable <code>recontruction_type</code> will not apply for a row/observation that is describing a biopsy. In these instances, the field should be left blank.
@@ -162,5 +142,5 @@ Once declared, these time periods can then be used to organize all of the report
 ![tp-refs](img/tp_refs.png)
 
 <hr>
-last updated: 04/04/25  
+last updated: 04/14/25
 authored by: mwatkins
