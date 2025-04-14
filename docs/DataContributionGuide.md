@@ -19,7 +19,8 @@ If you have not received a Data Contributor Bundle, please reach out the the D4C
 The data dictionary you will use is the result of many months of modeling work by disease experts in your consortium.
 
 <video width="320" height="240" controls>
-  <source src="video/pcdc-overview-100mb.mp4" type="video/mp4">
+  <source src="/video/pcdc-overview-100mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
 
 ## How long will this take?
@@ -38,7 +39,8 @@ The full transformation process for each dataset depends on a  variety of factor
 ## The Data Contributor Bundle
 
 <video width="320" height="240" controls>
-  <source src="video/data-contributor-bundle-100mb.mp4" type="video/mp4">
+  <source src="/video/data-contributor-bundle-100mb.mp4" type="video/mp4">
+  Your browser does not support the video tag.
 </video>
 
 ### Table guidance
