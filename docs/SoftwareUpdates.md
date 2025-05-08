@@ -2,6 +2,7 @@ Link to [Data Release Updates](https://docs.pedscommons.org/DataReleases/)
 
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
+| v1.38.0 | May 13, 2025 | Addressed a bug that caused a system message (API keys) to appear incorrectly; minor system improvements |
 | v1.37.0 | Apr 08, 2025 | (data release only) |
 | v1.36.0 | Mar 11, 2025 | Improved backend functionality that assigns administrative permissions |
 | v1.35.0 | Feb 11, 2025 | Changes to user permissions for project requests; bug fix to resolve a web page server error |
