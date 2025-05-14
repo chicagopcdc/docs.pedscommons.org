@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.37.0 User Guide
+###### v1.38.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -39,7 +39,6 @@ The main navigation buttons to PCDC Data Portal pages are in the upper right-han
 
 - Dictionary
 - Exploration
-- Query
 
 Profile settings can be accessed by clicking the username at the top of the page. See the [Profile section](#user-menu) below.
 
@@ -152,7 +151,7 @@ Using the above example, the Active filter at the top of the graph view shows â€
 
 ![Conjuctive Search](img/workspace_and_x.png)
 
-For patient observations that may be captured longitudinally, for example **Tumor Site** within the **Disease** tab, users can restrict filtering activity to a specific disease phase (e.g. Initial Diagnosis, Relapse) with an Anchor filter by clicking one of the radio buttons under **Disease Phase**.
+For patient observations that may be captured longitudinally, for example **Tumor Site** within the **Disease** tab, users can restrict filtering activity to a specific disease phase (Initial Diagnosis or Relapse) with an Anchor filter by clicking one of the radio buttons under **Disease Phase**.
 
 ![Disease Phase](img/imageW4.png)
 
