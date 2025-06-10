@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.38.0 User Guide
+###### v1.39.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -273,7 +273,7 @@ Some subjects within the PCDC can be further explored in external Data Commons'.
 
 ### Survival Analysis
 
-The PCDC platform includes a **Survival Analysis** tool that can display survival curves and Number at Risk tables. This tool will be available temporarily during a pilot phase to test the functionality and usability of the tool.
+The PCDC platform includes a **Survival Analysis** tool that can display survival curves and Number at Risk tables.
 
 When first accessing the survival curve generator, users must agree to follow the Acceptable Use Policy. Subsequent sessions will include a reminder of the terms whenever the Survival tab is first used.
 
@@ -284,7 +284,6 @@ To create a survival curve, users must first select at least one filter set to a
 
 Use the drop down labeled “Select Filter Set to Analyze” to select a saved filter set, then click the **Add** button to add the filter set. Optionally, a user may select “All Subjects” to see the entire data set. Additional filter sets can be added using the steps above. 
 
-The "Consortium" information label shows which data are available to create a survival curve. Filter sets that include values from other consortia are disabled.
 
 ![Survival Analysis](img/image38.png)
 
@@ -300,10 +299,10 @@ Multiple data sets can be selected and shown simultaneously. In the example belo
 
 The survival curve can be adjusted using the options available. 
 
-![Survival Analysis](img/survival_curve_controls.png)
+![Survival Analysis](img/survival_curve_controls_v3.png)
 
 
-The **Consortium** field indicates which disease groups have data available to create a survival curve. 
+The **Allowed Consortia** field indicates which disease groups have data available to create a survival curve. 
 
 The **Disallowed Variables** field shows which variables cannot be used to create a survival curve.
 
