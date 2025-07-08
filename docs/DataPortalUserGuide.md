@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.39.0 User Guide
+###### v1.40.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -268,7 +268,9 @@ Some subjects within the PCDC can be further explored in external Data Commons'.
 
 ![Explore in](img/explore_in.png)
 
-3) Download the manifest. The "Open in new tab" button will activate after downloading the file. Follow the instructions on the target website to upload the manifest. 
+3) Download the manifest. The "Open in new tab" button will activate after downloading the file. 
+
+4) Follow the instructions on the target website to upload the manifest. Note: for GMKF, click on the **Participant** tab on the left side of the GMKF website, then select "Upload a participant list" to proceed. 
 
 
 ### Survival Analysis
