@@ -270,8 +270,11 @@ Some subjects within the PCDC can be further explored in external Data Commons'.
 
 3) Download the manifest. The "Open in new tab" button will activate after downloading the file. 
 
-4) Follow the instructions on the target website to upload the manifest. Note: for GMKF, click on the **Participant** tab on the left side of the GMKF website, then select "Upload a participant list" to proceed. 
+4) For GMKF, click on the **Participant** tab on the left side of the GMKF website, then select "Upload a participant list" to proceed. 
 
+5) For GDC, click on the Import New Cohort button ("Up" arrow) at the top of the GDC website to upload the manifest file.  
+
+![GDC upload](img/GDC_upload_v2.png)
 
 ### Survival Analysis
 
@@ -316,8 +319,8 @@ The **Survival type** drop down can be used to select Overall or Event-Free surv
 
 **Time interval** is used to determine the frequency of hash marks appearing on the x-axis, both on the survival curve and in the Number at risk table shown below the curve. Default is one year. 
 
-### Query
-The **Query** page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide).
+<!-- ### Query
+The **Query** page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide). -->
 
 ### User Menu
 The User Menu can be accessed by clicking on the user icon in the top right corner of the screen. The **View Profile** option allows users to make changes to their name and institutional affiliation. The View Profile page can also be used to create API Keys (additional information to be provided in a future release of the User Guide).  
