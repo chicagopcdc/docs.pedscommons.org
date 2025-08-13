@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.40.0 User Guide
+###### v1.41.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -270,8 +270,11 @@ Some subjects within the PCDC can be further explored in external Data Commons'.
 
 3) Download the manifest. The "Open in new tab" button will activate after downloading the file. 
 
-4) Follow the instructions on the target website to upload the manifest. Note: for GMKF, click on the **Participant** tab on the left side of the GMKF website, then select "Upload a participant list" to proceed. 
+4) For GMKF, click on the **Participant** tab on the left side of the GMKF website, then select "Upload a participant list" to proceed. 
 
+5) For GDC, click on the Import New Cohort button ("Up" arrow) at the top of the GDC website to upload the manifest file.  
+
+![GDC upload](img/GDC_upload_v2.png)
 
 ### Survival Analysis
 
@@ -316,23 +319,28 @@ The **Survival type** drop down can be used to select Overall or Event-Free surv
 
 **Time interval** is used to determine the frequency of hash marks appearing on the x-axis, both on the survival curve and in the Number at risk table shown below the curve. Default is one year. 
 
-### Query
-The **Query** page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide).
+<!-- ### Query
+The **Query** page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide). -->
 
 ### User Menu
 The User Menu can be accessed by clicking on the user icon in the top right corner of the screen. The **View Profile** option allows users to make changes to their name and institutional affiliation. The View Profile page can also be used to create API Keys (additional information to be provided in a future release of the User Guide).  
 
 
-![User Menu](img/user_menu.png)
+![User Menu](img/user_menu2.png)
 
 ### Data Requests
 The **Data Requests** screen allows users to see the status of their data requests and, when approved, download data. At the top of the screen is a toggle button to see All Requests or only Approved Requests. 
+
 
 ![Data Requests](img/image22.png)
 
 Only users who are authorized to receive requested data will see the Download Data button activated when the data is ready.  
 
 ![Data Requests](img/image19.png)
+
+
+### Message Center
+The **Message Center** screen shows system alerts that may appear while using the Portal. Alerts may include downtime warnings advising users to save their work. 
 
 ### Documentation
 ![Documentation Menu](img/Documentation_menu.png)
