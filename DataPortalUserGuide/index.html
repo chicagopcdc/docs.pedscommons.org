@@ -358,8 +358,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v1400-user-guide" class="md-nav__link">
-    v1.40.0 User Guide
+  <a href="#v1410-user-guide" class="md-nav__link">
+    v1.41.0 User Guide
   </a>
   
 </li>
@@ -530,13 +530,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#query" class="md-nav__link">
-    Query
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#user-menu" class="md-nav__link">
     User Menu
   </a>
@@ -546,6 +539,13 @@
           <li class="md-nav__item">
   <a href="#data-requests" class="md-nav__link">
     Data Requests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-center" class="md-nav__link">
+    Message Center
   </a>
   
 </li>
@@ -793,8 +793,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v1400-user-guide" class="md-nav__link">
-    v1.40.0 User Guide
+  <a href="#v1410-user-guide" class="md-nav__link">
+    v1.41.0 User Guide
   </a>
   
 </li>
@@ -965,13 +965,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#query" class="md-nav__link">
-    Query
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#user-menu" class="md-nav__link">
     User Menu
   </a>
@@ -981,6 +974,13 @@
           <li class="md-nav__item">
   <a href="#data-requests" class="md-nav__link">
     Data Requests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-center" class="md-nav__link">
+    Message Center
   </a>
   
 </li>
@@ -1013,7 +1013,7 @@
 
 <p><img alt="Logo" src="../img/PcdcLogo.png" /></p>
 <h1 id="pediatric-cancer-data-commons-data-portal-user-guide">Pediatric Cancer Data Commons<br> Data Portal User Guide</h1>
-<h6 id="v1400-user-guide">v1.40.0 User Guide</h6>
+<h6 id="v1410-user-guide">v1.41.0 User Guide</h6>
 <h2 id="introduction">Introduction</h2>
 <p>The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. </p>
 <p>By harmonizing existing clinical research data and leading international efforts to standardize data collection, we are breaking down long-standing barriers that have held back advancements in research on rare diseases. Our aim is to leverage this unique collaborative consortium-based approach to enable new and meaningful discoveries about pediatric cancers.</p>
@@ -1163,7 +1163,9 @@
 <p>2) Click on the <strong>Explore in</strong> button in the upper right part of the Exploration page. A pop-up window will open. The drop-down menu is used to select the external data commons. </p>
 <p><img alt="Explore in" src="../img/explore_in.png" /></p>
 <p>3) Download the manifest. The "Open in new tab" button will activate after downloading the file. </p>
-<p>4) Follow the instructions on the target website to upload the manifest. Note: for GMKF, click on the <strong>Participant</strong> tab on the left side of the GMKF website, then select "Upload a participant list" to proceed. </p>
+<p>4) For GMKF, click on the <strong>Participant</strong> tab on the left side of the GMKF website, then select "Upload a participant list" to proceed. </p>
+<p>5) For GDC, click on the Import New Cohort button ("Up" arrow) at the top of the GDC website to upload the manifest file.  </p>
+<p><img alt="GDC upload" src="../img/GDC_upload_v2.png" /></p>
 <h3 id="survival-analysis">Survival Analysis</h3>
 <p>The PCDC platform includes a <strong>Survival Analysis</strong> tool that can display survival curves and Number at Risk tables.</p>
 <p>When first accessing the survival curve generator, users must agree to follow the Acceptable Use Policy. Subsequent sessions will include a reminder of the terms whenever the Survival tab is first used.</p>
@@ -1183,16 +1185,19 @@
 <p><strong>Start time</strong> is used to select the start time of the x-axis. Default is zero (0).</p>
 <p><strong>End time</strong> is used to select the maximum time (in years) that will appear on the x-axis. The default is five years. If left blank, the maximum number of years will be shown for which data is available. </p>
 <p><strong>Time interval</strong> is used to determine the frequency of hash marks appearing on the x-axis, both on the survival curve and in the Number at risk table shown below the curve. Default is one year. </p>
-<h3 id="query">Query</h3>
-<p>The <strong>Query</strong> page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide).</p>
+<!-- ### Query
+The **Query** page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide). -->
+
 <h3 id="user-menu">User Menu</h3>
 <p>The User Menu can be accessed by clicking on the user icon in the top right corner of the screen. The <strong>View Profile</strong> option allows users to make changes to their name and institutional affiliation. The View Profile page can also be used to create API Keys (additional information to be provided in a future release of the User Guide).  </p>
-<p><img alt="User Menu" src="../img/user_menu.png" /></p>
+<p><img alt="User Menu" src="../img/user_menu2.png" /></p>
 <h3 id="data-requests">Data Requests</h3>
 <p>The <strong>Data Requests</strong> screen allows users to see the status of their data requests and, when approved, download data. At the top of the screen is a toggle button to see All Requests or only Approved Requests. </p>
 <p><img alt="Data Requests" src="../img/image22.png" /></p>
 <p>Only users who are authorized to receive requested data will see the Download Data button activated when the data is ready.  </p>
 <p><img alt="Data Requests" src="../img/image19.png" /></p>
+<h3 id="message-center">Message Center</h3>
+<p>The <strong>Message Center</strong> screen shows system alerts that may appear while using the Portal. Alerts may include downtime warnings advising users to save their work. </p>
 <h3 id="documentation">Documentation</h3>
 <p><img alt="Documentation Menu" src="../img/Documentation_menu.png" /></p>
 <p>The Documentation menu allows users to access reference documents related to the Data Portal such as the <em>Privacy Notice</em> and <em>Terms and Conditions</em>. Clicking on any of the documents in the list will redirect users to the <a href="https://docs.pedscommons.org/">D4CG Documentation site</a>.</p>
