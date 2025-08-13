@@ -2,6 +2,7 @@ Link to [Data Release Updates](https://docs.pedscommons.org/DataReleases/)
 
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
+| v1.41.0 | Aug 05, 2025 | Improvements to project request administration; addition of a message center for system alerts to users who are logged in; addition of a tool to convert units of age to days/months/years |
 | v1.40.0 | Jul 08, 2025 | Automated deployment of federated services |
 | v1.39.0 | Jun 10, 2025 | Minor improvements in filtering; backend and admin page bug fixes |
 | v1.38.0 | May 13, 2025 | Addressed a bug that caused a system message (API keys) to appear incorrectly; minor system improvements |
