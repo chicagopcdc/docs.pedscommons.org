@@ -50,9 +50,9 @@ The harmonization process relies on the development of a common **data dictionar
 
 ### How do I access data?
 
-Any user who registers is able to utilize the PCDC **Cohort Explorer** to identify how many patients share clinical characteristics of interest. On a limited pilot basis, the PCDC has also released a Kaplan-Meier **survival curve generator**. Plans are also underway to develop additional analytics tools, including a **demographic table generator**. These web-based tools are designed to be a starting point for investigators to explore the data that are available and perform preliminary analyses preparatory to formal research activities (e.g., sample size calculation).
+Any user who registers is able to utilize the PCDC **Cohort Explorer** to identify how many patients share clinical characteristics of interest. The PCDC also includes a Kaplan-Meier **survival curve generator**. Plans are underway to develop a **demographic table generator** as well. These web-based tools are designed to be a starting point for investigators to explore the data that are available and perform preliminary analyses preparatory to formal research activities (e.g., sample size calculation).
 
-Technical documentation on using these tools is available [here](https://commons.cri.uchicago.edu/wp-content/uploads/2021/11/PCDC-Data-Portal-User-Guide.pdf).
+Technical documentation on using these tools is available [here](https://docs.pedscommons.org/DataPortalUserGuide/).
 
 Users wishing to perform further analyses (e.g., for publication) are required to submit a project request in order to obtain line-level access to the data. The project request will be forwarded to and reviewed by the applicable disease-specific consortia. If the project request is approved, the user will be provided with line-level access to the data, which can be analyzed using third-party statistical software outside of the PCDC web-based analytics tools.
 
@@ -205,11 +205,8 @@ Users wishing to use analytics tools must attest that they
 - Agree to not engage in p-hacking or other forms of statistical misuse.
 - Agree to follow a hypothesis-driven approach with analyses and to maintain a local hypothesis record, which may be audited.
 
-## Analytics tool pilot
-
-Users wishing to utilize analytics tools at initial launch will be participating in a pilot release. The purpose of the pilot release is to collect data about how users utilize self-service analytics tools in order to inform more broad implementation of the tools across various consortia with additional datasets. The pilot will include review of aggregate user logfile data. Individual user logfile data will also be reviewed in cases of possible, suspected or confirmed misuse or abuse of the tools. Users may be contacted and invited to participate in a survey regarding their use of self-service analytics tools, and survey participation is voluntary. Data submitted to consortia as part of a project request may also be analyzed as part of the pilot. Results of the pilot project, including aggregate statistics and narrative descriptions of possible, suspected or confirmed misuse or abuse of the tools, may be distributed without limitation.
-
 ## Credits and acknowledgments
 
 This document was drafted by Kirk D. Wyatt, MD, MAS (Pediatric Hematologist/Oncologist and Clinical Informatician, Sanford Health, Fargo, ND, USA) and critically revised for statistical content by Wendy B. London, PhD (Associate Professor Pediatrics, Harvard Medical School; Director of Biostatistics, Dana-Farber/Boston Children’s Cancer and Blood Disorders Center, Boston, Massachusetts, USA). The PCDC thanks the many participants from member consortia whose critical insights inspired and informed the development of this document.
 
+Updated: August 18, 2025
