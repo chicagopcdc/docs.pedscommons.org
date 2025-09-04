@@ -2,6 +2,7 @@ Link to [Data Release Updates](https://docs.pedscommons.org/DataReleases/)
 
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
+| v1.42.0 | Sep 09, 2025 | Added a button for instructions on uploading files to third party websites when using the Explore In function; added a popup message when a filter is selected that requires a second, interdependent filter to also be selected. |
 | v1.41.0 | Aug 05, 2025 | Improvements to project request administration; addition of a message center for system alerts to users who are logged in; addition of a tool to convert units of age to days/months/years |
 | v1.40.0 | Jul 08, 2025 | Automated deployment of federated services |
 | v1.39.0 | Jun 10, 2025 | Minor improvements in filtering; backend and admin page bug fixes |
