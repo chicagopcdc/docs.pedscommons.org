@@ -2,6 +2,7 @@ Link to [Data Release Updates](https://docs.pedscommons.org/DataReleases/)
 
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
+| v1.44.0 | Nov 11, 2025 | Usability improvements when using the Explore In function; updated backend functionality related to include/exclude filters |
 | v1.43.0 | Oct 14, 2025 | Minor performance improvements; resolved an issue with Create Request function for admin users |
 | v1.42.0 | Sep 09, 2025 | Added a button for instructions on uploading files to third party websites when using the Explore In function; added a popup message when a filter is selected that requires a second, interdependent filter to also be selected |
 | v1.41.0 | Aug 05, 2025 | Improvements to project request administration; addition of a message center for system alerts to users who are logged in; addition of a tool to convert units of age to days/months/years |
