@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.45.0 User Guide
+###### v1.46.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -276,6 +276,8 @@ Some subjects within the PCDC can be further explored in external Data Commons'.
 
 ![GDC upload](img/GDC_upload_v2.png)
 
+6) For Imaging Data Commons (IDC), a manifest file can be generated, however there is currently no functionality in the IDC portal to upload a file. 
+
 ### Survival Analysis
 
 The PCDC platform includes a **Survival Analysis** tool that can display survival curves and Number at Risk tables.
@@ -323,7 +325,7 @@ The **Survival type** drop down can be used to select Overall or Event-Free surv
 The **Query** page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide). -->
 
 ### User Menu
-The User Menu can be accessed by clicking on the user icon in the top right corner of the screen. The **View Profile** option allows users to make changes to their name and institutional affiliation. The View Profile page can also be used to create API Keys (additional information to be provided in a future release of the User Guide).  
+The User Menu can be accessed by clicking on the user icon in the top right corner of the screen. The **View Profile** option allows users to make changes to their name and institutional affiliation. The View Profile page can also be used to create API Keys.  
 
 
 ![User Menu](img/user_menu2.png)
