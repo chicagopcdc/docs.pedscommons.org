@@ -4,6 +4,10 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+
+permissions:
+  contents: write  # Required for gh-deploy to push to gh-pages
+
 jobs:
   build:
     name: Build and Deploy Documentation
@@ -12,7 +16,7 @@ jobs:
       - name: Checkout Main
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch all history for proper gh-deploy
+          fetch-depth: 0
       
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -30,5 +34,4 @@ jobs:
           git config user.email github-actions@github.com
       
       - name: Deploy
-        run: |
-          python3 -m mkdocs gh-deploy --force
+        run: mkdocs gh-deploy --force
