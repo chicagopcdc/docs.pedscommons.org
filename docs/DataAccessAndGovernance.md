@@ -75,3 +75,4 @@ The PCDC disease consortium Executive Committee or designated group is responsib
 ![Review Process](/img/Data_Access_Review_Process.png)
 
 For consortium-specific questions on this process, please contact the consortium manager listed in the table above. For general questions, contact PCDC Program Manager [Kat Blumhardt](mailto:kblumhardt@uchicago.edu). 
+
