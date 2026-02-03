@@ -1,11 +1,9 @@
 name: Build document site using MkDocs
-
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-
 jobs:
   build:
     name: Build and Deploy Documentation
@@ -13,18 +11,24 @@ jobs:
     steps:
       - name: Checkout Main
         uses: actions/checkout@v4
-
-      - name: Set up Python 3.7
+        with:
+          fetch-depth: 0  # Fetch all history for proper gh-deploy
+      
+      - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
-
+          python-version: '3.11'
+      
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install -r requirements.txt
-
+      
+      - name: Configure Git
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+      
       - name: Deploy
         run: |
-          git pull
-          python3 -m mkdocs gh-deploy
+          python3 -m mkdocs gh-deploy --force
