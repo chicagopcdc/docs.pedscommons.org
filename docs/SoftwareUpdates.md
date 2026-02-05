@@ -2,6 +2,7 @@ Link to [Data Release Updates](https://docs.pedscommons.org/DataReleases/)
 
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
+| v1.47.0 | Feb 10, 2026 | Added the ability to see history of project status changes|
 | v1.46.0 | Jan 13, 2026 | Imaging Data Commons added to the Explore In function; minor improvements in backend functionality |
 | v1.45.0 | Dec 09, 2025 | Minor backend improvements |
 | v1.44.0 | Nov 11, 2025 | Usability improvements when using the Explore In function; updated backend functionality related to include/exclude filters |
