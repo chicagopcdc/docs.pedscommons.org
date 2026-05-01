@@ -2,6 +2,7 @@ Link to [Data Release Updates](https://docs.pedscommons.org/DataReleases/)
 
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
+| v1.50.0 | May 12, 2026 | Improvements in admin functions; Migration to Mailchimp for communications; minor back-end improvements |
 | v1.49.0 | April 14, 2026 | Improvements in admin functions; Improved error message communications; minor back-end improvements |
 | v1.48.0 | Mar 10, 2026 | Improvements in admin functions; minor back-end improvements |
 | v1.47.0 | Feb 10, 2026 | Added the ability to see history of project status changes|
