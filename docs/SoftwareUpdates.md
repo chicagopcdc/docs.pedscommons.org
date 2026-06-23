@@ -2,9 +2,10 @@ Link to [Data Release Updates](https://docs.pedscommons.org/DataReleases/)
 
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
-| v1.51.0 | June 9, 2026 | Improvements in admin functions; Addition of radiation timing filter to the exploration page; minor back-end improvements |
-| v1.50.0 | May 12, 2026 | Improvements in admin functions; Migration to Mailchimp for communications; minor back-end improvements |
-| v1.49.0 | April 14, 2026 | Improvements in admin functions; Improved error message communications; minor back-end improvements |
+| v1.52.0 | July 14, 2026 | Improvements in admin functions; Added Pagination to data request page; Added wizard UI with instruction at first login. Minor back-end improvements |
+| v1.51.0 | June 9, 2026 | Improvements in admin functions; Addition of radiation timing filter to the exploration page; Minor back-end improvements |
+| v1.50.0 | May 12, 2026 | Improvements in admin functions; Migration to Mailchimp for communications; Minor back-end improvements |
+| v1.49.0 | April 14, 2026 | Improvements in admin functions; Improved error message communications; Minor back-end improvements |
 | v1.48.0 | Mar 10, 2026 | Improvements in admin functions; minor back-end improvements |
 | v1.47.0 | Feb 10, 2026 | Added the ability to see history of project status changes|
 | v1.46.0 | Jan 13, 2026 | Imaging Data Commons added to the Explore In function; minor improvements in backend functionality |
