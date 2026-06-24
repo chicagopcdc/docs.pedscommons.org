@@ -37,13 +37,14 @@ Instructions to change email address:
 - actions
 - New repository secret
 - create these if not present:
-| Secret name      | Used for                                                            | Required?                                    |
-| ---------------- | ------------------------------------------------------------------- | -------------------------------------------- |
-| `EMAILLIST`      | Email recipients for document update notifications                  | ✅ Yes                                        |
-| `APIKEY`         | API key used to request a portal authentication token               | ✅ Yes (only for portal-registered documents) |
-| `KEYID`          | Identifier paired with `APIKEY`                                     | ✅ Yes (only for portal-registered documents) |
-| `REQUESTURL`     | Endpoint where `key.py` requests the access token                   | ✅ Yes (only for portal-registered documents) |
-| `PORTAL_API_URL` | Base URL of the portal API (`/user/admin/add_document` is appended) | ✅ Yes (only for portal-registered documents) |
+
+| Secret name | Used for | Current Value |
+|-------------|----------|-----------|
+| `EMAILLIST` | Email recipients for document update notifications | lgraglia@uchicago.edu |
+| `APIKEY` | API key used to request a portal authentication token | ####### |
+| `KEYID` | Identifier paired with `APIKEY` | ######## |
+| `REQUESTURL` | Endpoint where `key.py` requests the access token | ✅ Yes (only for portal-registered documents) |
+| `PORTAL_API_URL` | Base URL of the portal API (`/user/admin/add_document` is appended) | https://portal.pedscommons.org |
 
 
 ## Adding API Key and Key ID
