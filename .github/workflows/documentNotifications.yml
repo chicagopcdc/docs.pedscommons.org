@@ -159,11 +159,6 @@ jobs:
             exit 1
           fi
           echo "Token generated successfully! Token length: ${#TOKEN} characters."
-        # env:
-        #   TOKEN: ${{ env.TOKEN }}
-
-      # - name: Install jq
-      #   run: sudo apt-get update && sudo apt-get install -y jq
 
       - name: Create document payload
         if: steps.check-document.outputs.changed == 'true'
@@ -227,8 +222,6 @@ jobs:
           fi
           
           echo "Document registered successfully"
-        # env:
-        #   TOKEN: ${{ env.TOKEN }}
 
       - name: Cleanup token
         if: always() && steps.check-document.outputs.changed == 'true'
