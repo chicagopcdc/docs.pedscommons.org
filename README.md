@@ -37,8 +37,9 @@ Instructions to change email address:
 - actions
 - New repository secret
 - create these if not present:
+
 | Secret name | Used for | Required? |
-|-------------|----------|:---------:|
+|-------------|----------|-----------|
 | `EMAILLIST` | Email recipients for document update notifications | ✅ Yes |
 | `APIKEY` | API key used to request a portal authentication token | ✅ Yes (only for portal-registered documents) |
 | `KEYID` | Identifier paired with `APIKEY` | ✅ Yes (only for portal-registered documents) |
