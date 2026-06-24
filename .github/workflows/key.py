@@ -1,28 +1,108 @@
+"""
+Token generation script for PCDC document registration API.
+Generates an access token using API key and key ID.
+"""
 
-import requests
 import os
-def main():
-  API_KEY = os.environ.get("APIKEY")
-  if not API_KEY:
-    raise RuntimeError("API_KEY env var and or secret is not set!")
-  KEY_ID = os.environ.get("KEYID")
-  if not KEY_ID:
-    raise RuntimeError("KEY_ID env var and or secret is not set!")
-  url = os.environ.get("REQUESTURL")
-  if not url:
-    raise RuntimeError("url env var and or secret is not set!")
-  key =  {
-      "api_key": str(API_KEY)
-      "key_id": str(KEY_ID)
-      }
-  url_var = str(url)
-  token = (requests.post(url_var, json=key).json())['access_token']
-  write_in_string = "TOKEN={}".format(token)
-  env_file = os.getenv('GITHUB_ENV')
-  with open(env_file, "a") as myfile:
-    myfile.write(write_in_string)
-  
-  return token
+import sys
+import requests
 
-if __name__ == '__main__':
-  main()
+
+def main():
+    """Generate authentication token and set it as GITHUB_ENV variable."""
+    
+    # Get environment variables
+    api_key = os.environ.get("APIKEY")
+    key_id = os.environ.get("KEYID")
+    url = os.environ.get("REQUESTURL")
+
+    # Validate required environment variables
+    if not api_key:
+        error_msg = "APIKEY environment variable is not set. Please check GitHub secrets."
+        print(f"ERROR: {error_msg}", file=sys.stderr)
+        raise RuntimeError(error_msg)
+
+    if not key_id:
+        error_msg = "KEYID environment variable is not set. Please check GitHub secrets."
+        print(f"ERROR: {error_msg}", file=sys.stderr)
+        raise RuntimeError(error_msg)
+
+    if not url:
+        error_msg = "REQUESTURL environment variable is not set. Please check GitHub secrets."
+        print(f"ERROR: {error_msg}", file=sys.stderr)
+        raise RuntimeError(error_msg)
+
+    print(f"Requesting token from: {url}", file=sys.stderr)
+    print(f"Using API Key: {api_key[:4]}... (truncated for security)", file=sys.stderr)
+
+    try:
+        # Make API request to get token
+        response = requests.post(
+            url,
+            json={
+                "api_key": api_key,
+                "key_id": key_id,
+            },
+            timeout=30  # Add timeout to prevent hanging
+        )
+
+        # Raise exception for HTTP errors
+        response.raise_for_status()
+
+        # Parse response
+        token_data = response.json()
+        token = token_data.get("access_token")
+
+        if not token:
+            error_msg = "No access_token found in API response"
+            print(f"ERROR: {error_msg}", file=sys.stderr)
+            print(f"Response: {response.text}", file=sys.stderr)
+            raise RuntimeError(error_msg)
+
+        # Write token to GITHUB_ENV for use in subsequent steps
+        github_env = os.environ.get("GITHUB_ENV")
+        if not github_env:
+            error_msg = "GITHUB_ENV environment variable not set"
+            print(f"ERROR: {error_msg}", file=sys.stderr)
+            raise RuntimeError(error_msg)
+
+        with open(github_env, "a") as f:
+            f.write(f"TOKEN={token}\n")
+
+        print(f"Token generated successfully!", file=sys.stderr)
+        print(f"Token length: {len(token)} characters", file=sys.stderr)
+
+    except requests.exceptions.Timeout:
+        error_msg = "Request to token service timed out after 30 seconds"
+        print(f"ERROR: {error_msg}", file=sys.stderr)
+        sys.exit(1)
+        
+    except requests.exceptions.ConnectionError as e:
+        error_msg = f"Connection error while accessing token service: {str(e)}"
+        print(f"ERROR: {error_msg}", file=sys.stderr)
+        sys.exit(1)
+        
+    except requests.exceptions.HTTPError as e:
+        error_msg = f"HTTP error from token service: {str(e)}"
+        print(f"ERROR: {error_msg}", file=sys.stderr)
+        if hasattr(e, 'response') and e.response:
+            print(f"Response status: {e.response.status_code}", file=sys.stderr)
+            print(f"Response body: {e.response.text}", file=sys.stderr)
+        sys.exit(1)
+        
+    except ValueError as e:
+        error_msg = f"Invalid JSON response from token service: {str(e)}"
+        print(f"ERROR: {error_msg}", file=sys.stderr)
+        print(f"Response text: {response.text if 'response' in locals() else 'No response'}", file=sys.stderr)
+        sys.exit(1)
+        
+    except Exception as e:
+        error_msg = f"Unexpected error generating token: {str(e)}"
+        print(f"ERROR: {error_msg}", file=sys.stderr)
+        import traceback
+        traceback.print_exc(file=sys.stderr)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
