@@ -20,4 +20,3 @@ The name Data for the Common Good and the names and marks of each member group a
 This tool was created by and is operated by, the University of Chicago, Chicago, Illinois, United States.
 
 These Terms and Conditions are in effect as long as the user retains any of the matches provided by GEARBOx.
-
