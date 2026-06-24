@@ -5,12 +5,12 @@ on:
     branches:
       - main
     paths:
-      - 'AcceptableUsePolicy.md'
-      - 'DataPortalUserGuide.md'
-      - 'index.md'
-      - 'PcdcPrivacyNotice.md'
-      - 'StatisticalManual.md'
-      - 'TermsAndConditions.md'
+      - 'docs/AcceptableUsePolicy.md'
+      - 'docs/DataPortalUserGuide.md'
+      - 'docs/index.md'
+      - 'docs/PcdcPrivacyNotice.md'
+      - 'docs/StatisticalManual.md'
+      - 'docs/TermsAndConditions.md'
 
   workflow_dispatch:
 
@@ -81,27 +81,27 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - file: AcceptableUsePolicy.md
+          - file: docs/AcceptableUsePolicy.md
             type: portal-acceptable-use-policy
             version: 1
             name: Data Portal Acceptable Use Policy
-            raw: https://github.com/chicagopcdc/docs.pedscommons.org/blob/main/AcceptableUsePolicy.md
+            raw: https://github.com/chicagopcdc/docs.pedscommons.org/blob/main/docs/AcceptableUsePolicy.md
             formatted: https://docs.pedscommons.org/AcceptableUsePolicy/
             required: true
 
-          - file: PcdcPrivacyNotice.md
+          - file: docs/PcdcPrivacyNotice.md
             type: privacy-policy
             version: 1
             name: PCDC Privacy Notice
-            raw: https://github.com/chicagopcdc/docs.pedscommons.org/blob/main/PcdcPrivacyNotice.md
+            raw: https://github.com/chicagopcdc/docs.pedscommons.org/blob/main/docs/PcdcPrivacyNotice.md
             formatted: https://docs.pedscommons.org/PcdcPrivacyNotice/
             required: true
 
-          - file: TermsAndConditions.md
+          - file: docs/TermsAndConditions.md
             type: terms-and-conditions
             version: 1
             name: Terms and Conditions
-            raw: https://github.com/chicagopcdc/docs.pedscommons.org/blob/main/TermsAndConditions.md
+            raw: https://github.com/chicagopcdc/docs.pedscommons.org/blob/main/docs/TermsAndConditions.md
             formatted: https://docs.pedscommons.org/TermsAndConditions/
             required: true
 

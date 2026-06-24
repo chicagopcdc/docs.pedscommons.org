@@ -29,15 +29,22 @@ Publish using `mkdocs gh-deploy`
 4. Once satified with the changes submit a PR to the `dev` branch
 
 # Github Action Setting setup
-## Email Notifications
+## Email Notifications and backend update
 Document update emails default to lgraglia@bsd.uchicago.edu
 Instructions to change email address:
 - Go to settings
-- on the left click the 'Secrets' tab
-- select action
-- go to the secret called EMAILLIST
-- If EMAILLIST doesn't exists create a new repository secret **not** an enviorment secret
-- put **'None'** for default email or add alternative email address 
+- Secrets and variables
+- actions
+- New repository secret
+- create these if not present:
+| Secret name      | Used for                                                            | Required?                                    |
+| ---------------- | ------------------------------------------------------------------- | -------------------------------------------- |
+| `EMAILLIST`      | Email recipients for document update notifications                  | ✅ Yes                                        |
+| `APIKEY`         | API key used to request a portal authentication token               | ✅ Yes (only for portal-registered documents) |
+| `KEYID`          | Identifier paired with `APIKEY`                                     | ✅ Yes (only for portal-registered documents) |
+| `REQUESTURL`     | Endpoint where `key.py` requests the access token                   | ✅ Yes (only for portal-registered documents) |
+| `PORTAL_API_URL` | Base URL of the portal API (`/user/admin/add_document` is appended) | ✅ Yes (only for portal-registered documents) |
+
 
 ## Adding API Key and Key ID
 The API request requires three redentials (Request URL, API key, & key ID) to complete a access token request. These three credentials will be stored in Github Secrets. To add or change them the instructions are as follows:
