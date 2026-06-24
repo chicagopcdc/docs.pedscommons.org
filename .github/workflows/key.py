@@ -12,46 +12,47 @@ def main():
     """Generate authentication token and set it as GITHUB_ENV variable."""
     
     # Get environment variables
-    api_key = os.environ.get("APIKEY")
-    key_id = os.environ.get("KEYID")
-    url = os.environ.get("REQUESTURL")
+    fence_client_id = os.environ.get("FENCE_CLIENT_ID")
+    fence_client_secret = os.environ.get("FENCE_CLIENT_SECRET")
+    url = os.environ.get("PORTAL_API_URL")
 
     # Validate required environment variables
-    if not api_key:
-        error_msg = "APIKEY environment variable is not set. Please check GitHub secrets."
-        print(f"ERROR: {error_msg}", file=sys.stderr)
-        raise RuntimeError(error_msg)
-
-    if not key_id:
-        error_msg = "KEYID environment variable is not set. Please check GitHub secrets."
-        print(f"ERROR: {error_msg}", file=sys.stderr)
-        raise RuntimeError(error_msg)
-
     if not url:
         error_msg = "REQUESTURL environment variable is not set. Please check GitHub secrets."
         print(f"ERROR: {error_msg}", file=sys.stderr)
         raise RuntimeError(error_msg)
+    url = url + "/user/oauth2/token?grant_type=client_credentials&scope=openid"
+
+    if not fence_client_secret:
+        error_msg = "FENCE_CLIENT_SECRET environment variable is not set. Please check GitHub secrets."
+        print(f"ERROR: {error_msg}", file=sys.stderr)
+        raise RuntimeError(error_msg)
+
+    if not fence_client_id:
+        error_msg = "FENCE_CLIENT_ID environment variable is not set. Please check GitHub secrets."
+        print(f"ERROR: {error_msg}", file=sys.stderr)
+        raise RuntimeError(error_msg)
 
     print(f"Requesting token from: {url}", file=sys.stderr)
-    print(f"Using API Key: {api_key[:4]}... (truncated for security)", file=sys.stderr)
 
     try:
-        # Make API request to get token
         response = requests.post(
             url,
-            json={
-                "api_key": api_key,
-                "key_id": key_id,
-            },
-            timeout=30  # Add timeout to prevent hanging
+            auth=(
+                fence_client_id,
+                fence_client_secret,
+            ),
+            timeout=30  
         )
 
-        # Raise exception for HTTP errors
-        response.raise_for_status()
+        if r.status_code != 200:
+            raise RuntimeError(
+                f"Failed to obtain access token using OIDC client credentials - {r.status_code}:\n{r.text}"
+            )
 
         # Parse response
         token_data = response.json()
-        token = token_data.get("access_token")
+        token = token_data.get("access_token") #["access_token"]
 
         if not token:
             error_msg = "No access_token found in API response"

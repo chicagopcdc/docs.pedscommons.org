@@ -106,9 +106,8 @@ jobs:
             required: true
 
     env:
-      APIKEY: ${{ secrets.APIKEY }}
-      KEYID: ${{ secrets.KEYID }}
-      REQUESTURL: ${{ secrets.REQUESTURL }}
+      FENCE_CLIENT_ID: ${{ secrets.FENCE_CLIENT_ID }}
+      FENCE_CLIENT_SECRET: ${{ secrets.FENCE_CLIENT_SECRET }}
       PORTAL_API_URL: ${{ secrets.PORTAL_API_URL }}
 
     steps:
@@ -147,9 +146,9 @@ jobs:
         id: token-gen
         run: python .github/workflows/key.py
         env:
-          APIKEY: ${{ env.APIKEY }}
-          KEYID: ${{ env.KEYID }}
-          REQUESTURL: ${{ env.REQUESTURL }}
+          FENCE_CLIENT_ID: ${{ env.FENCE_CLIENT_ID }}
+          FENCE_CLIENT_SECRET: ${{ env.FENCE_CLIENT_SECRET }}
+          PORTAL_API_URL: ${{ env.PORTAL_API_URL }}
 
       - name: Verify token generation
         if: steps.check-document.outputs.changed == 'true'
@@ -192,45 +191,45 @@ jobs:
           fi
           echo "Payload is valid JSON"
 
-      - name: Register document
-        if: steps.check-document.outputs.changed == 'true'
-        shell: bash
-        run: |
-          # Log the API call (without exposing sensitive data)
-          echo "Registering document: ${{ matrix.name }}"
-          echo "API URL: ${{ env.PORTAL_API_URL }}/user/admin/add_document"
+      # - name: Register document
+      #   if: steps.check-document.outputs.changed == 'true'
+      #   shell: bash
+      #   run: |
+      #     # Log the API call (without exposing sensitive data)
+      #     echo "Registering document: ${{ matrix.name }}"
+      #     echo "API URL: ${{ env.PORTAL_API_URL }}/user/admin/add_document"
           
-          # Make the API call
-          RESPONSE=$(curl \
-            --fail \
-            --show-error \
-            --location \
-            --write-out "\nHTTP_STATUS:%{http_code}" \
-            --request POST \
-            --header "Content-Type: application/json" \
-            --header "Authorization: Bearer ${TOKEN}" \
-            --data @payload.json \
-            ${{ env.PORTAL_API_URL }}/user/admin/add_document 2>&1)
+      #     # Make the API call
+      #     RESPONSE=$(curl \
+      #       --fail \
+      #       --show-error \
+      #       --location \
+      #       --write-out "\nHTTP_STATUS:%{http_code}" \
+      #       --request POST \
+      #       --header "Content-Type: application/json" \
+      #       --header "Authorization: Bearer ${TOKEN}" \
+      #       --data @payload.json \
+      #       ${{ env.PORTAL_API_URL }}/user/admin/add_document 2>&1)
           
-          CURL_EXIT=$?
+      #     CURL_EXIT=$?
           
-          # Extract HTTP status from response
-          HTTP_STATUS=$(echo "$RESPONSE" | grep "HTTP_STATUS:" | cut -d: -f2)
-          RESPONSE_BODY=$(echo "$RESPONSE" | sed '/HTTP_STATUS:/d')
+      #     # Extract HTTP status from response
+      #     HTTP_STATUS=$(echo "$RESPONSE" | grep "HTTP_STATUS:" | cut -d: -f2)
+      #     RESPONSE_BODY=$(echo "$RESPONSE" | sed '/HTTP_STATUS:/d')
           
-          echo "Response body: $RESPONSE_BODY"
-          echo "HTTP Status: $HTTP_STATUS"
+      #     echo "Response body: $RESPONSE_BODY"
+      #     echo "HTTP Status: $HTTP_STATUS"
           
-          if [ $CURL_EXIT -ne 0 ] || [ "$HTTP_STATUS" -ne 200 ]; then
-            echo "ERROR: Document registration failed"
-            echo "Curl exit code: $CURL_EXIT"
-            echo "HTTP Status: $HTTP_STATUS"
-            exit 1
-          fi
+      #     if [ $CURL_EXIT -ne 0 ] || [ "$HTTP_STATUS" -ne 200 ]; then
+      #       echo "ERROR: Document registration failed"
+      #       echo "Curl exit code: $CURL_EXIT"
+      #       echo "HTTP Status: $HTTP_STATUS"
+      #       exit 1
+      #     fi
           
-          echo "Document registered successfully"
-        # env:
-        #   TOKEN: ${{ env.TOKEN }}
+      #     echo "Document registered successfully"
+      #   # env:
+      #   #   TOKEN: ${{ env.TOKEN }}
 
       - name: Cleanup token
         if: always() && steps.check-document.outputs.changed == 'true'
