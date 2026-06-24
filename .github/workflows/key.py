@@ -45,9 +45,9 @@ def main():
             timeout=30  
         )
 
-        if r.status_code != 200:
+        if response.status_code != 200:
             raise RuntimeError(
-                f"Failed to obtain access token using OIDC client credentials - {r.status_code}:\n{r.text}"
+                f"Failed to obtain access token using OIDC client credentials - {response.status_code}:\n{response.text}"
             )
 
         # Parse response
