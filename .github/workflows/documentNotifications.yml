@@ -60,7 +60,7 @@ jobs:
 
       - name: Send notification email
         if: steps.changed.outputs.files != '' && steps.changed.outputs.files != 'null'
-        uses: cinotify/github-action@v1.1.0
+        uses: cinotify/github-action@v1.6.0
         with:
           to: ${{ env.EMAIL_RECIPIENTS }}
           subject: Documentation Updated
