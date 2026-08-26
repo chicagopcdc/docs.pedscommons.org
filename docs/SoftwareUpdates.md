@@ -2,6 +2,7 @@ Link to [Data Release Updates](https://docs.pedscommons.org/DataReleases/)
 
 | Version | Release Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| Description |
 | ------- | -------------- | ----------------------------|
+| v1.54.0 | September 8, 2026 | Improvements in admin functions; Added more guided informations. |
 | v1.53.0 | August 11, 2026 | Improvements in admin functions; Added paginated filters to data request page; Enhanced Guppy filters options. Minor back-end improvements. Added project request status explainer modal. |
 | v1.52.0 | July 14, 2026 | Improvements in admin functions; Added Pagination to data request page; Added wizard UI with instruction at first login. Minor back-end improvements |
 | v1.51.0 | June 9, 2026 | Improvements in admin functions; Addition of radiation timing filter to the exploration page; Minor back-end improvements |
