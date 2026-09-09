@@ -1,7 +1,7 @@
 ![Logo](img/PcdcLogo.png)
 
 # Pediatric Cancer Data Commons<br> Data Portal User Guide
-###### v1.53.0 User Guide
+###### v1.54.0 User Guide
 ## Introduction
 
 The Pediatric Cancer Data Commons (PCDC) brings together clinical, genomic, and imaging data from institutions around the world that are working to transform pediatric cancer research and outcomes. Headquartered at the University of Chicago, the PCDC works with international leaders in pediatric cancers and the US National Cancer Institute to develop and apply uniform data standards, facilitating the collection, combination, and analysis of data from many different sources. 
@@ -323,6 +323,30 @@ The **Survival type** drop down can be used to select Overall or Event-Free surv
 
 <!-- ### Query
 The **Query** page is used to create queries using the GraphiQL tool. (additional information to be provided in a future release of the User Guide). -->
+
+### Table One
+
+The PCDC platform includes a **Table One** tool that can display summary tables.
+
+When first accessing the table one generator, users must agree to follow the Acceptable Use Policy. Subsequent sessions will include a reminder of the terms whenever the Table one tab is first used.
+
+
+![Table One](img/table_1_1.png)
+
+To create a table one, users must first select one saved filter set. Filter Sets can be created and saved using the procedure described above. **Note:** Only saved filter sets can be used to create a Table One. 
+
+Use the drop down labeled “Select Filter Set to Analyze” to select a saved filter set, then click the **Add** button to add the filter set.
+
+
+![Table One](img/image38.png)
+
+Then the user has to select the covariates, so the row of the table.
+
+![Table One](img/table_1_2.png)
+![Table One](img/table_1_3.png)
+
+Once selected, users can see the table one by hitting the **Apply** button at the bottom of the screen. Note: When changes are made to filter sets that are currently selected for the table one, users must hit the Apply button after editing to see the changes reflected in the table. 
+
 
 ### User Menu
 The User Menu can be accessed by clicking on the user icon in the top right corner of the screen. The **View Profile** option allows users to make changes to their name and institutional affiliation. The View Profile page can also be used to create API Keys.  
