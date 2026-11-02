@@ -347,6 +347,7 @@ Then the user has to select the covariates, so the row of the table.
 
 Once selected, users can see the table one by hitting the **Apply** button at the bottom of the screen. Note: When changes are made to filter sets that are currently selected for the table one, users must hit the Apply button after editing to see the changes reflected in the table. 
 
+**In the case of variables for which a patient may have multiple observations (e.g., age at tumor assessment for initial diagnosis and at relapse(s)), the first observation will be selected and so a patient will only be counted once.**
 
 ### User Menu
 The User Menu can be accessed by clicking on the user icon in the top right corner of the screen. The **View Profile** option allows users to make changes to their name and institutional affiliation. The View Profile page can also be used to create API Keys.  
